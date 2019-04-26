@@ -1,0 +1,48 @@
+@import "utils/reset";
+@import "utils/variables";
+@import "utils/mixins";
+@import "partials/sprite";
+
+h1, h2, h3, h4, p {
+    padding: 0;
+    margin: 0;
+}
+
+header, main, footer {
+    width: 100%;
+}
+
+header, footer {
+    flex-shrink: 0;
+}
+
+main {
+    flex-grow: 1;
+}
+
+.body {
+    background: #c9e0e04d;
+    font-family: "Helvetica", Arial, sans-serif;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 34px;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-between;
+    line-height: 1.3;
+    @include r(1024) {
+        // пример медиазапроса
+    }
+}
+
+.icon-svg {
+    fill: #000000;
+    height: 16px;
+    width: 16px;
+}
+

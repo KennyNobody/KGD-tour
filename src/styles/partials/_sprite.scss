@@ -1,0 +1,38 @@
+.icon {
+    font-size: 10px;
+}
+
+.icon:before {
+    content:' ';
+    vertical-align:middle;
+    display: inline-block;
+    background-image: url("../../../../docs/img/sprites/sprite.svg");
+    background-repeat: no-repeat;
+    background-size: 54.83579999999999em 64.7em;
+}
+
+.no-svg .icon:before {
+    background-image: url("../../../../docs/img/sprites/sprite.png");
+}
+
+
+
+  .icon.500px:before {
+      background-position: 0em 0em;
+      width: 9.775em;
+      height: 9.775em;
+  }
+
+
+
+
+  .icon.vk:before {
+      background-position: 0em -9.8em;
+      width: 54.83579999999999em;
+      height: 54.83579999999999em;
+  }
+
+
+
+
+
