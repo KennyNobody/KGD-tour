@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <title>Gulppack</title>
+    <title>Калиниград-тур</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="theme-color" content="">
@@ -18,17 +18,471 @@
     <link rel="stylesheet" href="/styles/main.css">
 </head>
 <body class="body">
-    <header>
-    	<p>Это шапка сайта. Она вставлена с помощью rigger</p>
+    <header class="header">
+    	<div class="container">
+    		<div class="topline">
+    			<a href="index.html" class="logo topline__logo">
+    				<img src="img/logo.svg" alt="Логотип Калининград-тур">
+    			</a>
+    			<div class="rate topline__rate">
+    				<div class="rate__wrap">
+    					<p class="rate__title">
+    						Курс евро:
+    					</p>
+    					<p class="rate__money">
+    						67.74 <span class="rate__symbol">₽</span>
+    					</p>
+    				</div>
+    			</div>
+    			<a href="tel:+74012534400" class="topline__link topline__link--phone">
+    				<svg class="icon-svg">
+    					<use xlink:href="img/sprites/svg/symbols.svg#icon-phone"></use>
+    				</svg>
+    				<span>
+    					(4012) 53-44-00
+    				</span>
+    			</a>
+    			<a href="tel:+78002009106" class="topline__link topline__link--phone">
+    				<svg class="icon-svg">
+    					<use xlink:href="img/sprites/svg/symbols.svg#icon-phone"></use>
+    				</svg>
+    				<span>
+    					8-800-200-91-06
+    				</span>
+    			</a>
+    			<a href="" class="topline__link topline__link--profile">
+    				<svg class="icon-svg">
+    					<use xlink:href="img/sprites/svg/symbols.svg#icon-user"></use>
+    				</svg>
+    				<span>
+    					Личный кабинет
+    				</span>
+    			</a>
+    		</div>
+    		<nav class="navline">
+    			<a href="" class="navline__link">
+    				Туры в Европу
+    			</a>
+    			<a href="" class="navline__link">
+    				Экскурсии по Калининградской области
+    			</a>
+    			<a href="news.html" class="navline__link">
+    				Новости
+    			</a>
+    			<a href="faq.html" class="navline__link">
+    				Вопросы и ответы
+    			</a>
+    			<a href="reviews.html" class="navline__link">
+    				Отзывы
+    			</a>
+    			<a href="contacts.html" class="navline__link">
+    				Контакты
+    			</a>
+    			<div class="navline__search">
+    				<svg class="icon-svg">
+    					<use xlink:href="img/sprites/svg/symbols.svg#icon-search"></use>
+    				</svg>
+    			</div>
+    		</nav>
+    	</div>
     </header>
-    <svg class="icon-svg">
+<!--     <svg class="icon-svg">
         <use xlink:href="img/sprites/svg/symbols.svg#icon-vk"></use>
-    </svg>
+    </svg> -->
     <main>
-        <h1>Основной контент сайта</h1>
+        <section class="breadcrumbs">
+        	<div class="container breadcrumbs__container">
+        		<a href="index.html" class="breadcrumbs__link">
+        			Главная
+        		</a>
+        		<svg class="icon-svg">
+        			<use xlink:href="img/sprites/svg/symbols.svg#icon-arrow"></use>
+        		</svg>
+        		<a href="index.html" class="breadcrumbs__link">
+        			Туры в Европу
+        		</a>
+        		<svg class="icon-svg">
+        			<use xlink:href="img/sprites/svg/symbols.svg#icon-arrow"></use>
+        		</svg>
+        		<span class="breadcrumbs__now">
+        			Тур Прага-Дрезден
+        		</span>
+        	</div>
+        </section>
+        <section class="tour">
+        	<div class="container container--columns">
+        		<div class="slider content tour__slider swiper-container">
+        			<div class="swiper-wrapper">
+        				<div class="swiper-slide slider__slide">
+        					<img src="http://placehold.it/1000x600" alt="Изображение в слайдере">
+        				</div>
+        				<div class="swiper-slide slider__slide">
+        					<img src="http://placehold.it/1000x600" alt="Изображение в слайдере">
+        				</div>
+        				<div class="swiper-slide slider__slide">
+        					<img src="http://placehold.it/1000x600" alt="Изображение в слайдере">
+        				</div>
+        				<div class="swiper-slide slider__slide">
+        					<img src="http://placehold.it/1000x600" alt="Изображение в слайдере">
+        				</div>
+        				<div class="swiper-slide slider__slide">
+        					<img src="http://placehold.it/1000x600" alt="Изображение в слайдере">
+        				</div>
+        			</div>
+        			<div class="slider__nav">
+        				<div class="slider__btn slider__btn--prev">
+        					<svg class="icon-svg">
+        						<use xlink:href="img/sprites/svg/symbols.svg#icon-next"></use>
+        					</svg>
+        				</div>
+        				<div class="slider__btn slider__btn--next">
+        					<svg class="icon-svg">
+        						<use xlink:href="img/sprites/svg/symbols.svg#icon-next"></use>
+        					</svg>
+        				</div>
+        			</div>
+        		</div>
+        		<div class="tour__content aside">
+        			<h2 class="h1 tour__h1">
+        				Тур "Прага-Дрезден"
+        			</h2>
+        			<div class="tour__dates">
+        				<p class="tour__dates-title">
+        					Даты выезда:
+        				</p>
+        				<p class="tour__dates-ul">
+        					25-04-2019, 25-06-2019, 25-09-2019
+        				</p>
+        			</div>
+        			<div class="tour__price">
+        				<span class="tour__money">245</span>
+        				<span class="tour__currency">EUR</span>
+        			</div>
+        			<div class="tour__info">
+        				<p>
+        					С человека в 2-х местном стандартном номере при условии приобретения экскурсионного пакета Высокие Татры и Краков (35 EUR)
+        				</p>
+        				<br>
+        				<p>
+        					<strong>Длительность:</strong> 6 дней
+        				</p>
+        			</div>
+        			<a href="#" class="btn btn--dark tour__btn">
+        				Забронировать
+        			</a>
+        		</div>
+        	</div>
+        </section>
+        <div class="container container--columns">
+            <div class="content">
+                <!-- //= sections/tour-content.html -->
+                <section class="text">
+                	<h2 class="h2 text__h2">
+                		Программа тура по дням
+                	</h2>
+                	<div class="text__content text__content--bg">
+                		<h3>1 день</h3> 
+                		<p>Ранний выезд из Калининграда. Транзитный переезд по территории Польши. Прибытие в г. Попрад (Словакия). Размещение в отеле 3*. Свободное время. Ночь в отеле.</p> 
+                		<h3>2 день</h3> 
+                		<p>Завтрак. Свободное время, отдых на курорте, катание на лыжах. Для желающих факультативно экскурсия Высокие Татры* (Штребское Плесо, Смоковец, Татранская Ломница). Вечером факультативно поездка в термальные бассейны в Врбов* (температура воды от 26 до 45 градусов). Термальная вода благотворно воздействует на двигательный аппарат, урологическую систему, дыхательные пути и обладает положительными косметическими свойствами. Ночь в отеле. </p>
+                		<h3>3 день</h3> 
+                		<p>Завтрак. Для желающих - поездка в Белянскую пещеру*, которая является одной из самых посещаемых пещер в Словакии. Во второй половине дня для желающих факультативно экскурсия Левоча + замок Стражки*. Королевский город Левоча - магический центр словацкого ренессанса основан в 1249 году. Готические костелы города уникальны своими интерьерами. Самый большой деревянный готический алтарь в мире - в церкви Святого Якуба, городская ратуша, музей скульптора Павола, дома с редкими фресками - позволят погрузиться в атмосферу средневековой Европы. Стражки - Ренессансный костел, спроектированный и построенный легендарным мастером Грегором Хорватом-Станситом предлагает экспозиции старинной мебели и домашних аксессуаров 17-19 вв. Вечером факультативно поездка в термальные бассейны в Врбов*. Ночь в отеле. </p>
+                		<h3>4 день</h3> 
+                		<p>Завтрак. Свободное время или факультативно экскурсия в Замок Любовнянский Град* 13-го века и посещение единственного в Словакии завода по производству виски завода NESTVILLE* (экскурсия+дегустация виски, произведенные по старинным рецептам). Знакомство с национальными старинными секретами производства напитка. Вечером факультативно поездка в термальные бассейны в Врбов*. Ночь в отеле. </p>
+                		<h3>5 день</h3> 
+                		<p>Завтрак. Свободное время, отдых и катание на лыжах на горнолыжных курортах Высокие Татры. Вечером факультативно Рождественский ужин в национальной словацкой колибе с живой музыкой*. Ночь в отеле.</p> 
+                		<h3>6 день</h3> 
+                		<p>Завтрак. Выезд из отеля. Переезд по территории Словакии, Польши. Позднее прибытие в Калининград.</p>
+                	</div>
+                </section>
+                <section class="route">
+                	<h2 class="h2 route__h2">
+                		Маршрут тура
+                	</h2>
+                	<div class="route__map">
+                		
+                	</div>
+                </section>
+                <section class="features">
+                	<h2 class="h2 features__h2">
+                		Включено в стоимость тура
+                	</h2>
+                	<div class="features__items">
+                		<div class="features__item">
+                			<div class="features__icon">
+                				<svg class="icon-svg">
+                					<use xlink:href="img/sprites/svg/symbols.svg#icon-bus"></use>
+                				</svg>
+                				<svg class="icon-svg">
+                					<use xlink:href="img/sprites/svg/symbols.svg#icon-ok"></use>
+                				</svg>
+                			</div>
+                			<p class="features__text">
+                				Проезд в комфортабельном автобусе
+                			</p>
+                		</div>
+                		<div class="features__item">
+                			<div class="features__icon">
+                				<svg class="icon-svg">
+                					<use xlink:href="img/sprites/svg/symbols.svg#icon-bed"></use>
+                				</svg>
+                				<svg class="icon-svg">
+                					<use xlink:href="img/sprites/svg/symbols.svg#icon-ok"></use>
+                				</svg>
+                			</div>
+                			<p class="features__text">
+                				Проживание в отеле
+                			</p>
+                		</div>
+                		<div class="features__item">
+                			<div class="features__icon">
+                				<svg class="icon-svg">
+                					<use xlink:href="img/sprites/svg/symbols.svg#icon-girl"></use>
+                				</svg>
+                				<svg class="icon-svg">
+                					<use xlink:href="img/sprites/svg/symbols.svg#icon-ok"></use>
+                				</svg>
+                			</div>
+                			<p class="features__text">
+                				Сопровождение представителем фирмы
+                			</p>
+                		</div>
+                		<div class="features__item">
+                			<div class="features__icon">
+                				<svg class="icon-svg">
+                					<use xlink:href="img/sprites/svg/symbols.svg#icon-food"></use>
+                				</svg>
+                				<svg class="icon-svg">
+                					<use xlink:href="img/sprites/svg/symbols.svg#icon-ok"></use>
+                				</svg>
+                			</div>
+                			<p class="features__text">
+                				Завтраки в отеле
+                			</p>
+                		</div>
+                	</div>
+                </section>
+                <section class="reviews">
+                	<h2 class="h2 reviews__h2">
+                		Отзывы
+                	</h2>
+                	<article class="review">
+                		123
+                		<br>
+                		<br>
+                		<br>
+                		<br>
+                		<br>
+                		<br>
+                		<br>
+                		<br>
+                	</article>
+                	<a href="#" class="btn btn--black reviews__btn">
+                		Больше отзывов об этом туре
+                	</a>
+                </section>
+                <section class="text">
+                	<h2 class="h2 text__h2">
+                		Полезные советы
+                	</h2>
+                	<div class="text__content">
+                		<p>1. Несмотря на высокую безопасность пребывания в стране, туристы не застрахованы от действий карманников. Кредитные карты, деньги и документы лучше хранить во внутренних карманах. </p>
+                		<p>2. На юго-западе страны распространены клещи, а потому любителям пеших прогулок по лесу следует перед поездкой в Германию сделать прививку от клещевого энцефалита. </p>
+                		<p>3. Нацизм является острой темой для германского общества, даже шутки на эту тему караются здесь административным наказанием, а за использование нацисткой символики в Германии могут посадить в тюрьму. </p>
+                		<p>4. В качестве чаевых официантам принято оставлять 7-10% от стоимости чека. Если чек не превышает 5 евро, то обычно «на чай» оставляют 1 евро. </p>
+                		<p>5. Метро в Германии начинает работу с 4 часов утра и закрывается около полуночи. </p>
+                		<p>6. В общественных местах в Германии считается дурным тоном активная жестикуляция или открытое выражение эмоций. Такое поведение вызовет осуждающие взгляды окружающих. </p>
+                		<p>10. Немцы очень рано ложатся спать, а потому не стоит шуметь после 21 часа. В противном случае соседи без лишних предупреждений и просьб вызовут полицию. </p>
+                		<p>11. Большинство музеев в Германии закрыто по понедельникам. Зато во вторник и среду они ждут посетителей до позднего вечера. </p>
+                		<p>12. Немцы очень приветливы и хорошо относятся к путешественникам, они с готовностью подскажут дорогу или помогут советом. Однако важно соблюдать правила общения – к незнакомому человеку нужно обращаться Herr («господин») или Frau («госпожа»), к тому же, в Германии принято обращаться друг к другу по фамилиям. </p>
+                		<p>13. Немцы обладают довольно специфическим чувством юмора, поэтому с ними лучше не шутить – они могут воспринимать шутки буквально, что повлечет создание неловкой ситуации. </p>
+                		<p>14. В каждом городе Германии имеются телефонные будки, откуда туристы могут позвонить в любую точку земного шара. Для удобства рядом лежат телефонные справочники. Оплатить услугу можно монетами, телефонными или банковскими картами. </p>
+                		<p>15. Вода из-под крана считается в Германии питьевой, однако она может иметь довольно специфический привкус.</p>
+                	</div>
+                </section>
+            </div>
+            <aside class="aside" style="position: sticky; padding-bottom: 80px;">
+               <div class="sidebar">
+               	<div class="sidebar__menu side-menu">
+               		<p class="sidebar__title side-menu__title">
+               			Информация о туре
+               		</p>
+               		<a href="#" class="side-menu__link">
+               			Программа тура по дням
+               		</a>
+               		<a href="#" class="side-menu__link">
+               			Включено в стоимость тура
+               		</a>
+               		<a href="#" class="side-menu__link">
+               			Дополнительные услуги
+               		</a>
+               		<a href="#" class="side-menu__link">
+               			Дополнительные экскурсии
+               		</a>
+               		<a href="#" class="side-menu__link">
+               			Отзывы о туре
+               		</a>
+               		<a href="#" class="side-menu__link">
+               			Полезные советы
+               		</a>
+               		<a href="#" class="side-menu__link">
+               			Программа тура по дням
+               		</a>
+               		<a href="#" class="side-menu__link">
+               			Включено в стоимость тура
+               		</a>
+               		<a href="#" class="side-menu__link">
+               			Дополнительные услуги
+               		</a>
+               		<a href="#" class="side-menu__link">
+               			Дополнительные экскурсии
+               		</a>
+               		<a href="#" class="side-menu__link">
+               			Отзывы о туре
+               		</a>
+               		<a href="#" class="side-menu__link">
+               			Полезные советы
+               		</a>
+               		<a href="#" class="side-menu__link">
+               			Программа тура по дням
+               		</a>
+               		<a href="#" class="side-menu__link">
+               			Включено в стоимость тура
+               		</a>
+               		<a href="#" class="side-menu__link">
+               			Дополнительные услуги
+               		</a>
+               		<a href="#" class="side-menu__link">
+               			Дополнительные экскурсии
+               		</a>
+               		<a href="#" class="side-menu__link">
+               			Отзывы о туре
+               		</a>
+               		<a href="#" class="side-menu__link">
+               			Полезные советы
+               		</a>
+               		<a href="#" class="side-menu__link">
+               			Программа тура по дням
+               		</a>
+               		<a href="#" class="side-menu__link">
+               			Включено в стоимость тура
+               		</a>
+               		<a href="#" class="side-menu__link">
+               			Дополнительные услуги
+               		</a>
+               		<a href="#" class="side-menu__link">
+               			Дополнительные экскурсии
+               		</a>
+               		<a href="#" class="side-menu__link">
+               			Отзывы о туре
+               		</a>
+               		<a href="#" class="side-menu__link">
+               			Полезные советы
+               		</a>
+               	</div>
+               </div>
+            </aside>
+        </div>
     </main>
-    <footer>
-    	<p>Это подвал сайта. Он вставлен с помощью rigger</p>
+    <footer class="footer">
+    	<div class="container footer__container">
+    		<div class="footer__column footer__column--25">
+    			<a href="index.html" class="logo footer__logo">
+    				<img src="img/logo-light.svg" alt="Логотип Калиниград-Тур">
+    			</a>
+    			<a href="tel:+74012534400" class="footer__link">
+    				<svg class="icon-svg">
+    					<use xlink:href="img/sprites/svg/symbols.svg#icon-phone"></use>
+    				</svg>
+    				<span>
+    					(4012) 53-44-00
+    				</span>
+    			</a>
+    			<br>
+    			<a href="tel:+78002009106" class="footer__link">
+    				<svg class="icon-svg">
+    					<use xlink:href="img/sprites/svg/symbols.svg#icon-phone"></use>
+    				</svg>
+    				<span>
+    					8-800-200-91-06
+    				</span>
+    			</a>
+    			<br>
+    			<a href="mailto:kalinintour@yandex.ru" class="footer__link">
+    				<svg class="icon-svg">
+    					<use xlink:href="img/sprites/svg/symbols.svg#icon-mail"></use>
+    				</svg>
+    				<span>
+    					kalinintour@yandex.ru
+    				</span>
+    			</a>
+    			<br>
+    			<a href="" class="btn btn--dark footer__btn">
+    				Написать
+    			</a>
+    		</div>
+    		<div class="footer__column footer__column--25">
+    			<p class="footer__text">
+    				<strong>Калининград-тур</strong><br>
+    				Калининград, ТЦ "Барнаульский", Барнаульская ул., 2, офис 219
+    			</p>
+    			<p class="footer__text">
+    				Время работы офиса:<br>
+    				пн-пт: 10-18<bR>
+    				сб: 10-15<br>
+    				вс: выходной
+    			</p>
+    			<br>
+    			<div class="social footer__social">
+    				<p class="social__title">
+    					Мы в социальных сетях:
+    				</p>
+    				<a href="#" class="social__link">
+    					<svg class="icon-svg">
+    						<use xlink:href="img/sprites/svg/symbols.svg#icon-vk"></use>
+    					</svg>
+    				</a>
+    				<a href="#" class="social__link">
+    					<svg class="icon-svg">
+    						<use xlink:href="img/sprites/svg/symbols.svg#icon-fb"></use>
+    					</svg>
+    				</a>
+    				<a href="#" class="social__link">
+    					<svg class="icon-svg">
+    						<use xlink:href="img/sprites/svg/symbols.svg#icon-inst"></use>
+    					</svg>
+    				</a>
+    				<a href="#" class="social__link">
+    					<svg class="icon-svg">
+    						<use xlink:href="img/sprites/svg/symbols.svg#icon-odnoklassniki"></use>
+    					</svg>
+    				</a>
+    				<a href="#" class="social__link">
+    					<svg class="icon-svg">
+    						<use xlink:href="img/sprites/svg/symbols.svg#icon-youtube"></use>
+    					</svg>
+    				</a>
+    			</div>
+    		</div>
+    		<div class="footer__column footer__column--50">
+    			<div class="rate footer__rate">
+    				<div class="rate__wrap">
+    					<p class="rate__title">
+    						Курс евро:
+    					</p>
+    					<p class="rate__money">
+    						67.74 
+    						<span class="rate__text">
+    							российских рубля
+    						</span>
+    					</p>
+    				</div>
+    			</div>
+    			<p class="footer__offer">
+    				Обращаем Ваше внимание на то, что данный интернет-сайт носит исключительно информационный характер и ни при каких условиях информационные материалы и цены, размещенные на сайте, не являются публичной офертой, определяемой положениями Статьи 437 Гражданского кодекса РФ.
+    			</p>
+    		</div>
+    	</div>
     </footer>
     <script src="../js/main.min.js"></script>
 </body>

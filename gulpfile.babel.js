@@ -25,8 +25,7 @@ import clean from "gulp-clean";
 const paths = {
 	src: {
 		html: [
-		"./src/views/**/index.html",
-		"!./src/views/blocks/*.html"
+		"./src/views/*.html",
 		],
 		styles: [
 		"./src/styles/*.scss",
@@ -55,8 +54,14 @@ const paths = {
 
 // custom libraries
 const finalLibs = [
-"./src/libs/library.js", 
+"./src/libs/swiper/js/swiper.min.js", 
 paths.src.scripts
+];
+
+// Файлы для отслеживания
+const finalBlocks = [
+"./src/views/*.html",
+"./src/views/**/*.html",
 ];
 
 // GENERAL
@@ -74,7 +79,7 @@ export const server = () => {
 };
 
 export const watchDev = () => {
-	watch(paths.src.html, htmlDev);
+	watch(finalBlocks, htmlDev);
 	watch(paths.src.styles, stylesDev);
 	watch(paths.src.scripts, scriptsDev);
 	watch(paths.src.images, imagesDev);

@@ -1,0 +1,41 @@
+.tour {
+	margin-bottom: 41px;
+	&__container {
+		display: flex;
+		justify-content: space-between;
+	} 
+	&__slider {
+		margin-left: 0px;
+	}
+	&__content {
+		padding-top: 44px;
+	}
+	&__h1 {
+		margin-bottom: 22px;
+	}
+	&__dates {
+		font-size: 16px;
+		margin-bottom: 12px;
+	}
+	&__dates-title {
+		font-weight: 500;
+	}
+	&__price {
+		margin-bottom: 16px;
+	}
+	&__money {
+		font-size: 34px;
+		font-weight: 500;
+	}
+	&__info {
+		font-size: 14px;
+		margin-bottom: 22px;
+		strong {
+			font-weight: 500;
+		}
+	}
+	&__btn {
+		width: 208px;
+		height: 40px;
+	}
+}

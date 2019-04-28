@@ -1,0 +1,126 @@
+.social {
+	&__title {
+		margin-bottom: 5px;
+	}
+	&__link {
+		background-color: $accent;
+		border-radius: 6px;
+		display: inline-flex;
+		margin-right: 2px;
+		height: 24px;
+		width: 24px;
+		align-items: center;
+		justify-content: center;
+		svg {
+			fill: $light;
+		}
+		&:hover {
+			opacity: 0.75;
+		}
+	}
+}
+
+.btn {
+	border-radius: 6px;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	transition: 0.3s all;
+	&:hover {
+		opacity: 0.75;
+	}
+	&--light {
+		border: 2px solid $accent;
+		color: $dark;
+	}
+	&--dark {
+		color: $light;
+		background-color: $accent;
+		border: 2px solid $accent;
+	}
+	&--black {
+		color: $dark;
+		border: 2px solid $dark;
+	}
+}
+
+.breadcrumbs {
+	font-size: 14px;
+	padding-top: 23px;
+	padding-bottom: 14px;
+	&__container {
+		display: flex;
+		align-items: center;
+		color: #7C7169;
+	}
+	&__link {
+		&:hover {
+			color: $accent;
+		}	
+		&--static {
+			color: $accent;
+		}
+	}
+	svg {
+		margin-left: 6px;
+		margin-right: 6px;
+		fill: $accent;
+		height: 10px;
+		width: 10px;
+	}
+}
+
+.slider {
+	width: 686px;
+	height: 420px;
+	position: relative;
+	&__slide {
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	&__nav {
+		position: absolute;
+		z-index: 2;
+		bottom: 4px;
+		right: 4px;
+		display: none;
+		&--active {
+			display: flex;
+		}
+	}
+	&__btn {
+		height: 40px;
+		width: 40px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-shrink: 0;
+		cursor: pointer;
+		background-color: $dark;
+		transition: 0.3s all;
+		outline: none;
+		&:hover {
+			background-color: $light;
+		}
+		svg {
+			fill: $accent;
+			height: 18px;
+			width: 18px;
+		}
+		&--prev {
+			svg {
+				transform: rotate(180deg);
+			}
+		}
+		&--inactive {
+			opacity: 0.75;
+			cursor: auto;
+			&:hover {
+				background-color: $dark;
+			}
+		}
+	}
+}

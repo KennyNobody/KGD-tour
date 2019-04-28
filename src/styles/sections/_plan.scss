@@ -1,0 +1,22 @@
+.text {
+	margin-bottom: 85px;
+	&__h2 {
+		margin-bottom: 37px;
+	}
+	&__content {
+		font-size: 14px;
+		&--bg {
+			border-radius: 6px;
+			padding: 20px 20px 40px 20px;
+			background-color: #F9F5F1;
+		}
+		h3 {
+			font-size: 22px;
+			font-weight: 300;
+		}
+		p {
+			line-height: 1.4;
+			margin-bottom: 24px;
+		}
+	}
+}

@@ -1,0 +1,59 @@
+.footer {
+	background-color: $dark;
+	color: $light;
+	padding-top: 35px;
+	padding-bottom: 53px;
+	font-size: 14px;
+	&__container {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__column {
+		&--25 {
+			width: 25%;
+		}
+		&--50 {
+			width: 50%;
+		}
+	}
+	&__logo {
+		margin-bottom: 19px;
+	}
+	&__link {
+		display: inline-flex;
+		align-items: center;
+		color: $light;
+		margin-bottom: 16px;
+		font-size: 16px;
+		svg {
+			fill: $accent;
+			width: 16px;
+			height: 16px;
+			margin-right: 7px;
+		}
+		&:hover {
+			color: $accent;
+		}
+	}
+	&__btn {
+		font-size: 16px;
+		height: 40px;
+		width: 156px;
+	}
+	&__text {
+		margin-bottom: 19px;
+	}
+	&__rate {
+		display: block;
+		margin-bottom: 43px;
+	}
+	&__offer {
+		max-width: 425px;
+		width: 100%;
+	}
+	strong {
+		font-weight: 400;
+		text-transform: uppercase;
+	}
+}
+

@@ -1,0 +1,21 @@
+.reviews {
+	margin-bottom: 67px;
+	&__h2 {
+		margin-bottom: 42px;
+	}
+	&__btn {
+		width: 292px;
+		height: 40px;
+	}
+}
+
+.review {
+	background: #F9F5F1;
+	border-radius: 6px;
+	padding: 19px;
+	margin-bottom: 20px;
+	background-image: url(../img/rev-bg.svg);
+	background-repeat: no-repeat;
+	background-position: 97% center;
+	background-size: 100px;
+}

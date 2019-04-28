@@ -1,0 +1,31 @@
+.sidebar {
+	border-radius: 6px;
+	position: sticky;
+	top: 20px;
+	bottom: 20px;
+	background-color: $dark;
+	color: $light;
+	padding: 24px;
+	max-height: 100vh;
+	overflow-y: scroll; 
+	&__title {
+		color: #FFBE77;
+		font-weight: 500;
+		font-size: 24px;
+		line-height: 1.2;
+		margin-bottom: 22px;
+	}
+}
+
+.side-menu {
+	&__title {
+
+	}
+	&__link {
+		color: $light;
+		display: block;
+		margin-bottom: 27px;
+		padding-left: 19px;
+		position: relative;
+	}
+}

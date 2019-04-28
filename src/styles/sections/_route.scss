@@ -1,0 +1,11 @@
+.route {
+	margin-bottom: 85px;
+	&__h2 {
+		margin-bottom: 50px;
+	}
+	&__map {
+		height: 660px;
+		width: 100%;
+		background-color: green;
+	}
+}

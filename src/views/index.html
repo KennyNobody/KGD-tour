@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <title>Gulppack</title>
+    <title>Калиниград-тур</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="theme-color" content="">
@@ -10,11 +10,25 @@
 </head>
 <body class="body">
     //= blocks/header.html
-    <svg class="icon-svg">
+<!--     <svg class="icon-svg">
         <use xlink:href="img/sprites/svg/symbols.svg#icon-vk"></use>
-    </svg>
+    </svg> -->
     <main>
-        <h1>Основной контент сайта</h1>
+        //= sections/breadcrumbs.html
+        //= sections/tour.html
+        <div class="container container--columns">
+            <div class="content">
+                <!-- //= sections/tour-content.html -->
+                //= sections/tour-text--bg.html
+                //= sections/route.html
+                //= sections/features.html
+                //= sections/reviews.html
+                //= sections/tour-text.html
+            </div>
+            <aside class="aside" style="position: sticky; padding-bottom: 80px;">
+               //= blocks/sidebar.html
+            </aside>
+        </div>
     </main>
     //= blocks/footer.html
     //= includes/scripts.html

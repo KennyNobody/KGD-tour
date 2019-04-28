@@ -1,0 +1,39 @@
+.features {
+	margin-bottom: 53px;
+	&__h2 {
+		margin-bottom: 38px;
+	}
+	&__items {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	&__item {
+		width: 50%;
+		display: flex;
+		margin-bottom: 30px;
+		padding-right: 20px;
+		align-items: center;
+	}
+	&__icon {
+		height: 56px;
+		width: 56px;
+		flex-shrink: 0;
+		margin-right: 32px;
+		position: relative;
+		svg {
+			&:nth-child(1) {
+				height: 56px;
+				width: 56px;
+				fill: #BBB0A9;
+			}
+			&:nth-child(2) {
+				height: 16px;
+				width: 16px;
+				position: absolute;
+				top: 50%;
+				right: -8px;
+				fill: none;
+			}
+		}
+	}
+}
