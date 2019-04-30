@@ -18,5 +18,22 @@
 			line-height: 1.4;
 			margin-bottom: 24px;
 		}
+		table {
+			width: 100%;
+		}
+		tr {
+			margin-bottom: 20px;
+			display: flex;
+			justify-content: space-between;
+		}
+		td {
+			&:nth-child(1) {
+				width: 85%;
+				padding-right: 35px;
+			}
+			&:nth-child(2) {
+				width: 15%;
+			}
+		}
 	}
 }

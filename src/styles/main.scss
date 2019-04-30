@@ -4,10 +4,14 @@
 @import "utils/fonts";
 @import "partials/sprite";
 
+@import "../libs/swiper/css/swiper.min";
+@import "../libs/scroll/OverlayScrollbars.min";
+@import "../libs/tippy/microtip";
+
 @import "components/blocks";
 @import "components/sidebar";
-
-@import "../libs/swiper/css/swiper.min";
+@import "components/scroll";
+@import "components/interface";
 
 h1, h2, h3, h4, p {
 	padding: 0;
@@ -114,6 +118,34 @@ svg {
 	height: 20px;
 }
 
+.fact {
+	height: 10px;
+	width: 10px;
+	position: relative;
+	transition: 0.3s all;
+	cursor: pointer;
+	display: inline-block;
+	svg {
+		fill: $accent;
+		width: 100%;
+		display: block;
+		height: 100%;
+	}
+	&:hover {
+		svg {
+			opacity: 0.7;
+		}
+	}
+	&:after {
+		width: 230px !important;
+		box-sizing: border-box !important;
+		white-space: normal !important;
+		background-color: $light !important;
+		color: $dark !important;
+		padding: 5px 9px 10px 9px !important;
+	}
+}
+
 @import "includes/header";
 @import "includes/footer";
 
@@ -122,3 +154,4 @@ svg {
 @import "sections/route";
 @import "sections/features";
 @import "sections/reviews";
+@import "sections/tour-booking";

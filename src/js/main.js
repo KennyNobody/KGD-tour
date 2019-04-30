@@ -1,5 +1,7 @@
 (function(){
 
+	// Слайдер https://idangero.us/swiper/
+
 	(function ititSlider() {
 		const sliderLength = document.querySelectorAll(".slider .slider__slide").length;
 		const sliderNav = document.querySelector(".slider__nav");
@@ -14,7 +16,20 @@
 			});
 			sliderNav.classList.add('slider__nav--active');
 		}
-		console.log(sliderLength);
 	})();
+
+	// Кастомный скроллбар https://kingsora.github.io/OverlayScrollbars/
+
+	document.addEventListener("DOMContentLoaded", function() {
+		OverlayScrollbars(document.querySelectorAll(".custom-scroll"), {
+			paddingAbsolute : true,
+			scrollbars : {
+				clickScrolling : true
+			}
+		});
+	});
+
+	// Всплывающие окошки с информацией https://atomiks.github.io/tippyjs/
+
 	
 })();

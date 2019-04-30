@@ -1,0 +1,13 @@
+.price {
+	&__start {
+		font-size: 16px;
+	}
+	&__money {
+		font-size: 34px;
+		font-weight: 500;
+		margin-right: -5px;
+	}
+	&__currency {
+		font-size: 18px;
+	}
+}

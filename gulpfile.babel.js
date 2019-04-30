@@ -54,7 +54,9 @@ const paths = {
 
 // custom libraries
 const finalLibs = [
-"./src/libs/swiper/js/swiper.min.js", 
+"./src/libs/swiper/js/swiper.min.js",
+"./src/libs/scroll/OverlayScrollbars.min.js",
+
 paths.src.scripts
 ];
 
@@ -137,9 +139,9 @@ export const stylesDev = () => src("./src/styles/**/main.scss")
 
 export const scriptsDev = () => src(finalLibs)
 .pipe(sourcemaps.init())
-.pipe(babel())
 .pipe(concat("main.js"))
-.pipe(uglify())
+// .pipe(babel())
+// .pipe(uglify())
 .pipe(rename({suffix: ".min"}))
 .pipe(sourcemaps.write("./maps/"))
 .pipe(dest(paths.build.scripts))
@@ -171,8 +173,8 @@ export const stylesProd = () => src("./src/styles/**/main.scss")
 .pipe(debug({"title": "CSS files"}));
 
 export const scriptsProd = () => src(finalLibs)
-.pipe(babel())
 .pipe(concat("main.js"))
+// .pipe(babel())
 .pipe(uglify())
 .pipe(rename({suffix: ".min"}))
 .pipe(dest(paths.build.scripts))

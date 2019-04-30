@@ -6,7 +6,7 @@
 	background-color: $dark;
 	color: $light;
 	padding: 24px;
-	max-height: 100vh;
+	max-height: calc(100vh - 40px);
 	overflow-y: scroll; 
 	&__title {
 		color: #FFBE77;
@@ -18,6 +18,7 @@
 }
 
 .side-menu {
+	border-bottom: 1px solid #7C7169;
 	&__title {
 
 	}
@@ -27,5 +28,81 @@
 		margin-bottom: 27px;
 		padding-left: 19px;
 		position: relative;
+		&:before {
+			position: absolute;
+			right: calc(100% + 30px);
+			content: "";
+			width: 9px;
+			height: 9px;
+			transition: 0.3s all;
+			box-sizing: boder-box;
+			border: 1px solid $dark;
+			display: block;
+			left: 0px;
+			top: calc(50% - 4px);
+			border-radius: 10px;
+		}
+		&:hover {
+			&:before {
+				border: 1px solid $accent;
+			}
+		}
+		&--active {
+			&:before {
+				box-sizing: boder-box;
+				background-color: $accent;
+			}
+		}
+	}
+}
+
+.side-booking {
+	&__top {
+		border-bottom: 1px solid #7C7169;
+		padding-top: 15px;
+		padding-bottom: 17px;
+	}
+	&__name {
+		color: $light;
+		font-size: 20px;
+		margin-bottom: 19px;
+	}
+	&__line {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 19px;
+	}
+	&__left {
+		width: 50%;
+		padding-right: 20px;
+		color: #BBB0A9;
+	}
+	&__right {
+		width: 50%;
+	}
+	&__bottom {
+		padding-top: 12px;
+	}
+	&__result {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		&--left {
+			width: 40%;
+		}
+		&--right {
+			width: 60%;
+		}
+	}
+	&__fact {
+		top: -14px;
+		right: 4px;
+	}
+	&__result-price {
+		font-size: 34px;
+		font-weight: 500;
+	}
+	&__result-money {
+		font-size: 18px;
 	}
 }

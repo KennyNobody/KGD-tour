@@ -12,10 +12,23 @@
 .review {
 	background: #F9F5F1;
 	border-radius: 6px;
-	padding: 19px;
+	padding: 19px 19px 28px 19px;
 	margin-bottom: 20px;
 	background-image: url(../img/rev-bg.svg);
 	background-repeat: no-repeat;
 	background-position: 97% center;
 	background-size: 100px;
+	&__info {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 20px;
+	}
+	&__name {
+		font-weight: 500;
+	}
+	&__date {
+		font-size: 14px;
+		font-style: italic;
+		color: #7C7169;
+	}
 }
