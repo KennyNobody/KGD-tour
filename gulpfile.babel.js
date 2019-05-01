@@ -56,7 +56,7 @@ const paths = {
 const finalLibs = [
 "./src/libs/swiper/js/swiper.min.js",
 "./src/libs/scroll/OverlayScrollbars.min.js",
-
+// "./src/libs/modal/micromodal.min.js",
 paths.src.scripts
 ];
 
@@ -175,7 +175,7 @@ export const stylesProd = () => src("./src/styles/**/main.scss")
 export const scriptsProd = () => src(finalLibs)
 .pipe(concat("main.js"))
 // .pipe(babel())
-.pipe(uglify())
+// .pipe(uglify())
 .pipe(rename({suffix: ".min"}))
 .pipe(dest(paths.build.scripts))
 .pipe(debug({"title": "JS files"}));

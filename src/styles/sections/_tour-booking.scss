@@ -1,9 +1,18 @@
 .tour-booking {
+	margin-bottom: 120px;
 	&__h2 {
 		margin-bottom: 36px;
 	}
 	&__step {
-
+		display: flex;
+		justify-content: space-between;
+	}
+	&__left {
+		width: 96px;
+		flex-shrink: 0;
+	}
+	&__right {
+		flex-grow: 1;
 	}
 }
 
@@ -60,4 +69,42 @@
 	background-color: #F9F5F1;
 	display: flex;
 	min-height: 86px;
+	margin-bottom: 10px;
+	justify-content: space-between;
+	&__thumb {
+		width: 147px;
+		height: 100%;
+		flex-shrink: 0;
+		img {
+			object-fit: cover;
+			height: 100%;
+			width: 100%;
+			display: block;
+		}
+	}
+	&__content {
+		padding-top: 10px;
+		padding-bottom: 11px;
+		padding-left: 10px;
+		flex-grow: 1;
+		padding-right: 25px;
+	}
+	&__title {
+		margin-bottom: 7px;
+	}
+	&__text {
+		font-size: 12px;
+		color: #7C7169;
+	}
+	&__info {
+		padding-bottom: 5px;
+		flex-shrink: 0;
+		padding-right: 15px;
+	}
+	&__btn {
+		width: 128px;
+		height: 40px;
+		font-size: 14px;
+		font-weight: 500;
+	}
 }

@@ -12,6 +12,7 @@
 @import "components/sidebar";
 @import "components/scroll";
 @import "components/interface";
+@import "components/modal";
 
 h1, h2, h3, h4, p {
 	padding: 0;
@@ -28,7 +29,7 @@ header, main, footer {
 	width: 100%;
 }
 
-header, footer {
+header, footer, aside {
 	flex-shrink: 0;
 }
 
@@ -39,6 +40,10 @@ main {
 
 svg {
 	transition: 0.3s all;
+}
+
+button {
+	cursor: pointer;
 }
 
 .body {
@@ -73,6 +78,7 @@ svg {
 	margin-left: auto;
 	margin-right: auto;
 	text-align: left;
+	max-width: 100%;
 	&--columns {
 		display: flex;
 		justify-content: space-between;
@@ -87,6 +93,7 @@ svg {
 .aside {
 	width: calc(4 / 12 * 100% - 10px);
 	max-width: 100%;
+	padding-bottom: 74px;
 }
 
 .h1 {
@@ -110,12 +117,6 @@ svg {
 		border-right: none;
 		border-radius: 6px 0 0 6px;
 	}
-}
-
-.custom {
-	background-color: green;
-	top: 20px;
-	height: 20px;
 }
 
 .fact {
@@ -144,6 +145,10 @@ svg {
 		color: $dark !important;
 		padding: 5px 9px 10px 9px !important;
 	}
+}
+
+.hidden {
+	display: none;
 }
 
 @import "includes/header";

@@ -1,0 +1,126 @@
+/**************************\
+  Basic Modal Styles
+\**************************/
+
+.modal {
+    &__overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0,0,0,0.6);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 3;
+    }
+    &__container {
+        background-color: $light;
+        padding: 24px 24px 0px 24px;
+        max-width: 500px;
+        width: 100%;
+        max-height: 90vh;
+        border-radius: 6px;
+        overflow-y: auto;
+        box-sizing: border-box;
+        &--small {
+            max-width: 370px;
+        }
+    }
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__footer {
+        margin-bottom: 24px;
+    }
+    &__title {
+        font-size: 22px;
+        font-weight: 500;
+        color: $accent;
+    }
+    &__close {
+        background: transparent;
+        border: 0;
+        outline: none;
+        cursor: pointer;
+        flex-shrink: 0;
+    }
+    &__content {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        line-height: 1.5;
+        color: rgba(0,0,0,.8);
+    }
+    &__text {
+        font-size: 14px;
+    }
+    &__link {
+        font-size: 16px;
+        font-weight: 500;
+        border-bottom: 1px dashed $accent;
+        outline: none;
+        cursor: pointer;
+    }
+    &__btn {
+        width: 140px;
+        height: 40px;
+    }
+    // .os-size-auto-observer {
+    //     height: 100% !important;
+    // }
+}
+
+/**************************\
+  Demo Animation Style
+\**************************/
+@keyframes mmfadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes mmfadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@keyframes mmslideIn {
+  from { transform: translateY(15%); }
+  to { transform: translateY(0); }
+}
+
+@keyframes mmslideOut {
+  from { transform: translateY(0); }
+  to { transform: translateY(-10%); }
+}
+
+.micromodal-slide {
+  display: none;
+}
+
+.micromodal-slide.is-open {
+  display: block;
+}
+
+.micromodal-slide[aria-hidden="false"] .modal__overlay {
+  animation: mmfadeIn .3s cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+.micromodal-slide[aria-hidden="false"] .modal__container {
+  animation: mmslideIn .3s cubic-bezier(0, 0, .2, 1);
+}
+
+.micromodal-slide[aria-hidden="true"] .modal__overlay {
+  animation: mmfadeOut .3s cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+.micromodal-slide[aria-hidden="true"] .modal__container {
+  animation: mmslideOut .3s cubic-bezier(0, 0, .2, 1);
+}
+
+.micromodal-slide .modal__container,
+.micromodal-slide .modal__overlay {
+  will-change: transform;
+}

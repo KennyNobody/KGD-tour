@@ -11,3 +11,47 @@
 		font-size: 18px;
 	}
 }
+
+.close {
+	display: inline-flex;
+	width: 16px;
+	height: 16px;
+	padding: 8px;
+	align-items: center;
+	justify-content: space-between;
+	transition: 0.3s all;
+	box-sizing: content-box;
+	svg {
+		width: 16px;
+		height: 16px;
+		fill: $dark;
+	}
+	&:hover {
+		svg {
+			fill: $accent;
+		}
+	}
+}
+
+.label {
+	display: block;
+	text-align: left;
+	margin-bottom: 16px;
+	&__title {
+		margin-bottom: 6px;
+		color: #7C7169;
+		line-height: 21px;
+	}
+}
+
+.input {
+	border: 1px solid #E4DFDB;
+	box-sizing: border-box;
+	border-radius: 6px;
+	padding-left: 9px;
+	padding-right: 9px;
+	color: $dark;
+	height: 40px;
+	outline: none;
+	width: 100%;
+}
