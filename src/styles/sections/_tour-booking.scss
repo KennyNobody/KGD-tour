@@ -6,6 +6,24 @@
 	&__step {
 		display: flex;
 		justify-content: space-between;
+		&--2 {
+			min-height: 120px;
+			align-items: center;
+		}
+	}
+	&__selects {
+		width: 100%;
+		max-width: 500px;
+		padding: 10px 9px 10px 9px;
+		margin-left: auto;
+		display: flex;
+		align-items: center;
+		margin-right: auto;
+		background: #F9F5F1;
+		border-radius: 6px;
+	}
+	&__select {
+		margin-right: 20px;
 	}
 	&__left {
 		width: 96px;
@@ -58,10 +76,45 @@
 	}
 	&__slider {
 		height: 302px;
-		background-color: green;
 		display: flex;
 		width: 100%;
 		margin-bottom: 36px;
+	}
+	&__map {
+
+	}
+	&__map-title {
+		font-size: 16px;
+		font-weight: 500;
+		margin-bottom: 16px;
+	}
+	&__map-content {
+		height: 287px;
+	}
+	&__selects {
+		display: flex;
+		padding-top: 36px;
+		margin-bottom: 10px;
+	}
+	&__select {
+		width: 50%;
+		max-width: 240px;
+	}
+	&__select-title {
+		font-size: 16px;
+		font-weight: 500;
+		margin-bottom: 20px;
+	}
+	&__control {
+
+	}
+	&__btn {
+		height: 40px;
+		width: 128px;
+		font-size: 14px;
+		display: inline-flex;
+		margin-right: 15px;
+		font-weight: 500;
 	}
 }
 
@@ -106,5 +159,79 @@
 		height: 40px;
 		font-size: 14px;
 		font-weight: 500;
+	}
+}
+
+.thumbs-slider {
+	display: flex;
+	justify-content: space-between;
+	&__top {
+		width: 510px;
+		height: 302px;
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+	&__htumbs {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	&__thumbs-container {
+		width: 85px;
+		margin-left: 0px;
+		margin-right: 0px;
+		height: 260px;
+	}
+	&__top-slide {
+		img {
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+	&__thumbs-slide {
+		height: 56px;
+		transition: 0.3s all;
+		opacity: 0.6;
+		cursor: pointer;
+		img {
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+	&__thumbs-top {
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		height: 25px;
+		outline: none;
+		svg {
+			transform: rotate(-90deg);
+			width: 24px;
+			height: 20px;
+			cursor: pointer;
+			fill: #7C7169;
+		}
+	}
+	&__thumbs-bottom {
+		display: flex;
+		justify-content: center;
+		align-items: flex-end;
+		height: 25px;
+		outline: none;
+		svg {
+			transform: rotate(90deg);
+			width: 24px;
+			height: 20px;
+			cursor: pointer;
+			fill: #7C7169;
+		}
+	}
+	.swiper-slide-thumb-active {
+		opacity: 1;
+	}
+	.swiper-button-disabled {
+		opacity: 0.6;
 	}
 }

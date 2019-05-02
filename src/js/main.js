@@ -18,6 +18,24 @@
 		}
 	})();
 
+	var galleryThumbs = new Swiper('.thumbs-slider__thumbs-container', {
+		direction: 'vertical',
+		spaceBetween: 10,
+		slidesPerView: 4,
+		watchSlidesVisibility: true,
+		watchSlidesProgress: true,
+		navigation: {
+			nextEl: '.thumbs-slider__thumbs-bottom',
+			prevEl: '.thumbs-slider__thumbs-top',
+		},
+	});
+	var galleryTop = new Swiper('.thumbs-slider__top', {
+		spaceBetween: 10,
+		thumbs: {
+			swiper: galleryThumbs
+		}
+	});
+
 	// Всплывающие окошки 
 
 	MicroModal.init();
@@ -79,5 +97,17 @@
 		}
 	});
 
+	// Появление мобильного меню
+	const menuBtn = document.querySelector('.topline__menu');
+	const pageBody = document.querySelector('.body');
+	const menuOverlay = document.querySelector('.menu__overlay');
+
+	menuBtn.addEventListener('click', function() {
+		pageBody.classList.add('body--menu');
+	});
+
+	menuOverlay.addEventListener('click', function() {
+		pageBody.classList.remove('body--menu');
+	})
 
 })();

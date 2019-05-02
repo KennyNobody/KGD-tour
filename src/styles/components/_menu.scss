@@ -1,0 +1,45 @@
+.menu {
+	position: fixed;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	z-index: 4;
+	overflow: hidden;
+	width: 0px;
+	opacity: 0;
+	display: flex;
+	&__content {
+		height: 100%;
+		width: 320px;
+		max-width: 80%;
+		display: flex;
+		background-color: $light;
+		flex-direction: column;
+		justify-content: space-between;
+		padding: 20px;
+		flex-shrink: 0;
+	}
+	&__phone {
+		display: block;
+		margin-bottom: 6px;
+		font-size: 16px;
+	}
+	&__link {
+		font-size: 16px;
+		display: block;
+		margin-bottom: 6px;
+	}
+	&__profile {
+		border-bottom: 1px dashed $accent;
+		display: inline-block;
+		cursor: pointer;
+	}
+	&__overlay {
+		background-color: rgba(60, 53, 48, 0.7);
+		height: 100%;
+		flex-grow: 1;
+		display: block;
+		width: 100%;
+	}
+}
