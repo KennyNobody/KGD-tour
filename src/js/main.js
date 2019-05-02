@@ -18,17 +18,6 @@
 		}
 	})();
 
-	// Кастомный скроллбар https://kingsora.github.io/OverlayScrollbars/
-
-	document.addEventListener("DOMContentLoaded", function() {
-		OverlayScrollbars(document.querySelectorAll(".custom-scroll"), {
-			// paddingAbsolute : true,
-			// scrollbars : {
-			// 	clickScrolling : true
-			// }
-		});
-	});
-
 	// Всплывающие окошки 
 
 	MicroModal.init();
@@ -68,5 +57,27 @@
 			authBlock.classList.remove('hidden');
 		});
 	}
+
+	// Изменение активного пунка меню в сайдбаре
+
+	var section = document.querySelectorAll(".section-anchor");
+	var sections = {};
+	var i = 0;
+
+	Array.prototype.forEach.call(section, function(e) {
+		sections[e.id] = e.offsetTop;
+	});
+
+	document.addEventListener('scroll', function() {
+		var scrollPosition = document.documentElement.scrollTop + 50 || document.body.scrollTop + 50;
+
+		for (i in sections) {
+			if (sections[i] <= scrollPosition) {
+				document.querySelector('.side-menu__link--active').classList.remove('side-menu__link--active');
+				document.querySelector('a[href*=' + i + ']').classList.add('side-menu__link--active');
+			}
+		}
+	});
+
 
 })();

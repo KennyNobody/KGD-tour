@@ -6,19 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="theme-color" content="">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <link rel="shortcut icon" href="/img/favicons/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="/img/favicons/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="57x57" href="/img/favicons/apple-touch-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/img/favicons/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/img/favicons/apple-touch-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/img/favicons/apple-touch-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/img/favicons/apple-touch-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/img/favicons/apple-touch-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicons/apple-touch-icon-180x180.png">
-    <link rel="stylesheet" href="./styles/main.min.css">
+    <link rel="shortcut icon" href="./img/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="./img/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="./img/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./img/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./img/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./img/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon-180x180.png">
+    <link rel="stylesheet" href="./styles/main.css">
 </head>
-<body class="body custom-scroll">
-    <header class="header">
+<body class="body" id="page">
+    <!-- Шапка больше не должна меняться, блок поиск будет жить отдельно и выезжать сверху страницы, как и мобильное меню -->
+    <header class="header" id="header">
     	<div class="container">
     		<div class="topline">
     			<a href="index.html" class="logo topline__logo">
@@ -83,7 +84,7 @@
     			<a href="contacts.html" class="navline__link">
     				Контакты
     			</a>
-    			<div class="navline__search">
+    			<div class="navline__search" id="open-search">
     				<svg class="icon-svg">
     					<use xlink:href="img/sprites/svg/symbols.svg#icon-search"></use>
     				</svg>
@@ -91,10 +92,8 @@
     		</nav>
     	</div>
     </header>
-<!--     <svg class="icon-svg">
-        <use xlink:href="img/sprites/svg/symbols.svg#icon-vk"></use>
-    </svg> -->
     <main>
+        <!-- Далее идет контент, он будет меняться -->
         <section class="breadcrumbs">
         	<div class="container breadcrumbs__container">
         		<a href="index.html" class="breadcrumbs__link">
@@ -181,7 +180,7 @@
         <div class="container container--columns">
             <div class="content">
                 <!-- //= sections/tour-content.html -->
-                <section class="text">
+                <section class="text section-anchor" id="tour-plan">
                 	<h2 class="h2 text__h2">
                 		Программа тура по дням
                 	</h2>
@@ -200,7 +199,7 @@
                 		<p>Завтрак. Выезд из отеля. Переезд по территории Словакии, Польши. Позднее прибытие в Калининград.</p>
                 	</div>
                 </section>
-                <section class="route">
+                <section class="route section-anchor" id="tour-route">
                 	<h2 class="h2 route__h2">
                 		Маршрут тура
                 	</h2>
@@ -208,7 +207,7 @@
                 		
                 	</div>
                 </section>
-                <section class="features">
+                <section class="features section-anchor" id="in-price">
                 	<h2 class="h2 features__h2">
                 		Включено в стоимость тура
                 	</h2>
@@ -267,7 +266,7 @@
                 		</div>
                 	</div>
                 </section>
-                <section class="text">
+                <section class="text section-anchor" id="add-service">
                 	<h2 class="h2 text__h2">
                 		Дополнительные услуги
                 	</h2>
@@ -332,7 +331,7 @@
                 		</table>
                 	</div>
                 </section>
-                <section class="reviews">
+                <section class="reviews section-anchor" id="reviews-tour">
                 	<h2 class="h2 reviews__h2">
                 		Отзывы
                 	</h2>
@@ -379,7 +378,7 @@
                 		Больше отзывов об этом туре
                 	</a>
                 </section>
-                <section class="text">
+                <section class="text section-anchor" id="tips">
                 	<h2 class="h2 text__h2">
                 		Полезные советы
                 	</h2>
@@ -567,27 +566,27 @@
                 </section>
             </div>
             <aside class="aside">
-               <div class="sidebar custom-scroll custom-scroll--accent">
+               <div class="sidebar">
                	<div class="sidebar__menu side-menu">
                		<p class="sidebar__title side-menu__title" data-tippy-content="Я окошечко">
                			Информация о туре
                		</p>
-               		<a href="#" class="side-menu__link side-menu__link--active">
+               		<a href="#tour-plan" class="side-menu__link side-menu__link--active">
                			Программа тура по дням
                		</a>
-               		<a href="#" class="side-menu__link">
+               		<a href="#tour-route" class="side-menu__link">
+               			Маршрут тура
+               		</a>
+               		<a href="#in-price" class="side-menu__link">
                			Включено в стоимость тура
                		</a>
-               		<a href="#" class="side-menu__link">
+               		<a href="#add-service" class="side-menu__link">
                			Дополнительные услуги
                		</a>
-               		<a href="#" class="side-menu__link">
-               			Дополнительные экскурсии
-               		</a>
-               		<a href="#" class="side-menu__link">
+               		<a href="#reviews-tour" class="side-menu__link">
                			Отзывы о туре
                		</a>
-               		<a href="#" class="side-menu__link">
+               		<a href="#tips" class="side-menu__link">
                			Полезные советы
                		</a>
                	</div>
@@ -665,6 +664,7 @@
             </aside>
         </div>
     </main>
+    <!-- Футер больше не должен меняться (ну, вроде как <_< ) -->
     <footer class="footer">
     	<div class="container footer__container">
     		<div class="footer__column footer__column--25">
@@ -698,9 +698,9 @@
     				</span>
     			</a>
     			<br>
-    			<a href="" class="btn btn--dark footer__btn">
+    			<div data-micromodal-trigger="modal-write" class="btn btn--dark footer__btn">
     				Написать
-    			</a>
+    			</div>
     		</div>
     		<div class="footer__column footer__column--25">
     			<p class="footer__text">
@@ -763,10 +763,25 @@
     				Обращаем Ваше внимание на то, что данный интернет-сайт носит исключительно информационный характер и ни при каких условиях информационные материалы и цены, размещенные на сайте, не являются публичной офертой, определяемой положениями Статьи 437 Гражданского кодекса РФ.
     			</p>
     		</div>
+    		<a href="#header" class="footer__go-top go-top">
+    			<p class="go-top__text">
+    				В начало страницы
+    			</p>
+    			<div class="go-top__icon">
+    				<svg class="icon-svg">
+    					<use xlink:href="img/sprites/svg/symbols.svg#icon-next"></use>
+    				</svg>
+    				<svg class="icon-svg">
+    					<use xlink:href="img/sprites/svg/symbols.svg#icon-next"></use>
+    				</svg>
+    			</div>
+    		</a>
     	</div>
     </footer>
     <!-- Это блоки, которые по умолчанию скрыты. Их будет больше -->
     <div class="hiddens">
+    
+    	<!-- Окно регистрации/авторизации -->
     	<div class="modal micromodal-slide" id="modal-login" aria-hidden="true">
     		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
     			<div class="modal__container modal__container--small custom-scroll custom-scroll--accent" role="dialog" aria-modal="true" aria-labelledby="modal-login-title">
@@ -843,10 +858,13 @@
     			</div>
     		</div>
     	</div>
+    	
     </div>
-    <!-- Сейчас тут несколько файлов, подключай все. В самом конце оставлю один, сборщик гонит, не могу пока сделать бандл -->
-    
+    <!-- Это оставляй так, как есть, ничего не трогай -->
     <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/zenscroll/4.0.2/zenscroll-min.js"></script>
+    
+    <!-- Вместо это добавь ссылку гитхаб  https://kennynobody.github.io/KGD-tour/js/main.min.js-->
     <script src="./js/main.min.js"></script>
 </body>
 </html>

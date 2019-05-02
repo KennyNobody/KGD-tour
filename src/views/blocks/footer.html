@@ -1,3 +1,4 @@
+<!-- Футер больше не должен меняться (ну, вроде как <_< ) -->
 <footer class="footer">
 	<div class="container footer__container">
 		<div class="footer__column footer__column--25">
@@ -31,9 +32,9 @@
 				</span>
 			</a>
 			<br>
-			<a href="" class="btn btn--dark footer__btn">
+			<div data-micromodal-trigger="modal-write" class="btn btn--dark footer__btn">
 				Написать
-			</a>
+			</div>
 		</div>
 		<div class="footer__column footer__column--25">
 			<p class="footer__text">
@@ -96,5 +97,18 @@
 				Обращаем Ваше внимание на то, что данный интернет-сайт носит исключительно информационный характер и ни при каких условиях информационные материалы и цены, размещенные на сайте, не являются публичной офертой, определяемой положениями Статьи 437 Гражданского кодекса РФ.
 			</p>
 		</div>
+		<a href="#header" class="footer__go-top go-top">
+			<p class="go-top__text">
+				В начало страницы
+			</p>
+			<div class="go-top__icon">
+				<svg class="icon-svg">
+					<use xlink:href="img/sprites/svg/symbols.svg#icon-next"></use>
+				</svg>
+				<svg class="icon-svg">
+					<use xlink:href="img/sprites/svg/symbols.svg#icon-next"></use>
+				</svg>
+			</div>
+		</a>
 	</div>
 </footer>
