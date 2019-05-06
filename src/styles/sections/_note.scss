@@ -1,0 +1,50 @@
+.note {
+	margin-bottom: 66px;
+	@include r(780) {
+		display: none;
+	}
+	&__content {
+		padding-top: 313px;
+		background-size: cover;
+		background-position: top center;
+		background-repeat: no-repeat;
+		@include r(1200) {
+			padding-top: 40px;
+			padding-bottom: 32px;
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+	}
+	&__block {
+		padding: 14px 20px 32px 20px;
+		background-color: #F9F5F1;
+		width: 320px;
+		margin-left: auto;
+		margin-right: 88px;
+		@include r(1200) {
+			width: auto;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+	&__title {
+		font-size: 38px;
+		line-height: 49px;
+		font-weight: 300;
+		margin-bottom: 20px;
+		@include r(1200) {
+			
+		}
+		@include r(780) {
+			font-size: 24px;
+		}
+	}
+	&__discript {
+		font-style: italic;
+		margin-bottom: 38px;
+	}
+	&__btn {
+		width: 157px;
+		height: 40px;
+	}
+}

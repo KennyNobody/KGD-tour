@@ -18,23 +18,55 @@
 		}
 	})();
 
-	var galleryThumbs = new Swiper('.thumbs-slider__thumbs-container', {
-		direction: 'vertical',
-		spaceBetween: 10,
-		slidesPerView: 4,
-		watchSlidesVisibility: true,
-		watchSlidesProgress: true,
-		navigation: {
-			nextEl: '.thumbs-slider__thumbs-bottom',
-			prevEl: '.thumbs-slider__thumbs-top',
-		},
-	});
-	var galleryTop = new Swiper('.thumbs-slider__top', {
-		spaceBetween: 10,
-		thumbs: {
-			swiper: galleryThumbs
+	(function initHotelSliders() {
+		const sliderArray = document.getElementsByClassName('hotel');
+
+		for (let i = 1; i <= sliderArray.length; i++) {
+
+			let nowSliderBlock = ".hotel--" + i + " .thumbs-slider__thumbs-container";
+			let nowThumbsBlock = ".hotel--" + i + " .thumbs-slider__top";
+			let nowNextLink = ".hotel--" + i + " .thumbs-slider__thumbs-bottom";
+			let nowPrevLink = ".hotel--" + i + " .thumbs-slider__thumbs-top";
+
+			if (nowSliderBlock) {
+				let galleryThumbs = new Swiper(nowSliderBlock, {
+					direction: 'vertical',
+					spaceBetween: 10,
+					slidesPerView: 4,
+					watchSlidesVisibility: true,
+					watchSlidesProgress: true,
+					navigation: {
+						nextEl: nowNextLink,
+						prevEl: nowPrevLink,
+					},
+					breakpoints: {
+						1200: {
+							direction: 'horizontal',
+						}
+					}
+				});
+
+				let galleryTop = new Swiper(nowThumbsBlock, {
+					spaceBetween: 10,
+					thumbs: {
+						swiper: galleryThumbs
+					}
+				});
+			} 
 		}
-	});
+		
+	})();
+
+	(function initMainSliders() {
+		let swiper = new Swiper('.f-slider__slider-container', {
+			slidesPerView: 3,
+			spaceBetween: 20,
+			navigation: {
+				nextEl: '.f-slider__prev',
+				prevEl: '.f-slider__next',
+			},
+		});
+	})();
 
 	// Всплывающие окошки 
 
@@ -90,9 +122,10 @@
 		var scrollPosition = document.documentElement.scrollTop + 50 || document.body.scrollTop + 50;
 
 		for (i in sections) {
+			console.log(i);
 			if (sections[i] <= scrollPosition) {
 				document.querySelector('.side-menu__link--active').classList.remove('side-menu__link--active');
-				document.querySelector('a[href*=' + i + ']').classList.add('side-menu__link--active');
+				document.querySelector('.side-menu a[href*=' + i + ']').classList.add('side-menu__link--active');
 			}
 		}
 	});
@@ -100,6 +133,7 @@
 	// Появление мобильного меню
 	const menuBtn = document.querySelector('.topline__menu');
 	const pageBody = document.querySelector('.body');
+	const menuProfile = document.querySelector('.menu__profile');
 	const menuOverlay = document.querySelector('.menu__overlay');
 
 	menuBtn.addEventListener('click', function() {
@@ -108,6 +142,85 @@
 
 	menuOverlay.addEventListener('click', function() {
 		pageBody.classList.remove('body--menu');
-	})
+	});
+
+	menuProfile.addEventListener('click', function() {
+		pageBody.classList.remove('body--menu');
+	});
+
+	// Раскрытие карточки отеля
+
+	function addEventListenerByClass(className, event, fn) {
+		const hotelBtn = document.getElementsByClassName(className);
+
+		for (let i = 0, len = hotelBtn.length; i < len; i++) {
+			hotelBtn[i].addEventListener('click', fn, false);
+		}
+	}
+
+	function openHotel () {
+		this.parentNode.parentNode.parentNode.parentNode.parentNode.classList.add('hotel--open');
+	}
+
+	addEventListenerByClass('hotel__open', 'click', openHotel);
+
+	// Скрывание карточки отеля
+
+	function closeHotel () {
+		this.parentNode.parentNode.parentNode.classList.remove('hotel--open');
+	}
+
+	addEventListenerByClass('hotel__close', 'click', closeHotel);
+
+	// Выбор даты datepicker
+
+	(function ititDatepickers() {
+		let pickerStart = new Pikaday({
+			field: document.getElementById('datepicker-start'),
+			firstDay: 1,
+			i18n: {
+				previousMonth : 'Предыдущий месяц',
+				nextMonth     : 'Следующий месяц',
+				months        : ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
+				weekdays      : ['Воскресенье','Понедельник','Вторник','Среда','Четверг','Пятница','Суббота'],
+				weekdaysShort : ['Вс','Пн','Вт','Ср','Чт','Пт','Сб']
+			},
+			onSelect: date => {
+				const year = date.getFullYear()
+				,month = date.getMonth() + 1
+				,day = date.getDate()
+				,formattedDate = [
+				day < 10 ? '0' + day : day
+				,month < 10 ? '0' + month : month
+				,year
+				].join('.')
+				document.getElementById('datepicker-start').value = formattedDate
+			}
+		});
+
+		let pickerFinish = new Pikaday({
+			field: document.getElementById('datepicker-finish'),
+			firstDay: 1,
+			format: 'YYYY-MM-DD',
+			i18n: {
+				previousMonth : 'Предыдущий месяц',
+				nextMonth     : 'Следующий месяц',
+				months        : ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
+				weekdays      : ['Воскресенье','Понедельник','Вторник','Среда','Четверг','Пятница','Суббота'],
+				weekdaysShort : ['Вс','Пн','Вт','Ср','Чт','Пт','Сб']
+			},
+			onSelect: date => {
+				const year = date.getFullYear()
+				,month = date.getMonth() + 1
+				,day = date.getDate()
+				,formattedDate = [
+				day < 10 ? '0' + day : day
+				,month < 10 ? '0' + month : month
+				,year
+				].join('.')
+				document.getElementById('datepicker-finish').value = formattedDate
+			}
+		});
+	})();
 
 })();

@@ -7,6 +7,7 @@
 @import "../libs/swiper/css/swiper.min";
 @import "../libs/scroll/OverlayScrollbars.min";
 @import "../libs/tippy/microtip";
+@import "../libs/pikaday/pikaday";
 
 @import "components/blocks";
 @import "components/sidebar";
@@ -61,8 +62,11 @@ button {
 	font-size: 16px;
 	color: $dark;
 	-webkit-font-smoothing: antialiased;
-	@include r(1024) {
-        // пример медиазапроса
+	@include r(1200) {
+
+    }
+    @include r(780) {
+
     }
     &--menu {
     	.menu {
@@ -70,6 +74,12 @@ button {
     		width: 100%;
     	}
     }
+}
+
+.mobile-hidden {
+	@include r(1200) {
+		display: none;
+	}
 }
 
 .icon-svg {
@@ -95,6 +105,9 @@ button {
 .content {
 	width: calc(8 / 12 * 100% - 10px);
 	max-width: 100%;
+	@include r(1200) {
+		width: 100%;
+	}
 }
 
 .aside {
@@ -124,6 +137,9 @@ button {
 		border-right: none;
 		border-radius: 6px 0 0 6px;
 	}
+	@include r(780) {
+    	font-size: 28px;
+    }
 }
 
 .fact {
@@ -133,6 +149,7 @@ button {
 	transition: 0.3s all;
 	cursor: pointer;
 	display: inline-block;
+	top: -0.6em;
 	svg {
 		fill: $accent;
 		width: 100%;
@@ -161,6 +178,12 @@ button {
 @import "includes/header";
 @import "includes/footer";
 
+
+// Главная страница
+@import "sections/note";
+@import "sections/front-sliders";
+
+// Страница тура
 @import "sections/tour";
 @import "sections/plan";
 @import "sections/route";

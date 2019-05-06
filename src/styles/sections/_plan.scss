@@ -13,6 +13,7 @@
 		h3 {
 			font-size: 22px;
 			font-weight: 300;
+			margin-bottom: 10px;
 		}
 		p {
 			line-height: 1.4;
@@ -25,14 +26,26 @@
 			margin-bottom: 20px;
 			display: flex;
 			justify-content: space-between;
+			@include r(780) {
+				display: flex;
+				flex-direction: column;
+			}
 		}
 		td {
 			&:nth-child(1) {
 				width: 85%;
 				padding-right: 35px;
+				@include r(780) {
+					width: 100%;
+					padding-right: 0px;
+					margin-bottom: 5px;
+				}
 			}
 			&:nth-child(2) {
 				width: 15%;
+				@include r(780) {
+					width: 100%;
+				}
 			}
 		}
 	}

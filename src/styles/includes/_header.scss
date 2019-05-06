@@ -76,6 +76,9 @@
 	align-items: center;
 	justify-content: space-between;
 	flex-wrap: wrap;
+	@include r(1200) {
+		display: none;
+	}
 	&__link {
 		height: 48px;
 		display: inline-flex;
@@ -85,6 +88,9 @@
 		text-decoration: none;
 		display: inline-flex;
 		&:hover {
+			color: $accent;
+		}
+		&--active {
 			color: $accent;
 		}
 	}

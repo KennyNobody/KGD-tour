@@ -4,21 +4,47 @@
 	padding-top: 35px;
 	padding-bottom: 53px;
 	font-size: 14px;
+	@include r(780) {
+		padding-bottom: 30px;
+	}
 	&__container {
 		display: flex;
 		justify-content: space-between;
 		position: relative;
+		@include r(1200) {
+			flex-wrap: wrap;
+		}
 	}
 	&__column {
+		@include r(780) {
+			text-align: center;
+			margin-bottom: 28px;
+		}
 		&--25 {
 			width: 25%;
+			@include r(1200) {
+				width: 33%;
+			}
+			@include r(780) {
+				width: 100%;
+			}
 		}
 		&--50 {
 			width: 50%;
+			@include r(1200) {
+				width: 33%;
+			}
+			@include r(780) {
+				width: 100%;
+			}
 		}
 	}
 	&__logo {
 		margin-bottom: 19px;
+		@include r(780) {
+			margin-left: auto;
+			margin-right: auto;
+		}
 	}
 	&__link {
 		display: inline-flex;
@@ -51,6 +77,10 @@
 	&__offer {
 		max-width: 425px;
 		width: 100%;
+		@include r(780) {
+			margin-left: auto;
+			margin-right: auto;
+		}
 	}
 	strong {
 		font-weight: 400;

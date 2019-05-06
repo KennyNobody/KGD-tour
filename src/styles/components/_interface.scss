@@ -162,3 +162,94 @@
 		background-position: 80% center;
 	}
 }
+
+.filter {
+	margin-bottom: 46px;
+	&__body {
+
+	}
+	&__nav {
+		display: flex;
+	}
+	&__tab {
+		border-radius: 6px 6px 0px 0px;
+		padding: 11px 41px 11px 41px;
+		background-color: #7C7169;
+		color: $light;
+		flex-shrink: 0;
+		position: relative;
+		transition: 0.3s all;
+		&--active {
+			background-color: $dark;
+			order: -1;
+			margin-right: -8px;
+			z-index: 2;
+			pointer-events: none;
+		}
+		&:hover {
+			opacity: 0.75;
+		}
+	}
+	&__content {
+		padding-top: 25px;
+		padding-left: 33px;
+		padding-bottom: 17px;
+		padding-right: 33px;
+		background-color: $dark;
+		display: flex;
+	}
+	&__select {
+		height: 40px;
+		padding-left: 10px;
+		outline: none;
+		font-size: 16px;
+		background-image: url('../img/icons/select-bg-right.png');
+		background-repeat: no-repeat;
+		background-position: 94% center;
+		cursor: pointer;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		&--line {
+			margin-right: 20px;
+			border-radius: 6px;
+			width: 205px;
+		}
+		&--contries {
+
+		}
+	}
+	&__date {
+		margin-right: 20px;
+		border-radius: 6px;
+		border: 0px;
+		outline: none;
+		color: $dark;
+		padding-left: 10px;
+		padding-right: 10px;
+		font-size: 16px;
+		background-image: url('../img/icons/datepicker-bg.png');
+		background-repeat: no-repeat;
+		background-position: 94% center;
+		cursor: pointer;
+		&::placeholder {
+			color: $dark;
+		}
+	}
+	&__btn {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 40px;
+		flex-grow: 1;
+		color: $light;
+		border-radius: 6px;
+		background-color: $accent;
+		font-size: 16px;
+		border: 0px;
+		transition: 0.3s all;
+		&:hover {
+			opacity: 0.75;
+		}
+	}
+}

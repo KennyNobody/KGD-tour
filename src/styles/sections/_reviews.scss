@@ -6,6 +6,7 @@
 	&__btn {
 		width: 292px;
 		height: 40px;
+		max-width: 100%;
 	}
 }
 
@@ -16,15 +17,22 @@
 	margin-bottom: 20px;
 	background-image: url(../img/rev-bg.svg);
 	background-repeat: no-repeat;
-	background-position: 97% center;
+	background-position: 97% 30%;
 	background-size: 100px;
 	&__info {
 		display: flex;
 		justify-content: space-between;
 		margin-bottom: 20px;
+		@include r(780) {
+			width: 100%;
+			flex-direction: column;
+		}
 	}
 	&__name {
 		font-weight: 500;
+		@include r(780) {
+			margin-bottom: 5px;
+		}
 	}
 	&__date {
 		font-size: 14px;

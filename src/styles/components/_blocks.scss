@@ -30,6 +30,10 @@
 	&:hover {
 		opacity: 0.75;
 	}
+	&--contrast {
+		border: 2px solid $dark;
+		color: $dark;
+	}
 	&--light {
 		border: 2px solid $accent;
 		color: $dark;
@@ -49,6 +53,9 @@
 	font-size: 14px;
 	padding-top: 23px;
 	padding-bottom: 14px;
+	@include r(780) {
+		display: none;
+	}
 	&__container {
 		display: flex;
 		align-items: center;
@@ -75,6 +82,12 @@
 	width: 686px;
 	height: 420px;
 	position: relative;
+	@include r(600) {
+		height: 300px;
+	}
+	@include r(450) {
+		height: 200px;
+	}
 	&__slide {
 		img {
 			width: 100%;
@@ -128,9 +141,17 @@
 
 .step-title {
 	text-align: center;
+	@include r(1200) {
+		display: flex;
+		width: 100%;
+		align-items: center;
+	}
 	&__number {
 		font-size: 34px;
 		line-height: 45px;
+		@include r(1200) {
+			margin-right: 15px;
+		}
 	}
 	&__discript {
 		font-size: 14px;

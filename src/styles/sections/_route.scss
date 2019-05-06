@@ -1,10 +1,19 @@
 .route {
 	margin-bottom: 85px;
+	@include r(780) {
+		margin-bottom: 60px;
+	}
 	&__h2 {
 		margin-bottom: 50px;
 	}
 	&__map {
 		height: 660px;
 		width: 100%;
+		@include r(1200) {
+			height: 400px;
+		}
+		@include r(780) {
+			height: 350px;
+		}
 	}
 }

@@ -13,6 +13,9 @@
 		margin-bottom: 30px;
 		padding-right: 20px;
 		align-items: center;
+		@include r(780) {
+			width: 100%;
+		}
 	}
 	&__icon {
 		height: 56px;

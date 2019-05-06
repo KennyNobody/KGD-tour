@@ -1,0 +1,161 @@
+.f-slider {
+	margin-bottom: 86px;
+	&__h2 {
+		margin-bottom: 40px;
+	}
+}
+
+.f-slide {
+	display: flex;
+	height: 250px;
+	width: 333px;
+	justify-content: flex-end;
+	flex-direction: column;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	padding-bottom: 20px;
+	padding-top: 20px;
+	padding-right: 20px;
+	&__title {
+		height: 54px;
+		display: inline-flex;
+		background-color: $light;
+		width: fit-content;
+		align-items: center;
+		padding-left: 13px;
+		padding-right: 10px;
+		overflow: hidden;
+		max-width: 100%;
+		span {
+			margin-right: 20px;
+			font-size: 18px;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			overflow: hidden;
+			transition: 0.3s all;
+		}
+		svg {
+			fill: $accent;
+			width: 20px;
+			height: 20px;
+			flex-shrink: 0;
+		}
+	}
+	&:hover {
+		.f-slide__title {
+			span {
+				color: $accent;
+			}
+		}
+	}
+}
+
+.ex-slide {
+	display: flex;
+	height: 250px;
+	width: 333px;
+	justify-content: flex-end;
+	flex-direction: column;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	padding: 15px;
+	color: $light;
+	font-weight: 300;
+	&__content {
+		background-color: rgba(0, 0, 0, 0.6);
+		align-items: center;
+		padding-left: 13px;
+		padding-right: 10px;
+		overflow: hidden;
+		width: 100%;
+		padding: 20px 20px 18px 20px;
+		font-size: 20px;
+	}
+	&__top {
+		text-align: center;
+	}
+	&__bottom {
+		overflow: hidden;
+		max-height: 0px;
+		transition: 0.3s all;
+	}
+	&__info {
+		padding-top: 17px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 17px;
+	}
+	&__price {
+		b {
+			font-size: 22px;
+			font-weight: 500;
+		}
+	}
+	&__btn {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: $light;
+		border: 2px solid $light;
+		border-radius: 6px;
+		height: 40px;
+		&:hover {
+			color: $dark;
+			background-color: $light;
+		}
+	}
+	&:hover {
+		.ex-slide__bottom {
+			max-height: 500px;
+		}
+	}
+}
+
+.tour-slide {
+	width: 333px;
+	&__top {
+		display: flex;
+		height: 250px;
+		justify-content: flex-end;
+		flex-direction: column;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		padding: 14px;
+	}
+	&__bottom {
+		padding-top: 14px;
+		padding-left: 14px;
+		padding-bottom: 14px;
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+	}
+	&__title {
+		display: block;
+		background-color: rgba(0, 0, 0, 0.6);
+		padding-top: 10px;
+		padding-bottom: 10px;
+		text-align: center;
+		color: $light;
+		font-size: 20px;
+	}
+	&__days {
+		font-size: 20px;
+	}
+	&__money {
+		font-size: 22px;
+		font-weight: 500;
+		line-height: 1.2;
+	}
+	&:hover {
+		.tour-slide__title {
+			span {
+				color: $accent;
+			}
+		}
+	}
+}
