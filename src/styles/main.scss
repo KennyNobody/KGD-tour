@@ -64,16 +64,23 @@ button {
 	-webkit-font-smoothing: antialiased;
 	@include r(1200) {
 
-    }
-    @include r(780) {
+	}
+	@include r(780) {
 
-    }
-    &--menu {
-    	.menu {
-    		opacity: 1;
-    		width: 100%;
-    	}
-    }
+	}
+	&--menu {
+		.menu {
+			opacity: 1;
+			width: 100%;
+		}
+	}
+}
+
+.main {
+	padding-bottom: 120px;
+	@include r(1200) {
+		padding-bottom: 80px;
+	}
 }
 
 .mobile-hidden {
@@ -99,7 +106,10 @@ button {
 	&--columns {
 		display: flex;
 		justify-content: space-between;
-		padding-top: 50px;
+		padding-top: 30px;
+		@include r(1200) {
+			flex-wrap: wrap;
+		}
 	}
 }
 
@@ -114,7 +124,15 @@ button {
 .aside {
 	width: calc(4 / 12 * 100% - 10px);
 	max-width: 100%;
-	padding-bottom: 74px;
+	padding-top: 62px;
+	&--mob-top {
+		@include r(1200) {
+			width: 100%;
+			order: -1;
+			padding-top: 0px;
+			margin-bottom: 40px;
+		}
+	}
 }
 
 .h1 {
@@ -139,8 +157,17 @@ button {
 		border-radius: 6px 0 0 6px;
 	}
 	@include r(780) {
-    	font-size: 28px;
-    }
+		font-size: 28px;
+	}
+}
+
+.title {
+	font-size: 34px;
+	position: relative;
+	font-weight: 300;
+	@include r(780) {
+		font-size: 28px;
+	}
 }
 
 .fact {
@@ -163,12 +190,19 @@ button {
 		}
 	}
 	&:after {
+		box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.25);
 		width: 230px !important;
 		box-sizing: border-box !important;
 		white-space: normal !important;
 		background-color: $light !important;
 		color: $dark !important;
 		padding: 5px 9px 10px 9px !important;
+		margin-bottom: 7px !important;
+	}
+	&:before {
+		z-index: 12 !important;
+		margin-bottom: 0px !important;
+		background-color: $light;
 	}
 }
 
@@ -191,3 +225,6 @@ button {
 @import "sections/features";
 @import "sections/reviews";
 @import "sections/tour-booking";
+
+// Страница списков
+@import "sections/list";

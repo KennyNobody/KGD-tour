@@ -53,6 +53,7 @@
 	font-size: 14px;
 	padding-top: 23px;
 	padding-bottom: 14px;
+	width: 100%;
 	@include r(780) {
 		display: none;
 	}
@@ -65,9 +66,9 @@
 		&:hover {
 			color: $accent;
 		}	
-		&--static {
-			color: $accent;
-		}
+	}
+	&__now {
+		color: $accent;
 	}
 	svg {
 		margin-left: 6px;
