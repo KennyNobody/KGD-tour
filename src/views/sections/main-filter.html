@@ -2,14 +2,14 @@
 	<div class="container">
 		<div class="filter__body">
 			<div class="filter__nav">
-				<a href="" class="filter__tab filter__tab--active">
+				<span class="filter__tab filter__tab--1 filter__tab--active">
 					Автобусные туры в Европу
-				</a>
-				<a href="" class="filter__tab">
+				</span>
+				<span class="filter__tab filter__tab--2">
 					Экскурсии по Калининградской области
-				</a>
+				</span>
 			</div>
-			<form action="" class="filter__content">
+			<form action="" class="filter__content filter__content--1">
 				<select class="filter__select filter__select--contries filter__select--line" >
 					<option value="all">Все страны</option>
 					<option value="1">Категория 1</option>
@@ -20,6 +20,19 @@
 				</select>
 				<select class="filter__select filter__select--tours filter__select--line">
 					<option value="all">Все туры</option>
+					<option value="1">Категория 1</option>
+					<option value="2">Категория 2</option>
+					<option value="3">Категория 3</option>
+					<option value="4">Категория 4</option>
+					<option value="5">Категория 5</option>
+				</select>
+				<input class="filter__date" type="text" placeholder="Дата выезда, с" id="datepicker-start">
+				<input class="filter__date" type="text" placeholder="Дата выезда, по" id="datepicker-finish">
+				<button class="filter__btn">Поиск</button>
+			</form>
+			<form action="" class="filter__content filter__content--hide filter__content--2">
+				<select class="filter__select filter__select--tours filter__select--line filter__select--big-line">
+					<option value="all">Все категории</option>
 					<option value="1">Категория 1</option>
 					<option value="2">Категория 2</option>
 					<option value="3">Категория 3</option>

@@ -165,11 +165,15 @@
 
 .filter {
 	margin-bottom: 46px;
+	@include r(780) {
+		padding-top: 30px;
+	}
 	&__body {
 
 	}
 	&__nav {
 		display: flex;
+		flex-wrap: wrap;
 	}
 	&__tab {
 		border-radius: 6px 6px 0px 0px;
@@ -179,12 +183,31 @@
 		flex-shrink: 0;
 		position: relative;
 		transition: 0.3s all;
+		cursor: pointer;
+		@include r(780) {
+			display: block;
+			width: 100%;
+			text-align: center;
+		}
+		&--1 {
+			z-index: 2;
+			@include r(780) {
+				border-radius: 6px 6px 0px 0px;
+			}
+		}
+		&--2 {
+			@include r(780) {
+				border-radius: 0;
+			}
+		}
 		&--active {
 			background-color: $dark;
-			order: -1;
+			// order: -1;
 			margin-right: -8px;
-			z-index: 2;
 			pointer-events: none;
+			@include r(780) {
+				
+			}
 		}
 		&:hover {
 			opacity: 0.75;
@@ -197,6 +220,17 @@
 		padding-right: 33px;
 		background-color: $dark;
 		display: flex;
+		border-radius: 0px 6px 6px 6px;
+		@include r(1200) {
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+		@include r(780) {
+			border-radius: 0px 0px 6px 6px;
+		}
+		&--hide {
+			display: none;
+		}
 	}
 	&__select {
 		height: 40px;
@@ -214,6 +248,17 @@
 			margin-right: 20px;
 			border-radius: 6px;
 			width: 205px;
+			@include r(1200) {
+				width: calc(50% - 8px);
+				margin-right: 0px;
+				margin-bottom: 10px;
+			}
+			@include r(780) {
+				width: 100%;
+			}
+		}
+		&--big-line {
+			width: 284px;
 		}
 		&--contries {
 
@@ -232,8 +277,14 @@
 		background-repeat: no-repeat;
 		background-position: 94% center;
 		cursor: pointer;
+		height: 40px;
 		&::placeholder {
 			color: $dark;
+		}
+		@include r(780) {
+			width: 100%;
+			margin-right: 0px;
+			margin-bottom: 10px;
 		}
 	}
 	&__btn {
@@ -250,6 +301,9 @@
 		transition: 0.3s all;
 		&:hover {
 			opacity: 0.75;
+		}
+		@include r(780) {
+			width: 100%;
 		}
 	}
 }

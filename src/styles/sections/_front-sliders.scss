@@ -1,7 +1,69 @@
 .f-slider {
-	margin-bottom: 86px;
+	margin-bottom: 76px;
+	&__container {
+		padding-top: 10px;
+		position: relative;
+		overflow: hidden;
+	}
+	&__slider-container {
+		overflow: visible;
+	}
 	&__h2 {
 		margin-bottom: 40px;
+	}
+	&__prev {
+		cursor: pointer;
+		width: 26px;
+		height: 26px;
+		position: absolute;
+		right: 46px;
+		top: -76px;
+		z-index: 2;
+		outline: none;
+		svg {
+			height: 26px;
+			width: 26px;
+			fill: #7C7169;
+			transform: rotate(180deg);
+			display: block;
+		}
+		&:hover {
+			svg {
+				fill: $accent;
+			}
+		}
+		@include r(780) {
+			left: 0px;
+			top: 50%;
+			margin-top: -13px;
+		}
+	}
+	&__next {
+		cursor: pointer;
+		width: 26px;
+		height: 26px;
+		position: absolute;
+		right: 0px;
+		top: -76px;
+		z-index: 2;
+		outline: none;
+		svg {
+			height: 26px;
+			width: 26px;
+			fill: #7C7169;
+			display: block;
+		}
+		&:hover {
+			svg {
+				fill: $accent;
+			}
+		}
+		@include r(780) {
+			right: 0px;
+			top: 50%;
+			margin-top: -13px;
+		}
+
 	}
 }
 
