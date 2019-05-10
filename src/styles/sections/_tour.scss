@@ -11,6 +11,10 @@
 		@include r(1200) {
 			width: 100%;	
 		}
+		&--ex {
+			margin-bottom: 40px;
+			width: 100%;
+		}
 	}
 	&__content {
 		padding-top: 44px;
@@ -47,5 +51,18 @@
 	&__btn {
 		width: 208px;
 		height: 40px;
+	}
+}
+
+.video {
+	&__h2 {
+		margin-bottom: 30px;
+	}
+	&__content {
+		height: 385px;
+		width: 100%;
+		@include r(780) {
+			height: 300px;
+		}
 	}
 }

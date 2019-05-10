@@ -124,12 +124,19 @@ button {
 .aside {
 	width: calc(4 / 12 * 100% - 10px);
 	max-width: 100%;
-	padding-top: 62px;
+	padding-top: 65px;
 	&--mob-top {
 		@include r(1200) {
 			width: 100%;
 			order: -1;
 			padding-top: 0px;
+			margin-bottom: 40px;
+		}
+	}
+	&--mob-bottom {
+		@include r(1200) {
+			width: 100%;
+			padding-top: 40px;
 			margin-bottom: 40px;
 		}
 	}
@@ -228,3 +235,6 @@ button {
 
 // Страница списков
 @import "sections/list";
+
+// Странциа бронирования
+@import "sections/data";

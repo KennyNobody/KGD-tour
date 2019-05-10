@@ -6,6 +6,13 @@
 	&__h2 {
 		margin-bottom: 50px;
 	}
+	&__text {
+		margin-bottom: 44px;
+		&-title {
+			font-weight: 500;
+			display: block;
+		}
+	}
 	&__map {
 		height: 660px;
 		width: 100%;

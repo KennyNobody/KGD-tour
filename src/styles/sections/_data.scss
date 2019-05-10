@@ -1,0 +1,210 @@
+.data {
+	&__title {
+		margin-bottom: 21px;
+	}
+	&__block {
+		padding: 14px 16px 19px 16px;
+		background: #F9F5F1;
+		border-radius: 6px;
+		color: #7C7169;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	&__separator {
+		display: flex;
+		justify-content: center;
+	}
+	&__separator-icon {
+		width: 60px;
+		height: 23px;
+		background: #F9F5F1;
+		flex-shrink: 0;
+	}
+	&__header {
+		display: flex;
+		align-items: center;
+		margin-bottom: 19px;
+		width: 100%;
+		padding-left: 5px;
+		padding-right: 5px;
+		@include r(780) {
+			display: block;
+		}
+	}
+	&__header-title {
+		width: 40%;
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 27px;
+		color: $dark;
+		@include r(780) {
+			width: 100%;
+			margin-bottom: 10px;
+		}
+	}
+	&__passport-info {
+		width: 60%;
+	}
+	&__label {
+		margin-bottom: 15px;
+		display: block;
+		flex-shrink: 0;
+		&--100 {
+			width: 100%;
+			@include r(1200) {
+				width: 100%;
+			}
+		}
+		&--70 {
+			width: calc(70% - 10px);
+			@include r(1200) {
+				width: 100%;
+			}
+		}
+		&--50 {
+			width: calc(50% - 10px);
+			@include r(1200) {
+				width: 100%;
+			}
+		}
+		&--33 {
+			width: calc(33% - 10px);
+			@include r(1200) {
+				width: 100%;
+			}
+		}
+		&--40 {
+			width: calc(40% - 10px);
+			@include r(1200) {
+				width: 100%;
+			}
+		}
+		&--30 {
+			width: calc(30% - 10px);
+			@include r(1200) {
+				width: 100%;
+			}
+		}
+		&--25 {
+			width: calc(25% - 10px);
+			@include r(1200) {
+				width: 100%;
+			}
+		}
+		&--20 {
+			width: calc(20% - 10px);
+			@include r(1200) {
+				width: 100%;
+			}
+		}
+	}
+	&__label-title {
+		display: flex;
+		justify-content: space-between;
+		@include r(1200) {
+			flex-direction: column;
+		}
+		span {
+			font-size: 12px;
+			font-style: italic;
+		}
+	}
+	&__date {
+		border: 1px solid #E4DFDB;
+		width: 100%;
+		box-sizing: border-box;
+	}
+	&__select {
+		border: 1px solid #E4DFDB;
+		box-sizing: border-box;
+		border-radius: 6px;
+		background-color: $light;
+		width: 100%;
+		height: 40px;
+		font-size: 16px;
+		padding-left: 9px;
+		padding-right: 9px;
+		color: #3C3530;
+		outline: none;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		background-image: url('../img/icons/select-bg.png');
+		background-repeat: no-repeat;
+		background-position: 95% center
+	}
+	hr {
+		height: 1px;
+		width: 100%;
+		background-color: #E4DFDB;
+		display: block;
+		margin-bottom: 10px;
+		border: none;
+	}
+	&__radios {
+		display: flex;
+		align-items: center;
+		height: 40px;
+		@include r(780) {
+			height: auto;
+			display: block;
+		}
+
+	}
+	&__radio {
+		width: 110px;
+		max-width: 50%;
+		@include r(780) {
+			width: 100%;
+			max-width: 100%;
+		}
+		&--50 {
+			width: 50%;
+			@include r(780) {
+				width: 100%;
+				max-width: 100%;
+			}
+		}
+	}
+	&__checkbox {
+		width: 100%;
+		@include r(780) {
+			margin-bottom: 10px;
+			align-items: flex-start;
+		}
+	}
+	&__textarea {
+		width: 100%;
+		height: 271px;
+		left: 460px;
+		background-color: $light;
+		border: 1px solid #E4DFDB;
+		box-sizing: border-box;
+		border-radius: 6px;
+		resize: none;
+		padding: 11px 15px 15px 15px;
+		font-family: "Segoe UI", Arial, sans-serif;
+		font-size: 14px;
+		color: $dark;
+		outline: none;
+		&::placeholder {
+			color: #7C7169;
+		}
+	}
+	&__submit-checkbox {
+		margin-bottom: 12px;
+		height: auto;
+		@include r(780) {
+			br {
+				display: none;
+			}
+		}
+
+	}
+	&__btn {
+		width: 285px;
+		max-width: 100%;
+		height: 40px;
+	}
+}

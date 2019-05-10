@@ -47,6 +47,13 @@
 		color: $dark;
 		border: 2px solid $dark;
 	}
+	&--disabled {
+		pointer-events: none;
+		cursor: auto;
+		color: $light;
+		background-color: #E4DFDB;
+		border-color: #E4DFDB;
+	}
 }
 
 .breadcrumbs {

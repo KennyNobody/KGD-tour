@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Калиниград-тур</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme-color" content="">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    //= includes/head-links.html
+</head>
+<body class="body" id="page">
+    //= blocks/header.html
+    <main class="main">
+        <!-- Далее идет контент, он будет меняться -->
+        //= sections/breadcrumbs.html
+        <div class="container container--columns">
+            <div class="content">
+                <section class="data">
+                    <h2 class="title data__title">
+                        Заполните анкетные данные
+                    </h2>
+                    <div class="data__block">
+                        <div class="data__header">
+                            <p class="data__header-title">
+                                Информация о заказчике
+                            </p>
+                            <p class="data__passport-info">
+                                по общегражданскому паспорту
+                            </p>
+                        </div>
+                        <label class="label data__label data__label--100">
+                            <p class="label__title">
+                                ФИО
+                            </p>
+                            <input class="input" type="text">
+                        </label>
+                        <label class="data__label data__label--33">
+                            <p class="filter__label-title">
+                                Выберите дату:
+                            </p>
+                            <input class="filter__date data__date" type="text" placeholder="04.06.2019" id="datepicker-start">
+                        </label>
+                        <label class="label data__label data__label--33">
+                            <p class="label__title">
+                                Серия и номер паспорта
+                            </p>
+                            <input class="input" type="text">
+                        </label>
+                        <label class="label data__label data__label--33">
+                            <p class="label__title">
+                                Дата выдачи
+                            </p>
+                            <input class="input" type="text">
+                        </label>
+                        <label class="label data__label data__label--70">
+                            <p class="label__title">
+                                Кем выдан
+                            </p>
+                            <input class="input" type="text">
+                        </label>
+                        <label class="label data__label data__label--30">
+                            <p class="label__title">
+                                Код подразделения
+                            </p>
+                            <input class="input" type="text">
+                        </label>
+                        <label class="label data__label data__label--50">
+                            <p class="label__title">
+                                Мобильный телефон
+                            </p>
+                            <input class="input" type="text">
+                        </label>
+                        <label class="label data__label data__label--50">
+                            <p class="label__title">
+                                E-mail
+                            </p>
+                            <input class="input" type="text">
+                        </label>
+                    </div>
+                    <div class="data__separator">
+                        <div class="data__separator-icon"></div>
+                    </div>
+                    <div class="data__block">
+                        <div class="data__header">
+                            <p class="data__header-title">
+                                Информация о туристе 1
+                            </p>
+                            <p class="data__passport-info">
+                                по заграничному паспорту
+                            </p>
+                        </div>
+                        <label class="label data__label data__label--50">
+                            <p class="label__title data__label-title">
+                                Фамилия
+                                <span>Заполняется латинскими буквами</span>
+                            </p>
+                            <input class="input" type="text">
+                        </label>
+                        <label class="label data__label data__label--50">
+                            <p class="label__title data__label-title">
+                                Имя
+                                <span>Заполняется латинскими буквами</span>
+                            </p>
+                            <input class="input" type="text">
+                        </label>
+                        <label class="data__label data__label--20">
+                            <p class="filter__label-title">
+                                Выберите дату:
+                            </p>
+                            <input class="filter__date data__date" type="text" placeholder="04.06.2019" id="datepicker-start">
+                        </label>
+                        <label class="label data__label data__label--40">
+                            <p class="label__title">
+                                Страна рождения
+                            </p>
+                            <select class="data__select">
+                                <option value="Россия">Россия</option>
+                                <option value="Украина">Украина</option>
+                                <option value="Казахстан">Казахстан</option>
+                            </select>
+                        </label>
+                        <label class="label data__label data__label--40">
+                            <p class="label__title">
+                                Гражданство
+                            </p>
+                            <select class="data__select">
+                                <option value="Россия">Россия</option>
+                                <option value="Украина">Украина</option>
+                                <option value="Казахстан">Казахстан</option>
+                            </select>
+                        </label>
+                        <label class="label data__label data__label--50">
+                            <p class="label__title">
+                                Серия и номер заграничного паспорта
+                            </p>
+                            <input class="input" type="text">
+                        </label>
+                        <label class="label data__label data__label--50">
+                            <p class="label__title">
+                                Кем выдан
+                            </p>
+                            <input class="input" type="text">
+                        </label>
+                        <label class="data__label data__label--25">
+                            <p class="filter__label-title">
+                                Паспорт выдан
+                            </p>
+                            <input class="filter__date data__date" type="text" placeholder="04.06.2019" id="datepicker-start">
+                        </label>
+                        <label class="data__label data__label--25">
+                            <p class="filter__label-title">
+                                Действителен до
+                            </p>
+                            <input class="filter__date data__date" type="text" placeholder="04.06.2019" id="datepicker-start">
+                        </label>
+                        <div class="data__label data__label--50">
+                            <p class="filter__label-title">
+                                Пол
+                            </p>
+                            <div class="data__radios">
+                                <label class="radio data__radio">
+                                    <input type="radio" name="people-sex" checked>
+                                    <div class="radio__icon">
+                                        <div class="radio__icon-point"></div>
+                                    </div>
+                                    <p class="radio__text">
+                                        мужской
+                                    </p>
+                                </label>
+                                <label class="radio data__radio">
+                                    <input type="radio" name="people-sex">
+                                    <div class="radio__icon">
+                                        <div class="radio__icon-point"></div>
+                                    </div>
+                                    <p class="radio__text">
+                                        женский
+                                    </p>
+                                </label>
+                            </div>
+                        </div>
+                        <hr>
+                        <br>
+                        <br>
+                        <div class="data__header">
+                            <p class="data__header-title">
+                                Визы
+                            </p>
+                        </div>
+                        <label class="radio data__radio data__radio--50">
+                            <input type="radio" name="people-visa-1" checked>
+                            <div class="radio__icon">
+                                <div class="radio__icon-point"></div>
+                            </div>
+                            <p class="radio__text">
+                                виза не нужна
+                            </p>
+                        </label>
+                        <label class="radio data__radio data__radio--50">
+                            <input type="radio" name="people-visa-1">
+                            <div class="radio__icon">
+                                <div class="radio__icon-point"></div>
+                            </div>
+                            <p class="radio__text">
+                                Шенгенская виза, тип D, взрослый
+                            </p>
+                        </label>
+                        <label class="radio data__radio data__radio--50">
+                            <input type="radio" name="people-visa-1">
+                            <div class="radio__icon">
+                                <div class="radio__icon-point"></div>
+                            </div>
+                            <p class="radio__text">
+                                Шенгенская виза, тип D, ребенок
+                            </p>
+                        </label>
+                        <br>
+                        <br>
+                        <br>
+                        <hr>
+                        <br>
+                        <br>
+                        <div class="data__header">
+                            <p class="data__header-title">
+                                Услуги
+                            </p>
+                        </div>
+                        <label class="checkbox data__checkbox">
+                            <input type="checkbox">
+                            <div class="checkbox__icon">
+                                <svg class="icon-svg">
+                                    <use xlink:href="img/sprites/svg/symbols.svg#icon-check"></use>
+                                </svg>
+                            </div>
+                            <div class="checkbox__text checkbox__text--line">
+                                <p>
+                                    Медицинская страховка
+                                </p>
+                                <b>
+                                    30 EUR
+                                </b>
+                            </div>
+                        </label>
+                        <label class="checkbox data__checkbox">
+                            <input type="checkbox">
+                            <div class="checkbox__icon">
+                                <svg class="icon-svg">
+                                    <use xlink:href="img/sprites/svg/symbols.svg#icon-check"></use>
+                                </svg>
+                            </div>
+                            <div class="checkbox__text checkbox__text--line">
+                                <p>
+                                    Гарантийный сбор от невыезда
+                                </p>
+                                <b>
+                                    100 EUR
+                                </b>
+                            </div>
+                        </label>
+                        <label class="checkbox data__checkbox">
+                            <input type="checkbox">
+                            <div class="checkbox__icon">
+                                <svg class="icon-svg">
+                                    <use xlink:href="img/sprites/svg/symbols.svg#icon-check"></use>
+                                </svg>
+                            </div>
+                            <div class="checkbox__text checkbox__text--line">
+                                <p>
+                                    Выбор места в автобусе: 5C <a href="">(Изменить)</a>
+                                </p>
+                                <b>
+                                    10 EUR
+                                </b>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="data__separator">
+                        <div class="data__separator-icon"></div>
+                    </div>
+                    <div class="data__block">
+                        <div class="data__header">
+                            <p class="data__header-title">
+                                Информация о туристе 2
+                            </p>
+                            <p class="data__passport-info">
+                                по заграничному паспорту
+                            </p>
+                        </div>
+                        <label class="label data__label data__label--50">
+                            <p class="label__title data__label-title">
+                                Фамилия
+                                <span>Заполняется латинскими буквами</span>
+                            </p>
+                            <input class="input" type="text">
+                        </label>
+                        <label class="label data__label data__label--50">
+                            <p class="label__title data__label-title">
+                                Имя
+                                <span>Заполняется латинскими буквами</span>
+                            </p>
+                            <input class="input" type="text">
+                        </label>
+                        <label class="data__label data__label--20">
+                            <p class="filter__label-title">
+                                Выберите дату:
+                            </p>
+                            <input class="filter__date data__date" type="text" placeholder="04.06.2019" id="datepicker-start">
+                        </label>
+                        <label class="label data__label data__label--40">
+                            <p class="label__title">
+                                Страна рождения
+                            </p>
+                            <select class="data__select">
+                                <option value="Россия">Россия</option>
+                                <option value="Украина">Украина</option>
+                                <option value="Казахстан">Казахстан</option>
+                            </select>
+                        </label>
+                        <label class="label data__label data__label--40">
+                            <p class="label__title">
+                                Гражданство
+                            </p>
+                            <select class="data__select">
+                                <option value="Россия">Россия</option>
+                                <option value="Украина">Украина</option>
+                                <option value="Казахстан">Казахстан</option>
+                            </select>
+                        </label>
+                        <label class="label data__label data__label--50">
+                            <p class="label__title">
+                                Серия и номер заграничного паспорта
+                            </p>
+                            <input class="input" type="text">
+                        </label>
+                        <label class="label data__label data__label--50">
+                            <p class="label__title">
+                                Кем выдан
+                            </p>
+                            <input class="input" type="text">
+                        </label>
+                        <label class="data__label data__label--25">
+                            <p class="filter__label-title">
+                                Паспорт выдан
+                            </p>
+                            <input class="filter__date data__date" type="text" placeholder="04.06.2019" id="datepicker-start">
+                        </label>
+                        <label class="data__label data__label--25">
+                            <p class="filter__label-title">
+                                Действителен до
+                            </p>
+                            <input class="filter__date data__date" type="text" placeholder="04.06.2019" id="datepicker-start">
+                        </label>
+                        <div class="data__label data__label--50">
+                            <p class="filter__label-title">
+                                Пол
+                            </p>
+                            <div class="data__radios">
+                                <label class="radio data__radio">
+                                    <input type="radio" name="people-sex-2" checked>
+                                    <div class="radio__icon">
+                                        <div class="radio__icon-point"></div>
+                                    </div>
+                                    <p class="radio__text">
+                                        мужской
+                                    </p>
+                                </label>
+                                <label class="radio data__radio">
+                                    <input type="radio" name="people-sex-2">
+                                    <div class="radio__icon">
+                                        <div class="radio__icon-point"></div>
+                                    </div>
+                                    <p class="radio__text">
+                                        женский
+                                    </p>
+                                </label>
+                            </div>
+                        </div>
+                        <hr>
+                        <br>
+                        <br>
+                        <div class="data__header">
+                            <p class="data__header-title">
+                                Визы
+                            </p>
+                        </div>
+                        <label class="radio data__radio data__radio--50">
+                            <input type="radio" name="people-visa-2" checked>
+                            <div class="radio__icon">
+                                <div class="radio__icon-point"></div>
+                            </div>
+                            <p class="radio__text">
+                                виза не нужна
+                            </p>
+                        </label>
+                        <label class="radio data__radio data__radio--50">
+                            <input type="radio" name="people-visa-2">
+                            <div class="radio__icon">
+                                <div class="radio__icon-point"></div>
+                            </div>
+                            <p class="radio__text">
+                                Шенгенская виза, тип D, взрослый
+                            </p>
+                        </label>
+                        <label class="radio data__radio data__radio--50">
+                            <input type="radio" name="people-visa-2">
+                            <div class="radio__icon">
+                                <div class="radio__icon-point"></div>
+                            </div>
+                            <p class="radio__text">
+                                Шенгенская виза, тип D, ребенок
+                            </p>
+                        </label>
+                        <br>
+                        <br>
+                        <br>
+                        <hr>
+                        <br>
+                        <br>
+                        <div class="data__header">
+                            <p class="data__header-title">
+                                Услуги
+                            </p>
+                        </div>
+                        <label class="checkbox data__checkbox">
+                            <input type="checkbox" checked>
+                            <div class="checkbox__icon">
+                                <svg class="icon-svg">
+                                    <use xlink:href="img/sprites/svg/symbols.svg#icon-check"></use>
+                                </svg>
+                            </div>
+                            <div class="checkbox__text checkbox__text--line">
+                                <p>
+                                    Медицинская страховка
+                                </p>
+                                <b>
+                                    30 EUR
+                                </b>
+                            </div>
+                        </label>
+                        <label class="checkbox data__checkbox">
+                            <input type="checkbox">
+                            <div class="checkbox__icon">
+                                <svg class="icon-svg">
+                                    <use xlink:href="img/sprites/svg/symbols.svg#icon-check"></use>
+                                </svg>
+                            </div>
+                            <div class="checkbox__text checkbox__text--line">
+                                <p>
+                                    Гарантийный сбор от невыезда
+                                </p>
+                                <b>
+                                    100 EUR
+                                </b>
+                            </div>
+                        </label>
+                        <label class="checkbox data__checkbox">
+                            <input type="checkbox">
+                            <div class="checkbox__icon">
+                                <svg class="icon-svg">
+                                    <use xlink:href="img/sprites/svg/symbols.svg#icon-check"></use>
+                                </svg>
+                            </div>
+                            <div class="checkbox__text checkbox__text--line">
+                                <p>
+                                    Выбор места в автобусе: 5C <a href="">(Изменить)</a>
+                                </p>
+                                <b>
+                                    10 EUR
+                                </b>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="data__separator">
+                        <div class="data__separator-icon"></div>
+                    </div>
+                    <div class="data__block">
+                        <div class="data__header">
+                            <p class="data__header-title">
+                                Примечания к заявке
+                            </p>
+                        </div>
+                        <textarea class="data__textarea" placeholder="Едете с друзьями? Укажите номер их заявки чтобы быть в одном автобусе или транзитном отеле. Так же вы можете указать здесь пожелания по поводу выбора отдельных, двуспальных кроватей в отелях, детских кроваток и иные пожелания.&#10;&#10;При наличии возможности мы постараемся удовлетворить ваши пожелания."></textarea>
+                    </div>
+                    <br>
+                    <label class="checkbox data__submit-checkbox">
+                        <input type="checkbox" id="data__submit--1">
+                        <div class="checkbox__icon">
+                            <svg class="icon-svg">
+                                <use xlink:href="img/sprites/svg/symbols.svg#icon-check"></use>
+                            </svg>
+                        </div>
+                        <div class="checkbox__text checkbox__text">
+                            <p>
+                                Настоящим согласием я подтверждаю, что ознакомлен(а) и согласен(на) с <a href="#">политикой <br> обработки персональных данных</a> 
+                            </p>
+                        </div>
+                    </label>
+                    <label class="checkbox data__submit-checkbox">
+                        <input type="checkbox" id="data__submit--2">
+                        <div class="checkbox__icon">
+                            <svg class="icon-svg">
+                                <use xlink:href="img/sprites/svg/symbols.svg#icon-check"></use>
+                            </svg>
+                        </div>
+                        <div class="checkbox__text checkbox__text">
+                            <p>
+                                Настоящим согласием я подтверждаю, что ознакомлен(а) и согласен(на) с <a href="#">договором-офертой</a> 
+                            </p>
+                        </div>
+                    </label>
+                    <a href="data-final.html" class="btn btn--dark data__btn btn--disabled">
+                        Продолжить
+                    </a>
+                </section>
+            </div>
+            <aside class="aside mobile-hidden">
+                <div class="sidebar">
+                    <div class="sidebar__booking side-booking">
+                        <div class="side-booking__top">
+                            <p class="sidebar__title side-booking__title">
+                                Бронирование
+                            </p>
+                            <p class="side-booking__name">
+                                Прага-Дрезден (6 дней)
+                            </p>
+                            <div class="side-booking__line">
+                                <div class="side-booking__left">
+                                    Выезд:
+                                </div>
+                                <div class="side-booking__right">
+                                    25 сент.-1 окт. 2019
+                                </div>
+                            </div>
+                            <div class="side-booking__line">
+                                <div class="side-booking__left">
+                                    Экскурсионный пакет:
+                                </div>
+                                <div class="side-booking__right">
+                                    да
+                                </div>
+                            </div>
+                            <div class="side-booking__line">
+                                <div class="side-booking__left">
+                                    Отель:
+                                </div>
+                                <div class="side-booking__right">
+                                    <p>
+                                        Andalousie
+                                    </p>
+                                    <p>
+                                        стандартный номер
+                                    </p>
+                                    <p>
+                                        без питания
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="side-booking__line">
+                                <div class="side-booking__left">
+                                    Взрослых:
+                                </div>
+                                <div class="side-booking__right">
+                                    2
+                                </div>
+                            </div>
+                        </div>
+                        <div class="side-booking__bottom">
+                            <div class="side-booking__result">
+                                <div class="side-booking__result--left">
+                                    <span class="side-booking__result-price">
+                                        245
+                                    </span>
+                                    <span class="side-booking__result-money">
+                                        EUR
+                                    </span>
+                                    <div class="fact side-booking__fact" aria-label="при условии приобретения экскурсионного пакета Высокие Татры и Краков (35 EUR)" data-microtip-position="top-right" role="tooltip">
+                                        <svg class="icon-svg">
+                                            <use xlink:href="img/sprites/svg/symbols.svg#icon-warning"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="side-booking__result--right">
+                                    С человека в 2-х местном стандартном номере
+                                </div>
+                            </div>
+                            <a href="#" class="btn side-booking__btn">
+                                Забронировать
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+    //= blocks/footer.html
+    //= blocks/hiddens.html
+    //= includes/scripts.html
+</body>
+</html>

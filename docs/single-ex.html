@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Калиниград-тур</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme-color" content="">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" href="./img/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="./img/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="./img/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./img/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./img/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./img/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon-180x180.png">
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body class="body" id="page">
+    <!-- Шапка больше не должна меняться, блок поиск будет жить отдельно и выезжать сверху страницы, как и мобильное меню -->
+    <header class="header" id="header">
+    	<div class="container">
+    		<div class="topline">
+    			<a href="index.html" class="logo topline__logo">
+    				<img src="img/logo.svg" alt="Логотип Калининград-тур">
+    			</a>
+    			<div class="rate topline__rate">
+    				<div class="rate__wrap">
+    					<p class="rate__title">
+    						Курс евро:
+    					</p>
+    					<p class="rate__money">
+    						67.74 <span class="rate__symbol">₽</span>
+    					</p>
+    				</div>
+    			</div>
+    			<a href="tel:+74012534400" class="topline__link topline__link--phone">
+    				<svg class="icon-svg">
+    					<use xlink:href="img/sprites/svg/symbols.svg#icon-phone"></use>
+    				</svg>
+    				<span>
+    					(4012) 53-44-00
+    				</span>
+    			</a>
+    			<a href="tel:+78002009106" class="topline__link topline__link--phone">
+    				<svg class="icon-svg">
+    					<use xlink:href="img/sprites/svg/symbols.svg#icon-phone"></use>
+    				</svg>
+    				<span>
+    					8-800-200-91-06
+    				</span>
+    			</a>
+    			<div data-micromodal-trigger="modal-login" class="topline__link topline__link--profile">
+    				<svg class="icon-svg">
+    					<use xlink:href="img/sprites/svg/symbols.svg#icon-user"></use>
+    				</svg>
+    				<span>
+    					Личный кабинет
+    				</span>
+    			</div>
+    			<div class="topline__menu">
+    				<svg class="icon-svg">
+    					<use xlink:href="img/sprites/svg/symbols.svg#icon-menu"></use>
+    				</svg>
+    			</div>
+    		</div>
+    		<nav class="navline">
+    			<a href="tours-list.html" class="navline__link navline__link--active">
+    				Туры в Европу
+    			</a>
+    			<a href="ex-list.html" class="navline__link">
+    				Экскурсии по Калининградской области
+    			</a>
+    			<a href="news.html" class="navline__link">
+    				Новости
+    			</a>
+    			<a href="faq.html" class="navline__link">
+    				Вопросы и ответы
+    			</a>
+    			<a href="reviews.html" class="navline__link">
+    				Отзывы
+    			</a>
+    			<a href="contacts.html" class="navline__link">
+    				Контакты
+    			</a>
+    			<div class="navline__search" id="open-search">
+    				<svg class="icon-svg">
+    					<use xlink:href="img/sprites/svg/symbols.svg#icon-search"></use>
+    				</svg>
+    			</div>
+    		</nav>
+    	</div>
+    </header>
+    <section class="breadcrumbs">
+    	<div class="container breadcrumbs__container">
+    		<a href="index.html" class="breadcrumbs__link">
+    			Главная
+    		</a>
+    		<svg class="icon-svg">
+    			<use xlink:href="img/sprites/svg/symbols.svg#icon-arrow"></use>
+    		</svg>
+    		<a href="index.html" class="breadcrumbs__link">
+    			Туры в Европу
+    		</a>
+    		<svg class="icon-svg">
+    			<use xlink:href="img/sprites/svg/symbols.svg#icon-arrow"></use>
+    		</svg>
+    		<span class="breadcrumbs__now">
+    			Тур Прага-Дрезден
+    		</span>
+    	</div>
+    </section>
+    <main class="main">
+        <!-- Далее идет контент, он будет меняться -->
+        <div class="container container--columns">
+            <div class="content">
+                <section class="tour">
+                    <div class="slider tour__slider tour__slider--ex swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide slider__slide">
+                                <img src="http://placehold.it/1000x600" alt="Изображение в слайдере">
+                            </div>
+                            <div class="swiper-slide slider__slide">
+                                <img src="http://placehold.it/1000x600" alt="Изображение в слайдере">
+                            </div>
+                            <div class="swiper-slide slider__slide">
+                                <img src="http://placehold.it/1000x600" alt="Изображение в слайдере">
+                            </div>
+                            <div class="swiper-slide slider__slide">
+                                <img src="http://placehold.it/1000x600" alt="Изображение в слайдере">
+                            </div>
+                            <div class="swiper-slide slider__slide">
+                                <img src="http://placehold.it/1000x600" alt="Изображение в слайдере">
+                            </div>
+                        </div>
+                        <div class="slider__nav">
+                            <div class="slider__btn slider__btn--prev">
+                                <svg class="icon-svg">
+                                    <use xlink:href="img/sprites/svg/symbols.svg#icon-next"></use>
+                                </svg>
+                            </div>
+                            <div class="slider__btn slider__btn--next">
+                                <svg class="icon-svg">
+                                    <use xlink:href="img/sprites/svg/symbols.svg#icon-next"></use>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="text" id="tour-plan">
+                    <h2 class="h2 text__h2">
+                        Экскурсия “Обзорная по Калининграду”
+                    </h2>
+                    <div class="text__columns">
+                        <div class="text__column">
+                            <p class="text__column-title">
+                                Расписание: 
+                            </p>
+                            <p>
+                                Вторник, среда, четверг, пятница
+                            </p>
+                            <p>
+                                <b>Начало в 10:00</b>
+                            </p>
+                        </div>
+                        <div class="text__column">
+                            <p class="text__column-title">
+                                Место отправления:
+                            </p>
+                            <p>
+                                г. Калининград, Ленинский пр-т, 15
+                            </p>
+                            <p class="text__column-title">
+                                Продолжительность:
+                            </p>
+                            <p>
+                                3 часа
+                            </p>
+                        </div>
+                    </div>
+                    <div class="text__content text__content--bg">
+                        <h3>1 день</h3> 
+                        <p>Ранний выезд из Калининграда. Транзитный переезд по территории Польши. Прибытие в г. Попрад (Словакия). Размещение в отеле 3*. Свободное время. Ночь в отеле.</p> 
+                        <h3>2 день</h3> 
+                        <p>Завтрак. Свободное время, отдых на курорте, катание на лыжах. Для желающих факультативно экскурсия Высокие Татры* (Штребское Плесо, Смоковец, Татранская Ломница). Вечером факультативно поездка в термальные бассейны в Врбов* (температура воды от 26 до 45 градусов). Термальная вода благотворно воздействует на двигательный аппарат, урологическую систему, дыхательные пути и обладает положительными косметическими свойствами. Ночь в отеле. </p>
+                        <h3>3 день</h3> 
+                        <p>Завтрак. Для желающих - поездка в Белянскую пещеру*, которая является одной из самых посещаемых пещер в Словакии. Во второй половине дня для желающих факультативно экскурсия Левоча + замок Стражки*. Королевский город Левоча - магический центр словацкого ренессанса основан в 1249 году. Готические костелы города уникальны своими интерьерами. Самый большой деревянный готический алтарь в мире - в церкви Святого Якуба, городская ратуша, музей скульптора Павола, дома с редкими фресками - позволят погрузиться в атмосферу средневековой Европы. Стражки - Ренессансный костел, спроектированный и построенный легендарным мастером Грегором Хорватом-Станситом предлагает экспозиции старинной мебели и домашних аксессуаров 17-19 вв. Вечером факультативно поездка в термальные бассейны в Врбов*. Ночь в отеле. </p>
+                        <h3>4 день</h3> 
+                        <p>Завтрак. Свободное время или факультативно экскурсия в Замок Любовнянский Град* 13-го века и посещение единственного в Словакии завода по производству виски завода NESTVILLE* (экскурсия+дегустация виски, произведенные по старинным рецептам). Знакомство с национальными старинными секретами производства напитка. Вечером факультативно поездка в термальные бассейны в Врбов*. Ночь в отеле. </p>
+                        <h3>5 день</h3> 
+                        <p>Завтрак. Свободное время, отдых и катание на лыжах на горнолыжных курортах Высокие Татры. Вечером факультативно Рождественский ужин в национальной словацкой колибе с живой музыкой*. Ночь в отеле.</p> 
+                        <h3>6 день</h3> 
+                        <p>Завтрак. Выезд из отеля. Переезд по территории Словакии, Польши. Позднее прибытие в Калининград.</p>
+                    </div>
+                </section>
+                <section class="route" id="tour-route">
+                    <h2 class="h2 route__h2">
+                        Карта маршрута
+                    </h2>
+                    <div class="route__text">
+                        <p class="route__text-title">
+                            Маршрут:
+                        </p>
+                        <p>
+                            Рыбная деревня - Кафедральный собор (обзорно) - Закхаймские ворота - Королевские ворота - Литовский вал - Башня “Дона” - штаб Балтийского флота - Памятник Петру I - памятник Шиллеру - район старых немецких вилл “Амалиенау” (Ул. Кутузова) - Музей-квартира кёнигсбергского быта “Altes Haus” (с посещением).
+                        </p>
+                    </div>
+                    <div class="route__map" id="tour-route-map">
+
+                    </div>
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function() {
+                            var myMap;
+
+                            ymaps.ready(init);
+
+                            function init () {
+                                myMap = new ymaps.Map('tour-route-map', {
+
+                                    center: [55.76, 37.64],
+                                    zoom: 10
+                                }, {
+                                    searchControlProvider: 'yandex#search'
+                                });
+                            }
+                        }, false);
+
+                    </script>
+                </section>
+                <section class="video">
+                    <h2 class="h2 video__h2">
+                        Видео-обзор
+                    </h2>
+                    <div class="video__content">
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/ZE-Z0PUnFmo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </section>
+            </div>
+            <aside class="aside aside--mob-bottom">
+                <div class="sidebar">
+                    <div class="side-header">
+                        Ближайшая экскурсия: 23.03.2019 в 10:00
+                    </div>
+                    <hr>
+                    <form class="side-form">
+                        <label class="filter__label--100 side-form__date">
+                            <p class="filter__label-title">
+                                Выберите дату:
+                            </p>
+                            <input class="filter__date filter__date--side" type="text" placeholder="04.06.2019" id="datepicker-start">
+                        </label>
+                        <div class="side-form__line">
+                            <div class="side-form__row side-form__row--1">
+                                Тип билета
+                            </div>
+                            <div class="side-form__row side-form__row--2">
+                                Цена
+                            </div>
+                            <div class="side-form__row side-form__row--3">
+                                Количество
+                            </div>
+                        </div>
+                        <div class="side-form__line">
+                            <div class="side-form__row side-form__row--1">
+                                Взрослый
+                            </div>
+                            <div class="side-form__row side-form__row--2">
+                                1400
+                            </div>
+                            <div class="side-form__row side-form__row--3">
+                                <div class="rater">
+                                    <div class="rater__link rater__link--minus rater__link--disabled">
+                                        <svg class="icon-svg">
+                                            <use xlink:href="img/sprites/svg/symbols.svg#icon-arrow"></use>
+                                        </svg>
+                                    </div>
+                                    <input type="text" class="rater__input" value="0">
+                                    <div class="rater__link rater__link--plus">
+                                        <svg class="icon-svg">
+                                            <use xlink:href="img/sprites/svg/symbols.svg#icon-arrow"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="side-form__line">
+                            <div class="side-form__row side-form__row--1">
+                                Ребенок (7-16)
+                            </div>
+                            <div class="side-form__row side-form__row--2">
+                                800
+                            </div>
+                            <div class="side-form__row side-form__row--3">
+                                <div class="rater">
+                                    <div class="rater__link rater__link--minus rater__link--disabled">
+                                        <svg class="icon-svg">
+                                            <use xlink:href="img/sprites/svg/symbols.svg#icon-arrow"></use>
+                                        </svg>
+                                    </div>
+                                    <input type="text" class="rater__input" value="0">
+                                    <div class="rater__link rater__link--plus">
+                                        <svg class="icon-svg">
+                                            <use xlink:href="img/sprites/svg/symbols.svg#icon-arrow"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="side-form__line">
+                            <div class="side-form__row side-form__row--1">
+                               Ребенок (до 6) 
+                           </div>
+                           <div class="side-form__row side-form__row--2">
+                            400
+                        </div>
+                        <div class="side-form__row side-form__row--3">
+                            <div class="rater">
+                                <div class="rater__link rater__link--minus rater__link--disabled">
+                                    <svg class="icon-svg">
+                                        <use xlink:href="img/sprites/svg/symbols.svg#icon-arrow"></use>
+                                    </svg>
+                                </div>
+                                <input type="text" class="rater__input" value="0">
+                                <div class="rater__link rater__link--plus">
+                                    <svg class="icon-svg">
+                                        <use xlink:href="img/sprites/svg/symbols.svg#icon-arrow"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="side-form__line">
+                        <div class="side-form__row side-form__row--1">
+                           Льготный <br> (пенсионер, студент)
+                           <span class="fact" aria-label="какая-либо дополнительная информация" data-microtip-position="top-right" role="tooltip">
+                            <svg class="icon-svg">
+                                <use xlink:href="img/sprites/svg/symbols.svg#icon-warning"></use>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="side-form__row side-form__row--2">
+                        1000
+                    </div>
+                    <div class="side-form__row side-form__row--3">
+                        <div class="rater">
+                            <div class="rater__link rater__link--minus rater__link--disabled">
+                                <svg class="icon-svg">
+                                    <use xlink:href="img/sprites/svg/symbols.svg#icon-arrow"></use>
+                                </svg>
+                            </div>
+                            <input type="text" class="rater__input" value="0">
+                            <div class="rater__link rater__link--plus">
+                                <svg class="icon-svg">
+                                    <use xlink:href="img/sprites/svg/symbols.svg#icon-arrow"></use>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <p class="side-form__result">
+                   Итого: 2200 руб 
+                </p>
+                <button class="filter__btn side-form__btn">Купить</button>
+            </form>
+        </div>
+    </aside>
+</div>
+
+</main>
+<!-- Футер больше не должен меняться (ну, вроде как <_< ) -->
+<footer class="footer">
+	<div class="container footer__container">
+		<div class="footer__column footer__column--25">
+			<a href="index.html" class="logo footer__logo">
+				<img src="img/logo-light.svg" alt="Логотип Калиниград-Тур">
+			</a>
+			<a href="tel:+74012534400" class="footer__link">
+				<svg class="icon-svg">
+					<use xlink:href="img/sprites/svg/symbols.svg#icon-phone"></use>
+				</svg>
+				<span>
+					(4012) 53-44-00
+				</span>
+			</a>
+			<br>
+			<a href="tel:+78002009106" class="footer__link">
+				<svg class="icon-svg">
+					<use xlink:href="img/sprites/svg/symbols.svg#icon-phone"></use>
+				</svg>
+				<span>
+					8-800-200-91-06
+				</span>
+			</a>
+			<br>
+			<a href="mailto:kalinintour@yandex.ru" class="footer__link">
+				<svg class="icon-svg">
+					<use xlink:href="img/sprites/svg/symbols.svg#icon-mail"></use>
+				</svg>
+				<span>
+					kalinintour@yandex.ru
+				</span>
+			</a>
+			<br>
+			<div data-micromodal-trigger="modal-write" class="btn btn--dark footer__btn">
+				Написать
+			</div>
+		</div>
+		<div class="footer__column footer__column--25">
+			<p class="footer__text">
+				<strong>Калининград-тур</strong><br>
+				Калининград, ТЦ "Барнаульский", Барнаульская ул., 2, офис 219
+			</p>
+			<p class="footer__text">
+				Время работы офиса:<br>
+				пн-пт: 10-18<bR>
+				сб: 10-15<br>
+				вс: выходной
+			</p>
+			<br>
+			<div class="social footer__social">
+				<p class="social__title">
+					Мы в социальных сетях:
+				</p>
+				<a href="#" class="social__link">
+					<svg class="icon-svg">
+						<use xlink:href="img/sprites/svg/symbols.svg#icon-vk"></use>
+					</svg>
+				</a>
+				<a href="#" class="social__link">
+					<svg class="icon-svg">
+						<use xlink:href="img/sprites/svg/symbols.svg#icon-fb"></use>
+					</svg>
+				</a>
+				<a href="#" class="social__link">
+					<svg class="icon-svg">
+						<use xlink:href="img/sprites/svg/symbols.svg#icon-inst"></use>
+					</svg>
+				</a>
+				<a href="#" class="social__link">
+					<svg class="icon-svg">
+						<use xlink:href="img/sprites/svg/symbols.svg#icon-odnoklassniki"></use>
+					</svg>
+				</a>
+				<a href="#" class="social__link">
+					<svg class="icon-svg">
+						<use xlink:href="img/sprites/svg/symbols.svg#icon-youtube"></use>
+					</svg>
+				</a>
+			</div>
+		</div>
+		<div class="footer__column footer__column--50">
+			<div class="rate footer__rate">
+				<div class="rate__wrap">
+					<p class="rate__title">
+						Курс евро:
+					</p>
+					<p class="rate__money">
+						67.74 
+						<span class="rate__text">
+							российских рубля
+						</span>
+					</p>
+				</div>
+			</div>
+			<p class="footer__offer">
+				Обращаем Ваше внимание на то, что данный интернет-сайт носит исключительно информационный характер и ни при каких условиях информационные материалы и цены, размещенные на сайте, не являются публичной офертой, определяемой положениями Статьи 437 Гражданского кодекса РФ.
+			</p>
+		</div>
+		<a href="#header" class="footer__go-top go-top">
+			<p class="go-top__text">
+				В начало страницы
+			</p>
+			<div class="go-top__icon">
+				<svg class="icon-svg">
+					<use xlink:href="img/sprites/svg/symbols.svg#icon-next"></use>
+				</svg>
+				<svg class="icon-svg">
+					<use xlink:href="img/sprites/svg/symbols.svg#icon-next"></use>
+				</svg>
+			</div>
+		</a>
+	</div>
+</footer>
+<!-- Это блоки, которые по умолчанию скрыты. Их будет больше -->
+<div class="hiddens">
+
+	<!-- Окно регистрации/авторизации -->
+	<div class="modal micromodal-slide" id="modal-login" aria-hidden="true">
+		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+			<div class="modal__container modal__container--small custom-scroll custom-scroll--accent" role="dialog" aria-modal="true" aria-labelledby="modal-login-title">
+				<div class="modal__tab modal__tab--auth">
+					<div class="modal__header">
+						<h2 class="modal__title" id="modal-1-title">
+							Авторизация
+						</h2>
+						<div class="modal__close close" aria-label="Закрыть окно" data-micromodal-close>
+							<svg class="icon-svg" data-micromodal-close>
+								<use xlink:href="img/sprites/svg/symbols.svg#icon-close"></use>
+							</svg>
+						</div>
+					</div>
+					<div class="modal__content" id="modal-1-content">
+						<form action="" class="modal__form">
+							<label class="label">
+								<p class="label__title">
+									Ваш email
+								</p>
+								<input class="input" id="auth-email" type="text">
+							</label>
+							<label class="label">
+								<p class="label__title">
+									Пароль
+								</p>
+								<input class="input" id="auth-password" type="password" type="text">
+							</label>
+							<br>
+							<button class="modal__btn btn btn--dark">Войти</button>
+						</form>
+					</div>
+					<div class="modal__footer">
+						<p class="modal__text">
+							Еще не зарегистрированы? <br> <span id="modal__link--reg" class="modal__link modal__link">Создать аккаунт</span>
+						</p>
+					</div>
+				</div>
+				<div class="modal__tab modal__tab--reg hidden">
+					<div class="modal__header">
+						<h2 class="modal__title" id="modal-1-title">
+							Регистрация
+						</h2>
+						<div class="modal__close close" aria-label="Закрыть окно" data-micromodal-close>
+							<svg class="icon-svg" data-micromodal-close>
+								<use xlink:href="img/sprites/svg/symbols.svg#icon-close"></use>
+							</svg>
+						</div>
+					</div>
+					<div class="modal__content" id="modal-1-content">
+						<form action="" class="modal__form">
+							<label class="label">
+								<p class="label__title">
+									Ваш email
+								</p>
+								<input class="input" id="reg-email" type="text">
+							</label>
+							<label class="label">
+								<p class="label__title">
+									Пароль
+								</p>
+								<input class="input" id="reg-password" type="password" type="text">
+							</label>
+							<br>
+							<button class="modal__btn btn btn--dark">Зарегистрироваться</button>
+						</form>
+					</div>
+					<div class="modal__footer">
+						<p class="modal__text">
+							Уже зарегистрированы? <br> <span id="modal__link--auth" class="modal__link">Войти</span>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="menu">
+		<div class="menu__content">
+			<div class="menu__top">
+				<a href="tel:+74012534400" class="menu__phone">
+					+7 (4012) 53-44-00
+				</a>
+				<a href="tel:+78002009106" class="menu__phone">
+					8-800-200-91-06
+				</a>
+			</div>
+			<div class="menu__middle">
+				<a href="" class="menu__link">
+					Туры в Европу
+				</a>
+				<a href="" class="menu__link">
+					Экскурсии по Калининградской области
+				</a>
+				<a href="news.html" class="menu__link">
+					Новости
+				</a>
+				<a href="faq.html" class="menu__link">
+					Вопросы и ответы
+				</a>
+				<a href="reviews.html" class="menu__link">
+					Отзывы
+				</a>
+				<a href="contacts.html" class="menu__link">
+					Контакты
+				</a>
+			</div>
+			<div class="menu__bottom" >
+				<div class="menu__profile" data-micromodal-trigger="modal-login">
+					Войти в личный кабинет
+				</div>
+			</div>
+		</div>
+		<div class="menu__overlay">
+			
+		</div>
+	</div>
+	
+</div>
+<!-- Это оставляй так, как есть, ничего не трогай -->
+<script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/zenscroll/4.0.2/zenscroll-min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+<script src="http://momentjs.com/downloads/moment.min.js"></script>
+<!-- <script src="http://momentjs.com/downloads/moment-with-locales.js"></script> -->
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=ADkFy1wBAAAAroyMeQIA1XC97x9tzD7bmBf4YxiRLlx6CWEAAAAAAAAAAACFwEwMAb3vggJO5-bKmFhwbCF4Ww==" type="text/javascript"></script>
+
+<!-- Вместо это добавь ссылку гитхаб  https://kennynobody.github.io/KGD-tour/js/main.min.js-->
+<script src="./js/main.min.js"></script>
+</body>
+</html>

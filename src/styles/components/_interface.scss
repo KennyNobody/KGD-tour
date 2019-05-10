@@ -78,6 +78,7 @@
 		justify-content: center;
 		align-items: center;
 		background-color: $light;
+		flex-shrink: 0;
 	}
 	&__icon-point {
 		background-color: $accent;
@@ -107,10 +108,32 @@
 	align-items: center;
 	display: flex;
 	transition: 0.3s all;
+	@include r(780) {
+		height: auto;
+	}
 	&__text {
 		font-size: 14px;
 		b {
 			font-weight: 500;
+		}
+		a {
+			color: $accent;
+			text-decoration: underline;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+		&--line {
+			display: flex;
+			justify-content: space-between;
+			width: 100%;
+			color: $dark;
+			@include r(780) {
+				display: block;
+			}
+			a {
+				font-style: italic;
+			}
 		}
 	}
 	&__icon {
@@ -123,6 +146,7 @@
 		justify-content: center;
 		align-items: center;
 		background-color: $light;
+		flex-shrink: 0;
 	}
 	svg {
 		opacity: 0;
@@ -135,6 +159,7 @@
 		overflow: hidden;
 		height: 0px;
 		width: 0px;
+		flex-shrink: 0;
 	}
 	input:checked + .checkbox__icon {
 		border-color: $accent;
@@ -409,6 +434,43 @@
 		}
 		&:hover {
 			opacity: 0.75;
+		}
+	}
+}
+
+.rater {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 60px;
+	margin-left: auto;
+	margin-right: auto;
+	&__input {
+		width: 15px;
+		text-align: center;
+		background: none;
+		font-size: 14px;
+		color: $light;
+		border: none;
+		pointer-events: none;
+	}
+	&__link {
+		cursor: pointer;
+		svg {
+			fill: $accent;
+			display: block;
+			width: 14px;
+			height: 14px;
+		}
+		&--minus {
+			svg {
+				transform: rotate(180deg);
+			}
+		}
+		&--disabled {
+			svg {
+				fill: #7C7169;
+			}
 		}
 	}
 }

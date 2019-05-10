@@ -49,4 +49,22 @@
 			}
 		}
 	}
+	&__columns {
+		display: flex;
+		margin-bottom: 38px;
+		flex-wrap: wrap;
+	}
+	&__column {
+		width: 280px;
+		max-width: 100%;
+		p {
+			margin-bottom: 10px;
+		}
+		b {
+			font-weight: 500;
+		}
+	}
+	&__column-title {
+		font-weight: 500;
+	}
 }
