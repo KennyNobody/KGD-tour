@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Оплата завершена</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme-color" content="">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    //= includes/head-links.html
+</head>
+<body class="body" id="page">
+    //= blocks/header.html
+    <main class="main">
+        <!-- Далее идет контент, он будет меняться -->
+        //= sections/breadcrumbs.html
+        <div class="container">
+            <section class="payment">
+                <div class="payment__header">
+                    <svg class="icon-svg">
+                        <use xlink:href="img/sprites/svg/symbols.svg#icon-check"></use>
+                    </svg>
+                    <p class="title payment__title">
+                        Спасибо, оплата прошла успешно!
+                    </p>
+                </div>
+                <a href="#" class="btn btn--contrast payment__btn"> 
+                    Распечатать
+                </a>
+                <a href="tours-list.html" class="btn btn--dark payment__btn"> 
+                    Забронировать еще тур
+                </a>
+            </section>
+        </div>
+    </main>
+    //= blocks/footer.html
+    //= blocks/hiddens.html
+    //= includes/scripts.html
+</body>
+</html>

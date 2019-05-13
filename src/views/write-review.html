@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Оставить отзыв</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme-color" content="">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    //= includes/head-links.html
+</head>
+<body class="body" id="page">
+    //= blocks/header.html
+    <main class="main">
+        <!-- Далее идет контент, он будет меняться -->
+        //= sections/breadcrumbs.html
+        <div class="container">
+            <section class="write-review">
+                <h2 class="title write-review__title">
+                    Оставить отзыв
+                </h2>
+                
+                <div class="write-review">
+                    <div class="data__block">
+                        <div class="data__header">
+                            <p class="data__header-title">
+                                Оставить отзыв о поездке
+                            </p>
+                        </div>
+                        <label class="label data__label data__label--50">
+                            <p class="label__title label__title--required">
+                                Ваше имя
+                            </p>
+                            <input class="input" type="text">
+                        </label>
+                        <label class="label data__label data__label--50">
+                            <p class="label__title">
+                                Заявка №
+                            </p>
+                            <input class="input" type="text">
+                        </label>
+                        <label class="label data__label data__label--100">
+                            <p class="label__title label__title--required">
+                                Ваш отзыв
+                            </p>
+                            <textarea class="data__textarea"></textarea>
+                        </label>
+                    </div>
+                    <br>
+                    <label class="checkbox data__submit-checkbox">
+                        <input type="checkbox" id="data__submit--1">
+                        <div class="checkbox__icon">
+                            <svg class="icon-svg">
+                                <use xlink:href="img/sprites/svg/symbols.svg#icon-check"></use>
+                            </svg>
+                        </div>
+                        <div class="checkbox__text checkbox__text">
+                            <p>
+                                Настоящим согласием я подтверждаю, что ознакомлен(а) и согласен(на) с <a href="#">политикой <br> обработки персональных данных</a> 
+                            </p>
+                        </div>
+                    </label>
+                    <a href="reviews.html" class="btn btn--dark data__btn btn--disabled">
+                        Отправить
+                    </a>
+                </div>
+            </section>
+        </div>
+        
+    </main>
+    //= blocks/footer.html
+    //= blocks/hiddens.html
+    //= includes/scripts.html
+</body>
+</html>

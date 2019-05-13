@@ -165,3 +165,46 @@
 		font-size: 14px;
 	}
 }
+
+.warning {
+	display: flex;
+	align-items: center;
+	margin-bottom: 33px;
+	padding-top: 14px;
+	&__thumb {
+		flex-shrink: 0;
+		width: 40px;
+		height: 36px;
+		margin-right: 17px;
+	}
+	&__text {
+
+	}
+}
+
+.payment {
+	padding-top: 120px;
+	margin-bottom: 130px;
+	&__header {
+		display: flex;
+		align-items: center;
+		margin-bottom: 60px;
+		svg {
+			fill: #339B08;
+			width: 30px;
+			height: 30px;
+			margin-right: 28px;
+			flex-shrink: 0;
+			@include r(780) {
+				display: none;
+			}
+		}
+	}
+	&__btn {
+		height: 40px;
+		padding-left: 40px;
+		padding-right: 40px;
+		margin-right: 12px;
+		margin-bottom: 16px;
+	}
+}

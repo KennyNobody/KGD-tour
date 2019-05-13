@@ -98,6 +98,21 @@
 				width: 100%;
 			}
 		}
+		&--error {
+			position: relative;
+			input {
+				border-color: $accent;
+			}
+			&:after {
+				content: "Поле заполнено неверно";
+				position: absolute;
+				left: 0px;
+				right: 0px;
+				// top: 3px;
+				font-size: 12px;
+				color: $accent;
+			}
+		}
 	}
 	&__label-title {
 		display: flex;
@@ -188,6 +203,7 @@
 		font-size: 14px;
 		color: $dark;
 		outline: none;
+		margin-bottom: 10px;
 		&::placeholder {
 			color: #7C7169;
 		}

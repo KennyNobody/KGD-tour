@@ -40,3 +40,33 @@
 		color: #7C7169;
 	}
 }
+
+.reviews-page {
+	padding-bottom: 15px;
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 30px;
+		padding-top: 30px;
+		@include r(1200) {
+			display: block;
+		}
+	}
+	&__title {
+		@include r(1200) {
+			margin-bottom: 18px;
+		}
+	}
+	&__btn {
+		width: 207px;
+		height: 40px;
+	}
+}
+
+.write-review {
+	padding-top: 14px;
+	&__title {
+		margin-bottom: 28px;
+	}
+}

@@ -41,6 +41,13 @@
 		margin-bottom: 6px;
 		color: #7C7169;
 		line-height: 21px;
+		&--required {
+			&:after {
+				content: "*";
+				color: $accent;
+				display: inline-block;
+			}
+		}
 	}
 }
 

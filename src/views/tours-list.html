@@ -18,6 +18,12 @@
                     <h2 class="title list__title">
                         Туры в Европу
                     </h2>
+                    <div class="warning">
+                        <img class="warning__thumb" src="img/attention.svg" alt="Внимание!">
+                        <p class="warning__text">
+                            Извините, на выбранные вами даты туров нет. Туры на ближайшие к условиям поиска даты указаны ниже:
+                        </p>
+                    </div>
                     <article class="list-item">
                         <div class="list-item__thumb-column" style="background-image: url(http://placehold.it/1000x600);">
                             <p class="list-item__title-block">
@@ -195,13 +201,13 @@
                         <p class="filter__label-title">
                             Дата выезда, с
                         </p>
-                        <input class="filter__date filter__date--side" type="text" placeholder="04.06.2019" id="datepicker-start">
+                        <input class="filter__date filter__date--side datapicker" type="text" placeholder="04.06.2019">
                     </label>
                     <label class="filter__label filter__label--50">
                         <p class="filter__label-title">
                             Дата выезда, по
                         </p>
-                        <input class="filter__date filter__date--side" type="text" placeholder="04.07.2019" id="datepicker-finish">
+                        <input class="filter__date filter__date--side datapicker" type="text" placeholder="04.07.2019">
                     </label>
                     <button class="filter__btn">Поиск</button>
                 </div>
