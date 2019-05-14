@@ -353,4 +353,25 @@
   		}
   	}
   })();
+
+  // Раскрытие таблицы
+
+  (function initTableLines() {
+  	const tableLines = document.querySelectorAll(".table__line-top");
+
+  	let i;
+
+  	if (tableLines) {
+  		for (i = 0; i < tableLines.length; i++) {
+  			tableLines[i].addEventListener("click", function() {
+  				if (this.parentNode.classList.contains("table__line--active")) {
+  					this.parentNode.classList.remove("table__line--active");
+  				} else {
+  					this.parentNode.classList.add("table__line--active");
+  				}
+  			});
+  		}
+  	}
+  })();
+
 })();
