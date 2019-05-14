@@ -62,6 +62,12 @@
 				width: 100%;
 			}
 		}
+		&--60 {
+			width: calc(60% - 10px);
+			@include r(1200) {
+				width: 100%;
+			}
+		}
 		&--50 {
 			width: calc(50% - 10px);
 			@include r(1200) {
@@ -206,6 +212,14 @@
 		margin-bottom: 10px;
 		&::placeholder {
 			color: #7C7169;
+		}
+	}
+	&__text-block {
+		font-size: 18px;
+		padding-top: 28px;
+		line-height: 24px;
+		@include r(1200) {
+			display: none;
 		}
 	}
 	&__submit-checkbox {

@@ -96,6 +96,9 @@
 	@include r(450) {
 		height: 200px;
 	}
+	&--100 {
+		width: 100%;
+	}
 	&__slide {
 		img {
 			width: 100%;
@@ -206,5 +209,30 @@
 		padding-right: 40px;
 		margin-right: 12px;
 		margin-bottom: 16px;
+	}
+}
+
+.faq {
+	border-radius: 6px;
+	border: 2px solid #F9F5F1;
+	cursor: pointer;
+	margin-bottom: 15px;
+	&__header {
+		background-color: #F9F5F1;
+		padding: 18px 19px 17px 19px;
+
+	}
+	&__bottom {
+		max-height: 0px;
+		overflow: hidden;
+		transition: 0.3s all;
+	}
+	&__content {
+		padding: 20px 19px 20px 19px;
+	}
+	&--active {
+		.faq__bottom {
+			max-height: 5000px;
+		}
 	}
 }

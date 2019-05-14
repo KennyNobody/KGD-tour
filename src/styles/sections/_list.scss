@@ -25,6 +25,7 @@
 		display: flex;
 		align-items: flex-end;
 		padding: 14px;
+		flex-shrink: 0;
 		@include r(780) {
 			width: 100%;
 			margin-bottom: 20px;
@@ -74,6 +75,12 @@
 		&--none {
 			color: #FF3D3D;
 		}
+	}
+	&__date {
+		color: $accent;
+		font-style: italic;
+		font-size: 14px;
+		padding-top: 8px;
 	}
 	&__text {
 		font-size: 16px;

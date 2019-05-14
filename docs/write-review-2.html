@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <title>Бронирование экскурсии</title>
+    <title>Оставить отзыв</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="theme-color" content="">
@@ -113,12 +113,13 @@
         		</span>
         	</div>
         </section>
-        <div class="container container--columns">
-            <div class="content">
-                <section class="data">
-                    <h2 class="title data__title">
-                        Экскурсия “Обзорная по Калининграду”
-                    </h2>
+        <div class="container">
+            <section class="write-review">
+                <h2 class="title write-review__title">
+                    Контроль качества
+                </h2>
+                
+                <div class="write-review">
                     <div class="data__block">
                         <div class="data__header">
                             <p class="data__header-title">
@@ -139,10 +140,19 @@
                         </label>
                         <label class="label data__label data__label--50">
                             <p class="label__title">
-                                E-mail
+                                Email
                             </p>
                             <input class="input" type="text">
                         </label>
+                        <label class="label data__label data__label--60">
+                            <p class="label__title">
+                                Ваш отзыв
+                            </p>
+                            <textarea class="data__textarea"></textarea>
+                        </label>
+                        <p class="data__text-block data__label--40">
+                            Помогите нам стать лучше!<br> Оставьте свой отзыв о поездке с нами, <br>а так же ваши пожелания и замечания. <br>Мы обязательно ответим вам в течение<br> суток.
+                        </p>
                     </div>
                     <br>
                     <label class="checkbox data__submit-checkbox">
@@ -171,68 +181,13 @@
                             </p>
                         </div>
                     </label>
-                    <a href="data-final.html" class="btn btn--dark data__btn btn--disabled">
-                        Продолжить
+                    <a href="reviews.html" class="btn btn--dark data__btn btn--disabled">
+                        Отправить
                     </a>
-                </section>
-            </div>
-            <aside class="aside mobile-hidden">
-                <div class="sidebar">
-                    <div class="sidebar__booking side-booking">
-                        <div class="side-booking__top">
-                            <p class="sidebar__title side-booking__title">
-                                Заказ
-                            </p>
-                            <p class="side-booking__name">
-                                Обзорная экскурсия по Калининграду
-                            </p>
-                            <div class="side-booking__line">
-                                <div class="side-booking__left">
-                                    Дата:
-                                </div>
-                                <div class="side-booking__right">
-                                    25 сентября
-                                </div>
-                            </div>
-                            <div class="side-booking__line">
-                                <div class="side-booking__left">
-                                    Время:
-                                </div>
-                                <div class="side-booking__right">
-                                    9:00
-                                </div>
-                            </div>
-                            <div class="side-booking__line">
-                                <div class="side-booking__left">
-                                    Взрослый:
-                                </div>
-                                <div class="side-booking__right">
-                                    1 х 1170р
-                                </div>
-                            </div>
-                            <div class="side-booking__line">
-                                <div class="side-booking__left">
-                                    Ребенок:
-                                </div>
-                                <div class="side-booking__right">
-                                    1 х 600р
-                                </div>
-                            </div>
-                        </div>
-                        <div class="side-booking__bottom">
-                            <div class="side-booking__result">
-                                <div class="side-booking__result--line">
-                                    Итого: 3000 руб
-                                </div>
-                            </div>
-                            <a href="payment.html" class="btn side-booking__btn">
-                                Оплатить
-                            </a>
-                        </div>
-                    </div>
                 </div>
-            </aside>
+            </section>
         </div>
+        
     </main>
     <!-- Футер больше не должен меняться (ну, вроде как <_< ) -->
     <footer class="footer">

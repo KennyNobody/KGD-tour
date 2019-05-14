@@ -1,0 +1,46 @@
+.post {
+	&__title {
+		font-size: 34px;
+		line-height: 45px;
+		font-weight: 300;
+		margin-bottom: 39px;
+		@include r(780) {
+			font-size: 28px;
+			line-height: 34px;
+		}
+	}
+	&__slider {
+		width: 100%;
+		margin-bottom: 28px;
+	}
+	&__subtitle {
+		font-size: 22px;
+		font-weight: 300;
+		position: relative;
+		padding-left: 16px;
+		margin-bottom: 28px;
+		&:before {
+			content: "";
+			position: absolute;
+			top: -6px;
+			bottom: -10px;
+			left: 0px;
+			width: 16px;
+			border: 2px solid $accent;
+			border-right: none;
+			border-radius: 6px 0 0 6px;
+		}
+		@include r(780) {
+			font-size: 18px;
+			padding-left: 0px;
+			&:before {
+				display: none;
+			}
+		}
+	}
+	&__content {
+		p {
+			margin-bottom: 26px;
+		}
+	}
+}
