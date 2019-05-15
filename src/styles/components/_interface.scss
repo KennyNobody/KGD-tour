@@ -138,8 +138,14 @@
 			@include r(780) {
 				display: block;
 			}
-			a {
+			span {
 				font-style: italic;
+				text-decoration: underline;
+				color: $accent;
+				cursor: pointer;
+				&:hover {
+					text-decoration: none;
+				}
 			}
 		}
 	}
@@ -479,5 +485,117 @@
 				fill: #7C7169;
 			}
 		}
+	}
+}
+
+.room {
+	width: 100%;
+}
+
+.place {
+	width: 864px;
+	max-width: 100%;
+	display: flex;
+	padding: 73px 39px 48px 42px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	&__content {
+		flex-grow: 1;
+		text-align: left;
+	}
+	&__table {
+		width: 497px;
+		flex-shrink: 0;
+		border-spacing: 6px;
+		border-collapse: initial;
+		font-size: 14px;
+		td {
+			box-sizing: border-box;
+			width: 90px;
+			height: 40px;
+			position: relative;
+		}
+	}
+	&__label {
+		position: absolute;
+		top: 0px;
+		bottom: 0px;
+		left: 0px;
+		right: 0px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-weight: 500;
+		color: #7C7169;
+		border: 1px solid #7C7169;
+		&--func {
+			color: $light;
+			background-color: #7C7169;
+
+		}
+		&--blocked {
+			background-color: #E4DFDB;
+			border-color: #E4DFDB;
+			color: #BBB0A9;
+			pointer-events: none;
+		}
+		&--selected {
+			background-color: $accent;
+			color: $light;
+			border-color: $accent;
+		}
+		&--static {
+			position: relative;
+			width: 90px;
+			height: 40px;
+			margin-right: 13px;
+		}
+		&--exit {
+			width: 40px;
+			left: auto;
+			p {
+				transform: rotate(-90deg);
+				white-space: nowrap;
+			}
+		}
+		input {
+			display: none;
+		}
+	}
+	&__user {
+		display: flex;
+		margin-bottom: 36px;
+	}
+	&__user-column {
+		width: 50%;
+	}
+	&__user-title {
+		color: #7C7169;
+		margin-bottom: 12px;
+	}
+	&__user-text {
+
+	}
+	&__control {
+		margin-bottom: 64px;
+	}
+	&__btn {
+		margin-bottom: 13px;
+		width: 140px;
+		height: 40px;
+		display: flex;
+	}
+	&__example {
+		display: flex;
+		align-items: center;
+		margin-bottom: 12px;
+	}
+	&__close {
+		top: 0px;
+		right: 0px;
+		position: absolute;
+		z-index: 3;
+		cursor: pointer;
 	}
 }
