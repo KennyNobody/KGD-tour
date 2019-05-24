@@ -500,9 +500,16 @@
 	margin-left: auto;
 	margin-right: auto;
 	position: relative;
+	@include r(980) {
+		display: block;
+		padding-left: 0px;
+		padding-right: 0px;
+	}
 	&__content {
 		flex-grow: 1;
 		text-align: left;
+		@include r(980) {
+			margin-bottom: 50px;		}
 	}
 	&__table {
 		width: 497px;
@@ -510,6 +517,12 @@
 		border-spacing: 6px;
 		border-collapse: initial;
 		font-size: 14px;
+		@include r(980) {
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 100%;
+			width: auto;
+		}
 		td {
 			box-sizing: border-box;
 			width: 90px;
@@ -566,9 +579,16 @@
 	&__user {
 		display: flex;
 		margin-bottom: 36px;
+		@include r(980) {
+			display: block;
+		}
 	}
 	&__user-column {
 		width: 50%;
+		@include r(980) {
+			width: 100%;
+			margin-bottom: 12px;
+		}
 	}
 	&__user-title {
 		color: #7C7169;
@@ -579,12 +599,16 @@
 	}
 	&__control {
 		margin-bottom: 64px;
+		@include r(980) {
+			margin-bottom: 25px;
+		}
 	}
 	&__btn {
 		margin-bottom: 13px;
 		width: 140px;
 		height: 40px;
 		display: flex;
+		outline: none;
 	}
 	&__example {
 		display: flex;
@@ -597,5 +621,45 @@
 		position: absolute;
 		z-index: 3;
 		cursor: pointer;
+	}
+}
+
+.label-modal {
+	display: block;
+	text-align: left;
+	margin-bottom: 28px;
+	position: relative;
+	&__title {
+		font-size: 16px;
+		color: #7C7169;
+	}
+	&__input {
+		padding-top: 3px;
+		padding-bottom: 3px;
+		font-size: 18px;
+		display: block;
+		width: 100%;
+		outline: none;
+		border: none;
+		border-bottom: 2px solid #E4DFDB;;
+	}
+	&__show-pass {
+		height: 24px;
+		width: 24px;
+		position: absolute;
+		right: 0px;
+		bottom: 2px;
+		z-index: 2;
+		cursor: pointer;
+		svg {
+			width: 100%;
+			height: 100%;
+			fill: #7C7169;
+		}
+		&:hover {
+			svg {
+				fill: $accent;
+			}
+		}
 	}
 }

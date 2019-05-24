@@ -46,6 +46,7 @@ svg {
 
 button {
 	cursor: pointer;
+	font-family: "Segoe UI", Arial, sans-serif;
 }
 
 .body {
@@ -124,7 +125,6 @@ button {
 .aside {
 	width: calc(4 / 12 * 100% - 10px);
 	max-width: 100%;
-	padding-top: 65px;
 	&--mob-top {
 		@include r(1200) {
 			width: 100%;
@@ -247,3 +247,9 @@ button {
 
 // Личный кабинет
 @import "sections/lk";
+
+// Страница "Контакты"
+@import "sections/contacts";
+
+// Информация о бронировании
+@import "sections/info";

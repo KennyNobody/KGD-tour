@@ -78,6 +78,27 @@
                                 3 часа
                             </p>
                         </div>
+                        <div class="text__map" id="text__map">
+
+                        </div>
+                        <script>
+                            document.addEventListener('DOMContentLoaded', function() {
+                                var myMap;
+
+                                ymaps.ready(init);
+
+                                function init () {
+                                    myMap = new ymaps.Map('text__map', {
+
+                                        center: [55.76, 37.64],
+                                        zoom: 10
+                                    }, {
+                                        searchControlProvider: 'yandex#search'
+                                    });
+                                }
+                            }, false);
+
+                        </script>
                     </div>
                     <div class="text__content text__content--bg">
                         <h3>1 день</h3> 
@@ -209,9 +230,9 @@
                         </div>
                         <div class="side-form__line">
                             <div class="side-form__row side-form__row--1">
-                               Ребенок (до 6) 
-                           </div>
-                           <div class="side-form__row side-form__row--2">
+                             Ребенок (до 6) 
+                         </div>
+                         <div class="side-form__row side-form__row--2">
                             400
                         </div>
                         <div class="side-form__row side-form__row--3">
@@ -232,8 +253,8 @@
                     </div>
                     <div class="side-form__line">
                         <div class="side-form__row side-form__row--1">
-                           Льготный <br> (пенсионер, студент)
-                           <span class="fact" aria-label="какая-либо дополнительная информация" data-microtip-position="top-right" role="tooltip">
+                         Льготный <br> (пенсионер, студент)
+                         <span class="fact" aria-label="какая-либо дополнительная информация" data-microtip-position="top-right" role="tooltip">
                             <svg class="icon-svg">
                                 <use xlink:href="img/sprites/svg/symbols.svg#icon-warning"></use>
                             </svg>
@@ -260,12 +281,12 @@
                 </div>
                 <hr>
                 <p class="side-form__result">
-                   Итого: 2200 руб 
-                </p>
-                <button class="filter__btn side-form__btn">Купить</button>
-            </form>
-        </div>
-    </aside>
+                 Итого: 2200 руб 
+             </p>
+             <button class="filter__btn side-form__btn">Купить</button>
+         </form>
+     </div>
+ </aside>
 </div>
 
 </main>

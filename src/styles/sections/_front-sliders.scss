@@ -8,6 +8,12 @@
 	&__slider-container {
 		overflow: visible;
 	}
+	&__static-container {
+		position: relative;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
 	&__h2 {
 		margin-bottom: 40px;
 	}
@@ -63,7 +69,6 @@
 			top: 50%;
 			margin-top: -13px;
 		}
-
 	}
 }
 
@@ -79,6 +84,26 @@
 	padding-bottom: 20px;
 	padding-top: 20px;
 	padding-right: 20px;
+	&--static {
+		width: calc(33% - (32px/3));
+		margin-bottom: 20px;
+		@include r(980) {
+			width: calc(50% - (20px/2));
+		}
+		@include r(700) {
+			width: 100%;
+		}
+	}
+	&--clear {
+		width: calc(33% - (32px/3));
+		height: 0px;
+		@include r(980) {
+			width: calc(50% - (20px/2));
+		}
+		@include r(700) {
+			width: 100%;
+		}
+	}
 	&__title {
 		height: 54px;
 		display: inline-flex;
@@ -218,6 +243,83 @@
 			span {
 				color: $accent;
 			}
+		}
+	}
+}
+
+.subscribe {
+	background-color: $accent;
+	color: $light;
+	display: flex;
+	flex-direction: column;
+	padding-left: 14px;
+	padding-right: 64px;
+	padding-bottom: 41px;
+	position: relative;
+	@include r(980) {
+		padding-right: 14px;
+	}
+	&__title {
+		font-size: 24px;
+		line-height: 24px;
+		margin-bottom: 11px;
+		max-width: 400px;
+	}
+	&__text {
+		font-size: 16px;
+		line-height: 19px;
+		flex-grow: 1;
+		max-width: 400px;
+	}
+	&__form {
+		display: flex;
+		justify-content: space-between;
+		width: 226px;
+		height: 40px;
+		max-width: 100%;
+	}
+	&__input {
+		border: none;
+		height: 100%;
+		box-sizing: border-box;
+		flex-grow: 1;
+		font-size: 16px;
+		padding-left: 15px;
+		padding-right: 15px;
+		outline: none;
+		@include r(980) {
+			padding-right: 0px;
+		}
+		&:placeholder {
+			color: #7C7169;
+		}
+	}
+	&__btn {
+		width: 40px;
+		border: none;
+		height: 100%;
+		border-radius: 0px 6px 6px 0px;
+		background-color: #3C3530;
+		transition: 0.3s all;
+		cursor: pointer;
+		flex-shrink: 0;
+		outline: none;
+		&:hover {
+			opacity: 0.7;
+		}
+		svg {
+			fill: $light;
+			width: 20px;
+			height: 20px;
+			flex-shrink: 0;
+		}
+	}
+	&__ill {
+		position: absolute;
+		bottom: 28px;
+		right: -73px;
+		@include r(1150) {
+			display: none;
 		}
 	}
 }

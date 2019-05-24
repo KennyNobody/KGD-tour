@@ -592,9 +592,9 @@
                                     С человека в 2-х местном стандартном номере
                                 </div>
                             </div>
-                            <a href="#" class="btn side-booking__btn">
+                            <!-- <a href="#" class="btn side-booking__btn">
                                 Забронировать
-                            </a>
+                            </a> -->
                         </div>
                     </div>
                 </div>
@@ -616,7 +616,7 @@
                         <div class="place__user">
                             <div class="place__user-column">
                                 <p class="place__user-title">
-                                    Турист 1
+                                    Имя 
                                 </p>
                                 <p class="place__user-text">
                                     Печенькин Владислав Геркулесович
@@ -626,27 +626,7 @@
                                 <p class="place__user-title">
                                     Место
                                 </p>
-                                <p class="place__user-text">
-                                    3C
-                                </p>
-                            </div>
-                        </div>
-                        <div class="place__user">
-                            <div class="place__user-column">
-                                <p class="place__user-title">
-                                    Турист 2
-                                </p>
-                                <p class="place__user-text">
-                                    Печенькин Владислав Геркулесович
-                                </p>
-                            </div>
-                            <div class="place__user-column">
-                                <p class="place__user-title">
-                                    Место
-                                </p>
-                                <p class="place__user-text">
-                                    3V
-                                </p>
+                                <p class="place__user-text" id="place__selected"></p>
                             </div>
                         </div>
                         <div class="place__control">
@@ -710,13 +690,13 @@
                                     <p class="place__label-title">
                                         1A
                                     </p>
-                                    <input type="checkbox">
+                                    <input type="radio" name="place">
                                 </label>
                             </td>
                             <td scope="col">
                                 <label class="place__label">
                                     <p class="place__label-title">1B</p>
-                                    <input type="checkbox">
+                                    <input type="radio" name="place">
                                 </label>
                             </td>
                             <td scope="col">
@@ -729,25 +709,25 @@
                             <td scope="col">
                                 <label class="place__label">
                                     <p class="place__label-title">2A</p>
-                                    <input type="checkbox">
+                                    <input type="radio" name="place">
                                 </label>
                             </td>
                             <td scope="col">
                                 <label class="place__label place__label--blocked">
                                     <p class="place__label-title">2B</p>
-                                    <input type="checkbox">
+                                    <input type="radio" name="place">
                                 </label>
                             </td>
                             <td scope="col">
                                 <label class="place__label">
                                     <p class="place__label-title">2D</p>
-                                    <input type="checkbox">
+                                    <input type="radio" name="place">
                                 </label>
                             </td>
                             <td scope="col">
                                 <label class="place__label">
                                     <p class="place__label-title">2E</p>
-                                    <input type="checkbox">
+                                    <input type="radio" name="place">
                                 </label>
                             </td>
                         </tr>
@@ -755,25 +735,25 @@
                             <td scope="col">
                                 <label class="place__label">
                                     <p class="place__label-title">3A</p>
-                                    <input type="checkbox">
+                                    <input type="radio" name="place">
                                 </label>
                             </td>
                             <td scope="col">
                                 <label class="place__label place__label--blocked">
                                     <p class="place__label-title">3B</p>
-                                    <input type="checkbox">
+                                    <input type="radio" name="place">
                                 </label>
                             </td>
                             <td scope="col">
                                 <label class="place__label place__label--blocked">
                                     <p class="place__label-title">3D</p>
-                                    <input type="checkbox">
+                                    <input type="radio" name="place">
                                 </label>
                             </td>
                             <td scope="col">
                                 <label class="place__label">
                                     <p class="place__label-title">3E</p>
-                                    <input type="checkbox">
+                                    <input type="radio" name="place">
                                 </label>
                             </td>
                         </tr>
@@ -781,25 +761,25 @@
                             <td scope="col">
                                 <label class="place__label">
                                     <p class="place__label-title">4A</p>
-                                    <input type="checkbox">
+                                    <input type="radio" name="place">
                                 </label>
                             </td>
                             <td scope="col">
                                 <label class="place__label place__label--blocked">
                                     <p class="place__label-title">4B</p>
-                                    <input type="checkbox">
+                                    <input type="radio" name="place">
                                 </label>
                             </td>
                             <td scope="col">
                                 <label class="place__label">
                                     <p class="place__label-title">4D</p>
-                                    <input type="checkbox">
+                                    <input type="radio" name="place">
                                 </label>
                             </td>
                             <td scope="col">
                                 <label class="place__label">
                                     <p class="place__label-title">4E</p>
-                                    <input type="checkbox">
+                                    <input type="radio" name="place">
                                 </label>
                             </td>
                         </tr>
@@ -807,25 +787,25 @@
                             <td scope="col">
                                 <label class="place__label place__label--blocked">
                                     <p class="place__label-title">5A</p>
-                                    <input type="checkbox">
+                                    <input type="radio" name="place">
                                 </label>
                             </td>
                             <td scope="col">
                                 <label class="place__label">
                                     <p class="place__label-title">5B</p>
-                                    <input type="checkbox">
+                                    <input type="radio" name="place">
                                 </label>
                             </td>
                             <td scope="col">
                                 <label class="place__label">
                                     <p class="place__label-title">5D</p>
-                                    <input type="checkbox">
+                                    <input type="radio" name="place">
                                 </label>
                             </td>
                             <td scope="col">
                                 <label class="place__label place__label--blocked">
                                     <p class="place__label-title">5E</p>
-                                    <input type="checkbox">
+                                    <input type="radio" name="place">
                                 </label>
                             </td>
                         </tr>
@@ -833,13 +813,13 @@
                             <td scope="col">
                                 <label class="place__label">
                                     <p class="place__label-title">6A</p>
-                                    <input type="checkbox">
+                                    <input type="radio" name="place">
                                 </label>
                             </td>
                             <td scope="col">
                                 <label class="place__label">
                                     <p class="place__label-title">6B</p>
-                                    <input type="checkbox">
+                                    <input type="radio" name="place">
                                 </label>
                             </td>
                             <td scope="rowgroup" rowspan="2" colspan="2">
@@ -852,13 +832,13 @@
                             <td scope="col">
                                 <label class="place__label place__label--blocked">
                                     <p class="place__label-title">7A</p>
-                                    <input type="checkbox">
+                                    <input type="radio" name="place">
                                 </label>
                             </td>
                             <td scope="col">
                                 <label class="place__label place__label--blocked">
                                     <p class="place__label-title">7B</p>
-                                    <input type="checkbox">
+                                    <input type="radio" name="place">
                                 </label>
                             </td>
                         </tr>
@@ -866,25 +846,25 @@
                             <td scope="col">
                                 <label class="place__label">
                                     <p class="place__label-title">8A</p>
-                                    <input type="checkbox">
+                                    <input type="radio" name="place">
                                 </label>
                             </td>
                             <td scope="col">
                                 <label class="place__label">
                                     <p class="place__label-title">8B</p>
-                                    <input type="checkbox">
+                                    <input type="radio" name="place">
                                 </label>
                             </td>
                             <td scope="col">
                                 <label class="place__label">
                                     <p class="place__label-title">8D</p>
-                                    <input type="checkbox">
+                                    <input type="radio" name="place">
                                 </label>
                             </td>
                             <td scope="col">
                                 <label class="place__label">
                                     <p class="place__label-title">8E</p>
-                                    <input type="checkbox">
+                                    <input type="radio" name="place">
                                 </label>
                             </td>
                         </tr>
@@ -892,25 +872,25 @@
                             <td scope="col">
                                 <label class="place__label">
                                     <p class="place__label-title">9A</p>
-                                    <input type="checkbox">
+                                    <input type="radio" name="place">
                                 </label>
                             </td>
                             <td scope="col">
                                 <label class="place__label">
                                     <p class="place__label-title">9B</p>
-                                    <input type="checkbox">
+                                    <input type="radio" name="place">
                                 </label>
                             </td>
                             <td scope="col">
                                 <label class="place__label">
                                     <p class="place__label-title">9D</p>
-                                    <input type="checkbox">
+                                    <input type="radio" name="place">
                                 </label>
                             </td>
                             <td scope="col">
                                 <label class="place__label">
                                     <p class="place__label-title">9E</p>
-                                    <input type="checkbox">
+                                    <input type="radio" name="place">
                                 </label>
                             </td>
                         </tr>
@@ -918,25 +898,25 @@
                             <td scope="col">
                                 <label class="place__label place__label--blocked">
                                     <p class="place__label-title">10A</p>
-                                    <input type="checkbox">
+                                    <input type="radio" name="place">
                                 </label>
                             </td>
                             <td scope="col">
                                 <label class="place__label">
                                     <p class="place__label-title">10B</p>
-                                    <input type="checkbox">
+                                    <input type="radio" name="place">
                                 </label>
                             </td>
                             <td scope="col">
                                 <label class="place__label">
                                     <p class="place__label-title">10D</p>
-                                    <input type="checkbox">
+                                    <input type="radio" name="place">
                                 </label>
                             </td>
                             <td scope="col">
                                 <label class="place__label">
                                     <p class="place__label-title">10E</p>
-                                    <input type="checkbox">
+                                    <input type="radio" name="place">
                                 </label>
                             </td>
                         </tr>
@@ -944,25 +924,25 @@
                             <td scope="col">
                                 <label class="place__label">
                                     <p class="place__label-title">11A</p>
-                                    <input type="checkbox">
+                                    <input type="radio" name="place">
                                 </label>
                             </td>
                             <td scope="col">
                                 <label class="place__label">
                                     <p class="place__label-title">11B</p>
-                                    <input type="checkbox">
+                                    <input type="radio" name="place">
                                 </label>
                             </td>
                             <td scope="col">
                                 <label class="place__label">
                                     <p class="place__label-title">11D</p>
-                                    <input type="checkbox">
+                                    <input type="radio" name="place">
                                 </label>
                             </td>
                             <td scope="col">
                                 <label class="place__label place__label--blocked">
                                     <p class="place__label-title">11E</p>
-                                    <input type="checkbox">
+                                    <input type="radio" name="place">
                                 </label>
                             </td>
                         </tr>
@@ -970,25 +950,25 @@
                             <td scope="col">
                                 <label class="place__label">
                                     <p class="place__label-title">12A</p>
-                                    <input type="checkbox">
+                                    <input type="radio" name="place">
                                 </label>
                             </td>
                             <td scope="col">
                                 <label class="place__label">
                                     <p class="place__label-title">12B</p>
-                                    <input type="checkbox">
+                                    <input type="radio" name="place">
                                 </label>
                             </td>
                             <td scope="col">
                                 <label class="place__label">
                                     <p class="place__label-title">12D</p>
-                                    <input type="checkbox">
+                                    <input type="radio" name="place">
                                 </label>
                             </td>
                             <td scope="col">
                                 <label class="place__label">
                                     <p class="place__label-title">12E</p>
-                                    <input type="checkbox">
+                                    <input type="radio" name="place">
                                 </label>
                             </td>
                         </tr>
@@ -996,31 +976,31 @@
                             <td scope="col">
                                 <label class="place__label">
                                     <p class="place__label-title">12A</p>
-                                    <input type="checkbox">
+                                    <input type="radio" name="place">
                                 </label>
                             </td>
                             <td scope="col">
                                 <label class="place__label">
                                     <p class="place__label-title">12B</p>
-                                    <input type="checkbox">
+                                    <input type="radio" name="place">
                                 </label>
                             </td>
                             <td scope="col">
                                 <label class="place__label">
                                     <p class="place__label-title">12C</p>
-                                    <input type="checkbox">
+                                    <input type="radio" name="place">
                                 </label>
                             </td>
                             <td scope="col">
                                 <label class="place__label">
                                     <p class="place__label-title">12D</p>
-                                    <input type="checkbox">
+                                    <input type="radio" name="place">
                                 </label>
                             </td>
                             <td scope="col">
                                 <label class="place__label">
                                     <p class="place__label-title">12E</p>
-                                    <input type="checkbox">
+                                    <input type="radio" name="place">
                                 </label>
                             </td>
                         </tr>

@@ -15,7 +15,7 @@
     <link rel="apple-touch-icon" sizes="120x120" href="./img/favicons/apple-touch-icon-120x120.png">
     <link rel="apple-touch-icon" sizes="144x144" href="./img/favicons/apple-touch-icon-144x144.png">
     <link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon-180x180.png">
-    <link rel="stylesheet" href="./styles/main.min.css">
+    <link rel="stylesheet" href="./styles/main.css">
 </head>
 <body class="body" id="page">
     <!-- Шапка больше не должна меняться, блок поиск будет жить отдельно и выезжать сверху страницы, как и мобильное меню -->
@@ -301,26 +301,29 @@
     					</div>
     					<div class="modal__content" id="modal-1-content">
     						<form action="" class="modal__form">
-    							<label class="label">
-    								<p class="label__title">
-    									Ваш email
+    							<label class="label-modal">
+    								<p class="label-modal__title">
+    									Логин
     								</p>
-    								<input class="input" id="auth-email" type="text">
+    								<input class="label-modal__input" type="text">
     							</label>
-    							<label class="label">
-    								<p class="label__title">
+    							<label class="label-modal">
+    								<p class="label-modal__title">
     									Пароль
     								</p>
-    								<input class="input" id="auth-password" type="password" type="text">
+    								<input class="label-modal__input" type="password">
+    								<div class="label-modal__show-pass">
+    									<svg class="icon-svg" data-micromodal-close>
+    										<use xlink:href="img/sprites/svg/symbols.svg#icon-show"></use>
+    									</svg>
+    								</div>
     							</label>
     							<br>
     							<button class="modal__btn btn btn--dark">Войти</button>
+    							<a href="#" class="modal__link">Забыли пароль?</a>
+    							<hr>
+    							<a href="sign-in.html" class="modal__btn btn modal__btn--black">Регистрация</a>
     						</form>
-    					</div>
-    					<div class="modal__footer">
-    						<p class="modal__text">
-    							Еще не зарегистрированы? <br> <span id="modal__link--reg" class="modal__link modal__link">Создать аккаунт</span>
-    						</p>
     					</div>
     				</div>
     				<div class="modal__tab modal__tab--reg hidden">

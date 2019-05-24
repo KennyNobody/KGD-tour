@@ -1,0 +1,122 @@
+.contacts {
+	&__title {
+		margin-bottom: 32px;
+	}
+	&__nav {
+		display: flex;
+		align-items: center;
+		margin-bottom: 26px;
+	}
+	&__nav-discript {
+		color: #7C7169;
+		margin-right: 18px;
+	}
+	&__nav-decor {
+		margin-left: 12px;
+		margin-right: 12px;
+		height: 18px;
+		width: 1px;
+		background-color: $dark;
+	}
+	&__nav-tab {
+		font-weight: 500;
+		cursor: pointer;
+		&--active {
+			color: $accent;
+			pointer-events: none;
+		}
+	}
+	&__articles {
+		overflow: hidden;
+		max-height: 10000px;
+		&--hidden {
+			max-height: 0px;
+		} 
+	}
+	&__map {
+		height: 600px;
+		width: 100%;
+		overflow: hidden;
+		max-height: 10000px;
+		&--hidden {
+			max-height: 0px;
+		} 
+	}
+}
+
+.contact-article {
+	display: flex;
+	justify-content: space-between;
+	padding: 20px;
+	border-radius: 6px;
+	background: #F9F5F1;
+	margin-bottom: 5px;
+	@include r(980) {
+		flex-wrap: wrap;
+	}
+	&__column {
+		padding-right: 15px;
+		@include r(980) {
+			margin-bottom: 15px;
+		}
+		&:nth-child(1) {
+			width: 25%;
+			@include r(980) {
+				width: 100%;
+			}
+		}
+		&:nth-child(2) {
+			width: 25%;
+			@include r(980) {
+				width: 33%;
+			}
+			@include r(800) {
+				width: 100%;
+			}
+		}
+		&:nth-child(3) {
+			width: 20%;
+			@include r(980) {
+				width: 33%;
+			}
+			@include r(800) {
+				width: 100%;
+			}
+		}
+		&:nth-child(4) {
+			width: 30%;
+			@include r(980) {
+				width: 33%;
+			}
+			@include r(800) {
+				width: 100%;
+			}
+		}
+	}
+	&__subtitle {
+		font-size: 14px;
+		line-height: 19px;
+		color: #BBB0A9;
+	}
+	&__h {
+		font-size: 20px;
+		line-height: 27px;
+		font-weight: 500;
+	}
+	&__title {
+		font-weight: 500;
+		line-height: 1.4;
+	}
+	&__text {
+		font-size: 16px;
+		line-height: 1.4;
+		strong {
+			font-weight: 500;
+		}
+		a {
+			&:hover {
+				color: $accent;
+			}
+		}
+	}
+}

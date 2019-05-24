@@ -187,6 +187,12 @@
 		&--bold {
 			font-weight: 500;
 		}
+		&--full {
+			width: 100%;
+		}
+		&--half {
+			width: 50%;
+		}
 	}
 	&__subrow-title {
 		margin-bottom: 5px;

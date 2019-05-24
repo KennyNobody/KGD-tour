@@ -27,6 +27,7 @@
 	align-items: center;
 	transition: 0.3s all;
 	cursor: pointer;
+	font-weight: 500;
 	&:hover {
 		opacity: 0.75;
 	}
@@ -59,7 +60,7 @@
 .breadcrumbs {
 	font-size: 14px;
 	padding-top: 23px;
-	padding-bottom: 14px;
+	padding-bottom: 20px;
 	width: 100%;
 	@include r(780) {
 		display: none;
