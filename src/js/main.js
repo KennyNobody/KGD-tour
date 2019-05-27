@@ -450,4 +450,85 @@
     }
   })();
 
+  // Добавление менеджера
+
+  (function changeManager() {
+    const managerBlock = document.querySelector(".data__block--managers");
+    const managerEmptyBlock = document.querySelector(".data__added-managers");
+    const managerItem = document.querySelector(".data__manager");
+    const managerBtn = document.querySelector(".data__add-manager");
+
+    if(managerBlock && managerBtn) {
+      managerBlock.addEventListener('click', function(e) {
+        if (e.target.classList.contains("data__manager-btn")) {
+          e.target.parentNode.remove();
+        }
+      });
+
+      managerBtn.addEventListener('click', function() {
+        let clone = managerItem.cloneNode( true );
+        managerEmptyBlock.appendChild( clone );
+      });
+    }
+
+  })();
+
+  // Вкладки в контактах
+
+  (function toggleRegiatrationTab() {
+    const block1 = document.querySelector("#reg__content-1");
+    const block2 = document.querySelector("#reg__content-2");
+    const tabLink1 = document.querySelector("#reg-tab-1");
+    const tabLink2 = document.querySelector("#reg-tab-2");
+
+    if (tabLink1 && tabLink2) {
+      tabLink1.addEventListener("click", function(e) {
+        block2.classList.add('data__tab-block--hidden');
+        block1.classList.remove('data__tab-block--hidden');
+        tabLink2.classList.remove('data__tabs-link--active');
+        this.classList.add('data__tabs-link--active');
+      });
+
+      tabLink2.addEventListener("click", function(e) {
+        block1.classList.add('data__tab-block--hidden');
+        block2.classList.remove('data__tab-block--hidden');
+        tabLink1.classList.remove('data__tabs-link--active');
+        this.classList.add('data__tabs-link--active');
+      })
+    }
+  })();
+
+  // Слайдер выбора дат
+  (function initWhenSlider() {
+    const whenSliders = document.querySelectorAll(".when");
+
+    if (whenSliders) {
+
+      for (let i = 0; i < whenSliders.length; i++) {
+        let slider = new Swiper(".when", {
+          slidesPerView: 3,
+          // slidesPerView:'auto',
+          spaceBetween: 10,
+          breakpoints: {
+            800: {
+              slidesPerView: 2
+            },
+            550: {
+              slidesPerView: 1
+            },
+          },
+          navigation: {
+            prevEl: ".when__btn--left",
+            nextEl: ".when__btn--right",
+            disabledClass: "when__btn--inactive"
+          }
+        });
+      }
+
+      
+    }
+
+  })();
+
+
 })();

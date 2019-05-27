@@ -15,7 +15,7 @@
     <link rel="apple-touch-icon" sizes="120x120" href="./img/favicons/apple-touch-icon-120x120.png">
     <link rel="apple-touch-icon" sizes="144x144" href="./img/favicons/apple-touch-icon-144x144.png">
     <link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon-180x180.png">
-    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/main.min.css">
 </head>
 <body class="body" id="page">
     <!-- Шапка больше не должна меняться, блок поиск будет жить отдельно и выезжать сверху страницы, как и мобильное меню -->
@@ -72,7 +72,7 @@
     			<a href="ex-list.html" class="navline__link">
     				Экскурсии по Калининградской области
     			</a>
-    			<a href="news.html" class="navline__link">
+    			<a href="blog.html" class="navline__link">
     				Новости
     			</a>
     			<a href="faq.html" class="navline__link">
@@ -344,43 +344,8 @@
     							<button class="modal__btn btn btn--dark">Войти</button>
     							<a href="#" class="modal__link">Забыли пароль?</a>
     							<hr>
-    							<a href="sign-in.html" class="modal__btn btn modal__btn--black">Регистрация</a>
+    							<a href="registration.html" class="modal__btn btn modal__btn--black">Регистрация</a>
     						</form>
-    					</div>
-    				</div>
-    				<div class="modal__tab modal__tab--reg hidden">
-    					<div class="modal__header">
-    						<h2 class="modal__title" id="modal-1-title">
-    							Регистрация
-    						</h2>
-    						<div class="modal__close close" aria-label="Закрыть окно" data-micromodal-close>
-    							<svg class="icon-svg" data-micromodal-close>
-    								<use xlink:href="img/sprites/svg/symbols.svg#icon-close"></use>
-    							</svg>
-    						</div>
-    					</div>
-    					<div class="modal__content" id="modal-1-content">
-    						<form action="" class="modal__form">
-    							<label class="label">
-    								<p class="label__title">
-    									Ваш email
-    								</p>
-    								<input class="input" id="reg-email" type="text">
-    							</label>
-    							<label class="label">
-    								<p class="label__title">
-    									Пароль
-    								</p>
-    								<input class="input" id="reg-password" type="password" type="text">
-    							</label>
-    							<br>
-    							<button class="modal__btn btn btn--dark">Зарегистрироваться</button>
-    						</form>
-    					</div>
-    					<div class="modal__footer">
-    						<p class="modal__text">
-    							Уже зарегистрированы? <br> <span id="modal__link--auth" class="modal__link">Войти</span>
-    						</p>
     					</div>
     				</div>
     			</div>

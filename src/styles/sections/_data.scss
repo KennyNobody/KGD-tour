@@ -62,6 +62,12 @@
 				width: 100%;
 			}
 		}
+		&--77 {
+			width: calc(66%);
+			@include r(1200) {
+				width: 100%;
+			}
+		}
 		&--60 {
 			width: calc(60% - 10px);
 			@include r(1200) {
@@ -118,6 +124,33 @@
 				font-size: 12px;
 				color: $accent;
 			}
+		}
+		&--manager {
+			margin-bottom: 0px;
+			flex-grow: 1;
+		}
+	}
+	&__manager {
+		display: flex;
+		align-items: flex-end;
+		width: 100%;
+		margin-bottom: 20px;
+		flex-wrap: wrap;
+		@include r(480) {
+			display: block;
+		}
+	}
+	&__added-managers {
+		width: 100%;
+	}
+	&__manager-btn {
+		width: 137px;
+		height: 40px;
+		margin-left: 20px;
+		flex-shrink: 0;
+		@include r(480) {
+			margin-top: 20px;
+			margin-left: 0px;
 		}
 	}
 	&__label-title {
@@ -236,5 +269,51 @@
 		width: 285px;
 		max-width: 100%;
 		height: 40px;
+	}
+	&__add-manager {
+		height: 40px;
+		width: 238px;
+		display: flex;
+		align-items: center;
+		color: $accent;
+		border-color: $accent;
+		justify-content: space-around;
+		border: 2px solid $accent;
+		cursor: pointer;
+		svg {
+			fill: $accent;
+		}
+	}
+	&__tabs {
+		display: flex;
+		align-items: center;
+		font-weight: 500;
+		font-size: 18px;
+		margin-bottom: 22px;
+	}
+	&__tab-block {
+		max-height: 15000px;
+		&--hidden {
+			max-height: 0px;
+			overflow: hidden;
+		}
+	}
+	&__tabs-decor {
+		width: 1px;
+		height: 18px;
+		background-color: $dark;
+		margin-left: 12px;
+		margin-right: 12px;
+	}
+	&__tabs-link {
+		transition: 0.3s all;
+		cursor: pointer;
+		&:hover {
+			opacity: 0.7;
+		}
+		&--active {
+			color: $accent;
+			pointer-events: none;
+		}
 	}
 }
