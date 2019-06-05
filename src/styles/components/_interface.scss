@@ -509,7 +509,8 @@
 		flex-grow: 1;
 		text-align: left;
 		@include r(980) {
-			margin-bottom: 50px;		}
+			margin-bottom: 50px;		
+		}
 	}
 	&__table {
 		width: 497px;
@@ -662,4 +663,15 @@
 			}
 		}
 	}
+}
+
+.search {
+	display: flex;
+	width: 100%;
+	margin-bottom: 29px;
+	height: 40px;
+	background: #FFFFFF;
+	border: 1px solid #E4DFDB;
+	box-sizing: border-box;
+	border-radius: 6px;
 }
