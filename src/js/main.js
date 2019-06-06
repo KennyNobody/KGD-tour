@@ -465,11 +465,11 @@
       managerBlock.addEventListener('click', function(e) {
         if (e.target.classList.contains("data__manager-btn")) {
           e.target.parentNode.remove();
-          let blocksLength = document.querySelectorAll('.data__manager');
+          // let blocksLength = document.querySelectorAll('.data__manager');
 
-          for (let i = 0; i < blocksLength.length; i++) {
-            blocksLength[i].querySelector('input').setAttribute('name', 'ulmanager_' + i);
-          }
+          // for (let i = 0; i < blocksLength.length; i++) {
+          //   blocksLength[i].querySelector('input').setAttribute('name', 'ulmanager_' + i);
+          // }
 
         }
       });
@@ -477,11 +477,11 @@
       managerBtn.addEventListener('click', function() {
         let clone = managerItem.cloneNode( true );
         let copyBlock = managerEmptyBlock.appendChild( clone );
-        let blocksLength = document.querySelectorAll('.data__manager');
+        // let blocksLength = document.querySelectorAll('.data__manager');
 
-        for (let i = 0; i < blocksLength.length; i++) {
-          blocksLength[i].querySelector('input').setAttribute('name', 'ulmanager_' + i);
-        }
+        // for (let i = 0; i < blocksLength.length; i++) {
+        //   blocksLength[i].querySelector('input').setAttribute('name', 'ulmanager_' + i);
+        // }
 
       });
     }
