@@ -459,17 +459,30 @@
     const managerEmptyBlock = document.querySelector(".data__added-managers");
     const managerItem = document.querySelector(".data__manager");
     const managerBtn = document.querySelector(".data__add-manager");
+    let selectIndex = 1;
 
     if(managerBlock && managerBtn) {
       managerBlock.addEventListener('click', function(e) {
         if (e.target.classList.contains("data__manager-btn")) {
           e.target.parentNode.remove();
+          let blocksLength = document.querySelectorAll('.data__manager');
+
+          for (let i = 0; i < blocksLength.length; i++) {
+            blocksLength[i].querySelector('input').setAttribute('name', 'ulmanager_' + i);
+          }
+
         }
       });
 
       managerBtn.addEventListener('click', function() {
         let clone = managerItem.cloneNode( true );
-        managerEmptyBlock.appendChild( clone );
+        let copyBlock = managerEmptyBlock.appendChild( clone );
+        let blocksLength = document.querySelectorAll('.data__manager');
+
+        for (let i = 0; i < blocksLength.length; i++) {
+          blocksLength[i].querySelector('input').setAttribute('name', 'ulmanager_' + i);
+        }
+
       });
     }
 
@@ -530,6 +543,18 @@
       
     }
 
+  })();
+
+  // Инициализируем кастомные скролбары
+
+  (function initScrollbars(){
+    let Scrollbar = window.Scrollbar;
+
+    let scrollBarSelector = document.querySelector('.custom-scrollbar');
+
+    if(scrollBarSelector) {
+      Scrollbar.init(scrollBarSelector);
+    }
   })();
 
 

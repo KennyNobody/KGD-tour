@@ -355,29 +355,34 @@
                     </article>
                 </div>
                 <div class="contacts__map" id="contacts__map">
-                    
+
                 </div>
                 <script>
-                        document.addEventListener('DOMContentLoaded', function() {
-                            var myMap;
+                    document.addEventListener('DOMContentLoaded', function() {
+                        var myMap;
 
-                            ymaps.ready(init);
+                        ymaps.ready(init);
 
-                            function init () {
-                                myMap = new ymaps.Map('contacts__map', {
+                        function init () {
+                            myMap = new ymaps.Map('contacts__map', {
 
-                                    center: [55.76, 37.64],
-                                    zoom: 10
-                                }, {
-                                    searchControlProvider: 'yandex#search'
-                                });
+                                center: [55.76, 37.64],
+                                zoom: 10
+                            }, {
+                                searchControlProvider: 'yandex#search'
+                            });
+
+                            myMap.behaviors.disable('scrollZoom');
+                            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+                                myMap.behaviors.disable('drag');
                             }
-                        }, false);
+                        }
+                    }, false);
 
-                    </script>
+                </script>
             </section>
         </div>
-        
+
     </main>
     <!-- Футер больше не должен меняться (ну, вроде как <_< ) -->
     <footer class="footer">
@@ -591,6 +596,7 @@
     <script src="http://momentjs.com/downloads/moment.min.js"></script>
     <!-- <script src="http://momentjs.com/downloads/moment-with-locales.js"></script> -->
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=ADkFy1wBAAAAroyMeQIA1XC97x9tzD7bmBf4YxiRLlx6CWEAAAAAAAAAAACFwEwMAb3vggJO5-bKmFhwbCF4Ww==" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.4.0/smooth-scrollbar.js"></script>
     
     <!-- Вместо это добавь ссылку гитхаб  https://kennynobody.github.io/KGD-tour/js/main.min.js-->
     <script src="./js/main.min.js"></script>

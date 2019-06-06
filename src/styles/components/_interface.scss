@@ -672,6 +672,38 @@
 	height: 40px;
 	background: #FFFFFF;
 	border: 1px solid #E4DFDB;
-	box-sizing: border-box;
+	box-sizing: content-box;
 	border-radius: 6px;
+	margin-bottom: 29px;
+	&__input {
+		flex-grow: 1;
+		border: none;
+		border-radius: 6px;
+		outline: none;
+		height: 100%;
+		box-sizing: border-box;
+		padding-left: 15px;
+		padding-right: 15px;
+		background: $light;
+	}
+	&__btn {
+		height: 40px;
+		width: 40px;
+		border: none;
+		box-sizing: border-box;
+		background: $light;
+		border-radius: 6px;
+		transition: 0.3s all;
+		svg {
+			height: 22px;
+			width: 22px;
+			fill: $accent;
+		}
+		&:hover {
+			background: $accent;
+			svg {
+				fill: $light;
+			}
+		}
+	}
 }

@@ -59,6 +59,19 @@
 				background-color: $accent;
 			}
 		}
+		&--cat {
+			display: flex;
+			justify-content: space-between;
+			padding-right: 10px;
+		}
+	}
+	&__link-content {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+	&__link-counter {
+		color: #FFBE77;
 	}
 }
 
