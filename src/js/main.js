@@ -467,9 +467,9 @@
           e.target.parentNode.remove();
           let blocksLength = document.querySelectorAll('.data__manager');
 
-          for (let i = 0; i < blocksLength.length; i++) {
-            blocksLength[i].querySelector('input').setAttribute('name', 'ulmanager_' + i);
-          }
+          // for (let i = 0; i < blocksLength.length; i++) {
+          //   blocksLength[i].querySelector('input').setAttribute('name', 'ulmanager_' + i);
+          // }
 
         }
       });
@@ -479,9 +479,9 @@
         let copyBlock = managerEmptyBlock.appendChild( clone );
         let blocksLength = document.querySelectorAll('.data__manager');
 
-        for (let i = 0; i < blocksLength.length; i++) {
-          blocksLength[i].querySelector('input').setAttribute('name', 'ulmanager_' + i);
-        }
+        // for (let i = 0; i < blocksLength.length; i++) {
+        //   blocksLength[i].querySelector('input').setAttribute('name', 'ulmanager_' + i);
+        // }
 
       });
     }
