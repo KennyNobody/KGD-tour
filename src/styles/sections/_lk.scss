@@ -15,6 +15,7 @@
 		border: 1px solid #E4DFDB;
 		border-radius: 6px;
 		margin-right: 5px;
+		margin-bottom: 19px;
 		&:hover {
 			opacity: 0.75;
 		}
@@ -247,10 +248,3 @@
 	}
 }
 
-.horizontal-scroll {
-	height: auto;
-	width: 100%;
-	@include r(1200) {
-		overflow-x: scroll; 
-	}
-}

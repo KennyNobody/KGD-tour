@@ -217,6 +217,15 @@ button {
 	display: none;
 }
 
+.horizontal-scroll {
+	height: auto;
+	width: 100%;
+	padding-bottom: 15px;
+	@include r(1200) {
+		overflow-x: scroll; 
+	}
+}
+
 @import "includes/header";
 @import "includes/footer";
 

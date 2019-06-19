@@ -2,7 +2,7 @@
 	background-color: $dark;
 	color: $light;
 	padding-top: 35px;
-	padding-bottom: 53px;
+	padding-bottom: 20px;
 	font-size: 14px;
 	@include r(780) {
 		padding-bottom: 30px;
@@ -85,6 +85,19 @@
 	strong {
 		font-weight: 400;
 		text-transform: uppercase;
+	}
+	&__discript {
+		font-size: 14px;
+		padding-top: 20px;
+		color: $light;
+		border-top: 1px solid #7C7169;
+		margin-top: 30px;
+		a {
+			color: red;
+			&:hover {
+				color: $light;
+			}
+		}
 	}
 }
 

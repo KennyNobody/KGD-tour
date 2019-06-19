@@ -118,31 +118,33 @@
 
   // Изменение активного пунка меню в сайдбаре
 
-  if (document.querySelector(".section-anchor")) {
-  	var section = document.querySelectorAll(".section-anchor");
-  	var sections = {};
-  	var i = 0;
+  (function initSidebarsMenu(){
+    if (document.querySelector(".section-anchor")) {
+    var section = document.querySelectorAll(".section-anchor");
+    var sections = {};
+    var i = 0;
 
-  	Array.prototype.forEach.call(section, function(e) {
-  		sections[e.id] = e.offsetTop;
-  	});
+    Array.prototype.forEach.call(section, function(e) {
+      sections[e.id] = e.offsetTop;
+    });
 
-  	document.addEventListener("scroll", function() {
-  		var scrollPosition =
-  		document.documentElement.scrollTop + 50 || document.body.scrollTop + 50;
+    document.addEventListener("scroll", function() {
+      var scrollPosition =
+      document.documentElement.scrollTop + 50 || document.body.scrollTop + 50;
 
-  		for (i in sections) {
-  			if (sections[i] <= scrollPosition) {
-  				document
-  				.querySelector(".side-menu__link--active")
-  				.classList.remove("side-menu__link--active");
-  				document
-  				.querySelector(".side-menu a[href*=" + i + "]")
-  				.classList.add("side-menu__link--active");
-  			}
-  		}
-  	});
+      for (i in sections) {
+        if (sections[i] <= scrollPosition) {
+          document
+          .querySelector(".side-menu__link--active")
+          .classList.remove("side-menu__link--active");
+          document
+          .querySelector(".side-menu a[href*=" + i + "]")
+          .classList.add("side-menu__link--active");
+        }
+      }
+    });
   }
+  })();
 
   // Появление мобильного меню
 
@@ -551,9 +553,14 @@
     let Scrollbar = window.Scrollbar;
 
     let scrollBarSelector = document.querySelector('.custom-scrollbar');
+    let scrollBarSelector2 = document.querySelector('.horizontal-scroll');
 
     if(scrollBarSelector) {
       Scrollbar.init(scrollBarSelector);
+    }
+
+    if(scrollBarSelector2) {
+      Scrollbar.init(scrollBarSelector2);
     }
   })();
 
