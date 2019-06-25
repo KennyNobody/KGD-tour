@@ -120,30 +120,30 @@
 
   (function initSidebarsMenu(){
     if (document.querySelector(".section-anchor")) {
-    var section = document.querySelectorAll(".section-anchor");
-    var sections = {};
-    var i = 0;
+      var section = document.querySelectorAll(".section-anchor");
+      var sections = {};
+      var i = 0;
 
-    Array.prototype.forEach.call(section, function(e) {
-      sections[e.id] = e.offsetTop;
-    });
+      Array.prototype.forEach.call(section, function(e) {
+        sections[e.id] = e.offsetTop;
+      });
 
-    document.addEventListener("scroll", function() {
-      var scrollPosition =
-      document.documentElement.scrollTop + 50 || document.body.scrollTop + 50;
+      document.addEventListener("scroll", function() {
+        var scrollPosition =
+        document.documentElement.scrollTop + 50 || document.body.scrollTop + 50;
 
-      for (i in sections) {
-        if (sections[i] <= scrollPosition) {
-          document
-          .querySelector(".side-menu__link--active")
-          .classList.remove("side-menu__link--active");
-          document
-          .querySelector(".side-menu a[href*=" + i + "]")
-          .classList.add("side-menu__link--active");
+        for (i in sections) {
+          if (sections[i] <= scrollPosition) {
+            document
+            .querySelector(".side-menu__link--active")
+            .classList.remove("side-menu__link--active");
+            document
+            .querySelector(".side-menu a[href*=" + i + "]")
+            .classList.add("side-menu__link--active");
+          }
         }
-      }
-    });
-  }
+      });
+    }
   })();
 
   // Появление мобильного меню
@@ -383,26 +383,29 @@
   (function initBusPlace() {
   	const busPlaces = document.querySelectorAll(".place__label input");
     const placeNow = document.querySelector("#place__selected");
+    const totalPeoples = document.querySelectorAll('.data__block--tourist').length;
+    let selectedCount = 0;
+    let selectedplaces = {};
     let i;
     let n;
     let numberPlace;
 
     if (busPlaces) {
 
-      function remoteSelects() {
-        for (n = 0; n < busPlaces.length; n++) {
-          if (busPlaces[n].parentNode.classList.contains("place__label--selected")) {
-            busPlaces[n].parentNode.classList.remove("place__label--selected");
-          }
-        }
-      }
-
       for (i = 0; i < busPlaces.length; i++) {
         busPlaces[i].addEventListener("change", function() {
-          remoteSelects();
-          this.parentNode.classList.add("place__label--selected");
-          numberPlace = document.querySelector('.place__label--selected .place__label-title').innerText;
-          placeNow.textContent = numberPlace;
+          if (this.checked && selectedCount < totalPeoples) {
+            this.parentNode.classList.add("place__label--selected");
+            selectedCount = selectedCount + 1;
+            return false;
+          }
+          else if (this.checked && selectedCount >= totalPeoples) {
+            return false;
+          } else if (this.checked == false) {
+            this.parentNode.classList.remove("place__label--selected");
+            selectedCount = selectedCount - 1;
+          }
+          console.log(selectedCount);
         });
       }
     }
