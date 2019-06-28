@@ -543,16 +543,18 @@
 		font-weight: 500;
 		color: #7C7169;
 		border: 1px solid #7C7169;
+		cursor: pointer;
 		&--func {
 			color: $light;
 			background-color: #7C7169;
-
+			cursor: auto;
 		}
 		&--blocked {
 			background-color: #E4DFDB;
 			border-color: #E4DFDB;
 			color: #BBB0A9;
 			pointer-events: none;
+			cursor: auto;
 		}
 		&--selected {
 			background-color: $accent;
@@ -563,6 +565,7 @@
 			background-color: $accent;
 			color: $light;
 			border-color: $accent;
+			cursor: auto;
 		}
 		&--static {
 			position: relative;
@@ -570,9 +573,11 @@
 			height: 40px;
 			margin-right: 13px;
 			pointer-events: none;
+			cursor: auto;
 		}
 		&--exit {
 			width: 40px;
+			cursor: auto;
 			left: auto;
 			p {
 				transform: rotate(-90deg);
