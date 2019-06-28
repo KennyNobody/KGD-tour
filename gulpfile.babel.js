@@ -74,8 +74,8 @@ export const cleanFiles = () => src(paths.build.clean, {read: false})
 export const server = () => {
 	browsersync.init({
 		server: paths.build.general,
-		port: 9000,
-		tunnel: true,
+		port: 3000,
+		tunnel: false,
 		notify: false
 	});
 };

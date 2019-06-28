@@ -559,11 +559,17 @@
 			color: $light;
 			border-color: $accent;
 		}
+		&--custom {
+			background-color: $accent;
+			color: $light;
+			border-color: $accent;
+		}
 		&--static {
 			position: relative;
 			width: 90px;
 			height: 40px;
 			margin-right: 13px;
+			pointer-events: none;
 		}
 		&--exit {
 			width: 40px;

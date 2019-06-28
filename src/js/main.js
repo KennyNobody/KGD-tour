@@ -381,11 +381,11 @@
   // Выбор места в автобусе
 
   (function initBusPlace() {
-  	const busPlaces = document.querySelectorAll(".place__label input");
+  	const busPlaces = document.querySelectorAll(".place__label");
     const placeNow = document.querySelector("#place__selected");
-    const totalPeoples = document.querySelectorAll('.data__block--tourist').length;
-    let selectedCount = 0;
-    let selectedplaces = {};
+    const placeNowInput = document.querySelector("#place__selected-input");
+    const totalTourists = document.querySelectorAll(".data__block--tourist").length;
+    let selectCounter;
     let i;
     let n;
     let numberPlace;
@@ -393,19 +393,38 @@
     if (busPlaces) {
 
       for (i = 0; i < busPlaces.length; i++) {
-        busPlaces[i].addEventListener("change", function() {
-          if (this.checked && selectedCount < totalPeoples) {
-            this.parentNode.classList.add("place__label--selected");
-            selectedCount = selectedCount + 1;
-            return false;
+        busPlaces[i].addEventListener("click", function() {
+
+          if (this.classList.contains('place__label--selected')) {
+            selectCounter = document.querySelectorAll('.place__label--selected').length;
+            this.classList.remove("place__label--selected");
+            numberPlace = document.querySelectorAll('.place__label--selected');
+            placeNow.textContent = "";
+            placeNowInput.value = "";
+            console.log(placeNowInput);
+            for (let z = 0; z < numberPlace.length; z++) {
+              placeNow.textContent = placeNow.textContent + numberPlace[z].innerText + " ";
+              placeNowInput.value = placeNowInput.value + numberPlace[z].innerText + " ";
+            }
+
+          } else {
+            selectCounter = document.querySelectorAll('.place__label--selected').length;
+            if (selectCounter < totalTourists) {
+              this.classList.add("place__label--selected");
+
+              numberPlace = document.querySelectorAll('.place__label--selected');
+
+              placeNow.textContent = "";
+              placeNowInput.value = "";
+              for (let z = 0; z < numberPlace.length; z++) {
+                placeNow.textContent = placeNow.textContent + " " + numberPlace[z].innerText;
+                placeNowInput.value = placeNowInput.value + numberPlace[z].innerText + " ";
+              }
+            }
           }
-          else if (this.checked && selectedCount >= totalPeoples) {
-            return false;
-          } else if (this.checked == false) {
-            this.parentNode.classList.remove("place__label--selected");
-            selectedCount = selectedCount - 1;
-          }
-          console.log(selectedCount);
+          
+          // numberPlace = document.querySelector('.place__label--selected').innerText;
+          // placeNow.textContent = numberPlace;
         });
       }
     }
