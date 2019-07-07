@@ -80,18 +80,18 @@
   MicroModal.init();
 
   (function initCloseModal() {
-    let closeBtns = document.querySelectorAll(".close");
+  	let closeBtns = document.querySelectorAll(".close");
 
-    if (closeBtns) {
-      [].forEach.call(closeBtns, function(item) {
-        item.addEventListener("click", function() {
-          let openedModal = document.querySelector(".is-open");
+  	if (closeBtns) {
+  		[].forEach.call(closeBtns, function(item) {
+  			item.addEventListener("click", function() {
+  				let openedModal = document.querySelector(".is-open");
 
-          openedModal.classList.remove("is-open");
-          openedModal.setAttribute("aria-modal", "true");
-        });
-      });
-    }
+  				openedModal.classList.remove("is-open");
+  				openedModal.setAttribute("aria-modal", "true");
+  			});
+  		});
+  	}
   })();
 
   // Переключение вкладок в регистрации
@@ -119,31 +119,31 @@
   // Изменение активного пунка меню в сайдбаре
 
   (function initSidebarsMenu(){
-    if (document.querySelector(".section-anchor")) {
-      var section = document.querySelectorAll(".section-anchor");
-      var sections = {};
-      var i = 0;
+  	if (document.querySelector(".section-anchor")) {
+  		var section = document.querySelectorAll(".section-anchor");
+  		var sections = {};
+  		var i = 0;
 
-      Array.prototype.forEach.call(section, function(e) {
-        sections[e.id] = e.offsetTop;
-      });
+  		Array.prototype.forEach.call(section, function(e) {
+  			sections[e.id] = e.offsetTop;
+  		});
 
-      document.addEventListener("scroll", function() {
-        var scrollPosition =
-        document.documentElement.scrollTop + 50 || document.body.scrollTop + 50;
+  		document.addEventListener("scroll", function() {
+  			var scrollPosition =
+  			document.documentElement.scrollTop + 50 || document.body.scrollTop + 50;
 
-        for (i in sections) {
-          if (sections[i] <= scrollPosition) {
-            document
-            .querySelector(".side-menu__link--active")
-            .classList.remove("side-menu__link--active");
-            document
-            .querySelector(".side-menu a[href*=" + i + "]")
-            .classList.add("side-menu__link--active");
-          }
-        }
-      });
-    }
+  			for (i in sections) {
+  				if (sections[i] <= scrollPosition) {
+  					document
+  					.querySelector(".side-menu__link--active")
+  					.classList.remove("side-menu__link--active");
+  					document
+  					.querySelector(".side-menu a[href*=" + i + "]")
+  					.classList.add("side-menu__link--active");
+  				}
+  			}
+  		});
+  	}
   })();
 
   // Появление мобильного меню
@@ -231,18 +231,35 @@
   					],
   					weekdaysShort: ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"]
   				},
-  				onSelect: date => {
-  					const year = date.getFullYear(),
-  					month = date.getMonth() + 1,
-  					day = date.getDate(),
-  					formattedDate = [
-  					day < 10 ? "0" + day : day,
-  					month < 10 ? "0" + month : month,
-  					year
-  					].join(".");
-  					dataPickers[i].value = formattedDate;
-  				}
-  			});
+  				// onSelect: date => {
+  				// 	const year = date.getFullYear(),
+  				// 	month = date.getMonth() + 1,
+  				// 	day = date.getDate(),
+  				// 	formattedDate = [
+  				// 	day < 10 ? "0" + day : day,
+  				// 	month < 10 ? "0" + month : month,
+  				// 	year
+  				// 	].join(".");
+  				// 	dataPickers[i].value = formattedDate;
+  				// }
+  				format: 'd.m.Y',
+  				toString(date, format) {
+		        // you should do formatting based on the passed format,
+		        // but we will just return 'D/M/YYYY' for simplicity
+		        const day = date.getDate();
+		        const month = date.getMonth() + 1;
+		        const year = date.getFullYear();
+		        return `${day}.${month}.${year}`;
+		    },
+		    parse(dateString, format) {
+        		// dateString is the result of `toString` method
+        		const parts = dateString.split('/');
+        		const day = parseInt(parts[0], 10);
+        		const month = parseInt(parts[1], 10) - 1;
+        		const year = parseInt(parts[2], 10);
+        		return new Date(year, month, day);
+        	}
+        });
   		}
   	}
   })();
@@ -276,62 +293,62 @@
 
   (function initRaters() {
   	const raters = document.querySelectorAll(".rater");
-    const calcLine = document.querySelectorAll('.side-form__line');
-    const calcResultBlock = document.querySelector('#sidebar__result-price');
-    let calcTotal;
-    let lineTotal;
+  	const calcLine = document.querySelectorAll('.side-form__line');
+  	const calcResultBlock = document.querySelector('#sidebar__result-price');
+  	let calcTotal;
+  	let lineTotal;
 
-    if (raters && calcLine) {
-      for (let i = 0; i < raters.length; i++) {
-       const raterMinus = raters[i].querySelector(".rater__link--minus");
-       const raterPlus = raters[i].querySelector(".rater__link--plus");
+  	if (raters && calcLine) {
+  		for (let i = 0; i < raters.length; i++) {
+  			const raterMinus = raters[i].querySelector(".rater__link--minus");
+  			const raterPlus = raters[i].querySelector(".rater__link--plus");
 
-       raterPlus.addEventListener("click", function() {
-        raters[i].querySelector(".rater__input").value =
-        Number(raters[i].querySelector(".rater__input").value) + 1;
+  			raterPlus.addEventListener("click", function() {
+  				raters[i].querySelector(".rater__input").value =
+  				Number(raters[i].querySelector(".rater__input").value) + 1;
 
-        calcTotal = 0;
+  				calcTotal = 0;
 
-        for(let z = 1; z < calcLine.length; z++) {
-          lineTotal = +calcLine[z].querySelector('.side-form__row--2').innerText * +calcLine[z].querySelector('.side-form__row--3 .rater__input').value;
-          calcTotal = +calcTotal + +lineTotal;
-        }
+  				for(let z = 1; z < calcLine.length; z++) {
+  					lineTotal = +calcLine[z].querySelector('.side-form__row--2').innerText * +calcLine[z].querySelector('.side-form__row--3 .rater__input').value;
+  					calcTotal = +calcTotal + +lineTotal;
+  				}
 
-        calcResultBlock.innerText = calcTotal;
+  				calcResultBlock.innerText = calcTotal;
 
-        if (raters[i].querySelector(".rater__input").value == 0) {
-         raterMinus.classList.add("rater__link--disabled");
-       } else {
-         raterMinus.classList.remove("rater__link--disabled");
-       }
-     });
+  				if (raters[i].querySelector(".rater__input").value == 0) {
+  					raterMinus.classList.add("rater__link--disabled");
+  				} else {
+  					raterMinus.classList.remove("rater__link--disabled");
+  				}
+  			});
 
-       raterMinus.addEventListener("click", function() {
-        if (raters[i].querySelector(".rater__input").value == 0) {
-         return false;
-       } else {
-         raters[i].querySelector(".rater__input").value =
-         Number(raters[i].querySelector(".rater__input").value) - 1;
+  			raterMinus.addEventListener("click", function() {
+  				if (raters[i].querySelector(".rater__input").value == 0) {
+  					return false;
+  				} else {
+  					raters[i].querySelector(".rater__input").value =
+  					Number(raters[i].querySelector(".rater__input").value) - 1;
 
-         calcTotal = 0;
+  					calcTotal = 0;
 
-         for(let z = 1; z < calcLine.length; z++) {
-          lineTotal = +calcLine[z].querySelector('.side-form__row--2').innerText * +calcLine[z].querySelector('.side-form__row--3 .rater__input').value;
-          calcTotal = +calcTotal + +lineTotal;
-        }
+  					for(let z = 1; z < calcLine.length; z++) {
+  						lineTotal = +calcLine[z].querySelector('.side-form__row--2').innerText * +calcLine[z].querySelector('.side-form__row--3 .rater__input').value;
+  						calcTotal = +calcTotal + +lineTotal;
+  					}
 
-        calcResultBlock.innerText = calcTotal;
-      }
+  					calcResultBlock.innerText = calcTotal;
+  				}
 
-      if (raters[i].querySelector(".rater__input").value == 0) {
-       this.classList.add("rater__link--disabled");
-     } else {
-       this.classList.remove("rater__link--disabled");
-     }
-   });
-     }
-   }
- })();
+  				if (raters[i].querySelector(".rater__input").value == 0) {
+  					this.classList.add("rater__link--disabled");
+  				} else {
+  					this.classList.remove("rater__link--disabled");
+  				}
+  			});
+  		}
+  	}
+  })();
 
   // Чекбоксы разблокировки кнопки в оформлении заказа
 
@@ -404,210 +421,210 @@
 
   (function initBusPlace() {
   	const busPlaces = document.querySelectorAll(".place__label");
-    const placeNow = document.querySelector("#place__selected");
-    const placeNowInput = document.querySelector("#place__selected-input");
-    let totalTourists;
-    let selectCounter;
-    let i;
-    let n;
-    let numberPlace;
+  	const placeNow = document.querySelector("#place__selected");
+  	const placeNowInput = document.querySelector("#place__selected-input");
+  	let totalTourists;
+  	let selectCounter;
+  	let i;
+  	let n;
+  	let numberPlace;
 
-    if (busPlaces && placeNow && placeNowInput) {
+  	if (busPlaces && placeNow && placeNowInput) {
 
-      totalTourists = +document.querySelector("#place__selected-counter").value;
+  		totalTourists = +document.querySelector("#place__selected-counter").value;
 
-      for (i = 0; i < busPlaces.length; i++) {
-        busPlaces[i].addEventListener("click", function() {
+  		for (i = 0; i < busPlaces.length; i++) {
+  			busPlaces[i].addEventListener("click", function() {
 
-          if (this.classList.contains('place__label--selected')) {
-            selectCounter = document.querySelectorAll('.place__label--selected').length;
-            this.classList.remove("place__label--selected");
-            numberPlace = document.querySelectorAll('.place__label--selected');
-            placeNow.textContent = "";
-            placeNowInput.value = "";
-            for (let z = 0; z < numberPlace.length; z++) {
-              placeNow.textContent = placeNow.textContent + numberPlace[z].innerText + " ";
-              placeNowInput.value = placeNowInput.value + numberPlace[z].innerText + " ";
-            }
+  				if (this.classList.contains('place__label--selected')) {
+  					selectCounter = document.querySelectorAll('.place__label--selected').length;
+  					this.classList.remove("place__label--selected");
+  					numberPlace = document.querySelectorAll('.place__label--selected');
+  					placeNow.textContent = "";
+  					placeNowInput.value = "";
+  					for (let z = 0; z < numberPlace.length; z++) {
+  						placeNow.textContent = placeNow.textContent + numberPlace[z].innerText + " ";
+  						placeNowInput.value = placeNowInput.value + numberPlace[z].innerText + " ";
+  					}
 
-          } else {
-            selectCounter = document.querySelectorAll('.place__label--selected').length;
-            if (selectCounter < totalTourists) {
-              this.classList.add("place__label--selected");
+  				} else {
+  					selectCounter = document.querySelectorAll('.place__label--selected').length;
+  					if (selectCounter < totalTourists) {
+  						this.classList.add("place__label--selected");
 
-              numberPlace = document.querySelectorAll('.place__label--selected');
+  						numberPlace = document.querySelectorAll('.place__label--selected');
 
-              placeNow.textContent = "";
-              placeNowInput.value = "";
-              for (let z = 0; z < numberPlace.length; z++) {
-                placeNow.textContent = placeNow.textContent + " " + numberPlace[z].innerText;
-                placeNowInput.value = placeNowInput.value + numberPlace[z].innerText + " ";
-              }
-            }
-          }
-          
+  						placeNow.textContent = "";
+  						placeNowInput.value = "";
+  						for (let z = 0; z < numberPlace.length; z++) {
+  							placeNow.textContent = placeNow.textContent + " " + numberPlace[z].innerText;
+  							placeNowInput.value = placeNowInput.value + numberPlace[z].innerText + " ";
+  						}
+  					}
+  				}
+
           // numberPlace = document.querySelector('.place__label--selected').innerText;
           // placeNow.textContent = numberPlace;
-        });
-      }
-    }
+      });
+  		}
+  	}
   })();
 
 
   // Включаем отображение пароля
 
   (function showPassword () {
-    const showPassBtns = document.querySelectorAll(".label-modal__show-pass");
-    let i;
+  	const showPassBtns = document.querySelectorAll(".label-modal__show-pass");
+  	let i;
 
-    if (showPassBtns) {
-      for (i = 0; i < showPassBtns.length; i++) {
-        showPassBtns[i].addEventListener("click", function(e) {
-          e.stopPropagation();
-          if (this.parentNode.querySelector('input').type == 'password') {
-            this.parentNode.querySelector('input').type = 'text';
-          } else {
-            this.parentNode.querySelector('input').type = 'password';
-          }
-        });
-      }
-    }
+  	if (showPassBtns) {
+  		for (i = 0; i < showPassBtns.length; i++) {
+  			showPassBtns[i].addEventListener("click", function(e) {
+  				e.stopPropagation();
+  				if (this.parentNode.querySelector('input').type == 'password') {
+  					this.parentNode.querySelector('input').type = 'text';
+  				} else {
+  					this.parentNode.querySelector('input').type = 'password';
+  				}
+  			});
+  		}
+  	}
 
   })();
 
   // Вкладки в контактах
 
   (function toggleContactsTab() {
-    const block1 = document.querySelector("#contacts__articles");
-    const block2 = document.querySelector("#contacts__map");
-    const tabLink1 = document.querySelector("#contacts-tab-1");
-    const tabLink2 = document.querySelector("#contacts-tab-2");
+  	const block1 = document.querySelector("#contacts__articles");
+  	const block2 = document.querySelector("#contacts__map");
+  	const tabLink1 = document.querySelector("#contacts-tab-1");
+  	const tabLink2 = document.querySelector("#contacts-tab-2");
 
-    if (tabLink1 && tabLink2) {
-      tabLink1.addEventListener("click", function(e) {
-        block1.classList.add('contacts__articles--hidden');
-        block2.classList.remove('contacts__map--hidden');
-        tabLink2.classList.remove('contacts__nav-tab--active');
-        this.classList.add('contacts__nav-tab--active');
-      });
+  	if (tabLink1 && tabLink2) {
+  		tabLink1.addEventListener("click", function(e) {
+  			block1.classList.add('contacts__articles--hidden');
+  			block2.classList.remove('contacts__map--hidden');
+  			tabLink2.classList.remove('contacts__nav-tab--active');
+  			this.classList.add('contacts__nav-tab--active');
+  		});
 
-      tabLink2.addEventListener("click", function(e) {
-        block2.classList.add('contacts__map--hidden');
-        block1.classList.remove('contacts__articles--hidden');
-        tabLink1.classList.remove('contacts__nav-tab--active');
-        this.classList.add('contacts__nav-tab--active');
-      })
-    }
+  		tabLink2.addEventListener("click", function(e) {
+  			block2.classList.add('contacts__map--hidden');
+  			block1.classList.remove('contacts__articles--hidden');
+  			tabLink1.classList.remove('contacts__nav-tab--active');
+  			this.classList.add('contacts__nav-tab--active');
+  		})
+  	}
   })();
 
   // Добавление менеджера
 
   (function changeManager() {
-    const managerBlock = document.querySelector(".data__block--managers");
-    const managerEmptyBlock = document.querySelector(".data__added-managers");
-    const managerItem = document.querySelector(".data__manager");
-    const managerBtn = document.querySelector(".data__add-manager");
-    let selectIndex = 1;
+  	const managerBlock = document.querySelector(".data__block--managers");
+  	const managerEmptyBlock = document.querySelector(".data__added-managers");
+  	const managerItem = document.querySelector(".data__manager");
+  	const managerBtn = document.querySelector(".data__add-manager");
+  	let selectIndex = 1;
 
-    if(managerBlock && managerBtn) {
-      managerBlock.addEventListener('click', function(e) {
-        if (e.target.classList.contains("data__manager-btn")) {
-          e.target.parentNode.remove();
-          let blocksLength = document.querySelectorAll('.data__manager');
+  	if(managerBlock && managerBtn) {
+  		managerBlock.addEventListener('click', function(e) {
+  			if (e.target.classList.contains("data__manager-btn")) {
+  				e.target.parentNode.remove();
+  				let blocksLength = document.querySelectorAll('.data__manager');
 
           // for (let i = 0; i < blocksLength.length; i++) {
           //   blocksLength[i].querySelector('input').setAttribute('name', 'ulmanager_' + i);
           // }
 
-        }
-      });
+      }
+  });
 
-      managerBtn.addEventListener('click', function() {
-        let clone = managerItem.cloneNode( true );
-        let copyBlock = managerEmptyBlock.appendChild( clone );
-        let blocksLength = document.querySelectorAll('.data__manager');
+  		managerBtn.addEventListener('click', function() {
+  			let clone = managerItem.cloneNode( true );
+  			let copyBlock = managerEmptyBlock.appendChild( clone );
+  			let blocksLength = document.querySelectorAll('.data__manager');
 
         // for (let i = 0; i < blocksLength.length; i++) {
         //   blocksLength[i].querySelector('input').setAttribute('name', 'ulmanager_' + i);
         // }
 
-      });
-    }
+    });
+  	}
 
   })();
 
   // Вкладки в контактах
 
   (function toggleRegiatrationTab() {
-    const block1 = document.querySelector("#reg__content-1");
-    const block2 = document.querySelector("#reg__content-2");
-    const tabLink1 = document.querySelector("#reg-tab-1");
-    const tabLink2 = document.querySelector("#reg-tab-2");
+  	const block1 = document.querySelector("#reg__content-1");
+  	const block2 = document.querySelector("#reg__content-2");
+  	const tabLink1 = document.querySelector("#reg-tab-1");
+  	const tabLink2 = document.querySelector("#reg-tab-2");
 
-    if (tabLink1 && tabLink2) {
-      tabLink1.addEventListener("click", function(e) {
-        block2.classList.add('data__tab-block--hidden');
-        block1.classList.remove('data__tab-block--hidden');
-        tabLink2.classList.remove('data__tabs-link--active');
-        this.classList.add('data__tabs-link--active');
-      });
+  	if (tabLink1 && tabLink2) {
+  		tabLink1.addEventListener("click", function(e) {
+  			block2.classList.add('data__tab-block--hidden');
+  			block1.classList.remove('data__tab-block--hidden');
+  			tabLink2.classList.remove('data__tabs-link--active');
+  			this.classList.add('data__tabs-link--active');
+  		});
 
-      tabLink2.addEventListener("click", function(e) {
-        block1.classList.add('data__tab-block--hidden');
-        block2.classList.remove('data__tab-block--hidden');
-        tabLink1.classList.remove('data__tabs-link--active');
-        this.classList.add('data__tabs-link--active');
-      })
-    }
+  		tabLink2.addEventListener("click", function(e) {
+  			block1.classList.add('data__tab-block--hidden');
+  			block2.classList.remove('data__tab-block--hidden');
+  			tabLink1.classList.remove('data__tabs-link--active');
+  			this.classList.add('data__tabs-link--active');
+  		})
+  	}
   })();
 
   // Слайдер выбора дат
   (function initWhenSlider() {
-    const whenSliders = document.querySelectorAll(".when");
+  	const whenSliders = document.querySelectorAll(".when");
 
-    if (whenSliders) {
+  	if (whenSliders) {
 
-      for (let i = 0; i < whenSliders.length; i++) {
-        let slider = new Swiper(".when", {
-          slidesPerView: 3,
+  		for (let i = 0; i < whenSliders.length; i++) {
+  			let slider = new Swiper(".when", {
+  				slidesPerView: 3,
           // slidesPerView:'auto',
           spaceBetween: 10,
           breakpoints: {
-            800: {
-              slidesPerView: 2
-            },
-            550: {
-              slidesPerView: 1
-            },
+          	800: {
+          		slidesPerView: 2
+          	},
+          	550: {
+          		slidesPerView: 1
+          	},
           },
           navigation: {
-            prevEl: ".when__btn--left",
-            nextEl: ".when__btn--right",
-            disabledClass: "when__btn--inactive"
+          	prevEl: ".when__btn--left",
+          	nextEl: ".when__btn--right",
+          	disabledClass: "when__btn--inactive"
           }
-        });
-      }
+      });
+  		}
 
-      
-    }
+
+  	}
 
   })();
 
   // Инициализируем кастомные скролбары
 
   (function initScrollbars(){
-    let Scrollbar = window.Scrollbar;
+  	let Scrollbar = window.Scrollbar;
 
-    let scrollBarSelector = document.querySelector('.custom-scrollbar');
-    let scrollBarSelector2 = document.querySelector('.horizontal-scroll');
+  	let scrollBarSelector = document.querySelector('.custom-scrollbar');
+  	let scrollBarSelector2 = document.querySelector('.horizontal-scroll');
 
-    if(scrollBarSelector) {
-      Scrollbar.init(scrollBarSelector);
-    }
+  	if(scrollBarSelector) {
+  		Scrollbar.init(scrollBarSelector);
+  	}
 
-    if(scrollBarSelector2) {
-      Scrollbar.init(scrollBarSelector2);
-    }
+  	if(scrollBarSelector2) {
+  		Scrollbar.init(scrollBarSelector2);
+  	}
   })();
 
 
