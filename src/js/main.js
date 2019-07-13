@@ -250,8 +250,8 @@
 		        const month = date.getMonth() + 1;
 		        const year = date.getFullYear();
 		        return `${day}.${month}.${year}`;
-		    },
-		    parse(dateString, format) {
+          },
+          parse(dateString, format) {
         		// dateString is the result of `toString` method
         		const parts = dateString.split('/');
         		const day = parseInt(parts[0], 10);
@@ -465,11 +465,30 @@
 
           // numberPlace = document.querySelector('.place__label--selected').innerText;
           // placeNow.textContent = numberPlace;
-      });
+        });
   		}
   	}
   })();
 
+  // Сброс мест в автобусе
+
+  (function clearBusPlaces() {
+    const clearBtn = document.querySelector('#place__clear');
+    const selectedText = document.querySelector('#place__selected');
+    const selectedInput = document.querySelector('#place__selected-input');
+
+    if (clearBtn && selectedText) {
+      clearBtn.addEventListener('click', function() {
+        let busPlaces = document.querySelectorAll(".place__label--selected");
+        for (let i = 0; i < busPlaces.length; i++) {
+          busPlaces[i].classList.remove("place__label--selected");
+          selectedText.innerText = "";
+          selectedInput.value = "";
+        }
+      })
+    }
+
+  })();
 
   // Включаем отображение пароля
 
@@ -536,8 +555,8 @@
           //   blocksLength[i].querySelector('input').setAttribute('name', 'ulmanager_' + i);
           // }
 
-      }
-  });
+        }
+      });
 
   		managerBtn.addEventListener('click', function() {
   			let clone = managerItem.cloneNode( true );
@@ -548,7 +567,7 @@
         //   blocksLength[i].querySelector('input').setAttribute('name', 'ulmanager_' + i);
         // }
 
-    });
+      });
   	}
 
   })();
@@ -602,7 +621,7 @@
           	nextEl: ".when__btn--right",
           	disabledClass: "when__btn--inactive"
           }
-      });
+        });
   		}
 
 

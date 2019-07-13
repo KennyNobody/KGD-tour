@@ -518,6 +518,7 @@
 		border-spacing: 6px;
 		border-collapse: initial;
 		font-size: 14px;
+		margin-bottom: 15px;
 		@include r(980) {
 			margin-left: auto;
 			margin-right: auto;
@@ -530,6 +531,13 @@
 			height: 40px;
 			position: relative;
 		}
+	}
+	&__flour {
+		text-align: left;
+		height: 30px;
+		font-size: 20px;
+		color: $dark;
+		font-weight: bold;
 	}
 	&__label {
 		position: absolute;
@@ -548,6 +556,7 @@
 			color: $light;
 			background-color: #7C7169;
 			cursor: auto;
+			pointer-events: none;
 		}
 		&--blocked {
 			background-color: #E4DFDB;
