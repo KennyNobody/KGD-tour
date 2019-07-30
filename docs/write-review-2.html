@@ -75,6 +75,9 @@
     			<a href="blog.html" class="navline__link">
     				Новости
     			</a>
+    			<a href="blog.html" class="navline__link">
+    				Услуги
+    			</a>
     			<a href="faq.html" class="navline__link">
     				Вопросы и ответы
     			</a>
@@ -395,6 +398,142 @@
     			
     		</div>
     	</div>
+    
+    	<!-- Фильтры личного кабинета -->
+    
+    	<div class="modal micromodal-slide" id="modal-filter" aria-hidden="true">
+    		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+    			<div class="modal__container modal__container--filter custom-scroll custom-scroll--accent" role="dialog" aria-modal="true" aria-labelledby="modal-login-title">
+    				<div class="modal__tab modal__tab--auth">
+    					<div class="modal__header">
+    						<h2 class="modal__title" id="modal-1-title">
+    							Фильтр по полям
+    						</h2>
+    						<div class="modal__close close" aria-label="Закрыть окно" data-micromodal-close>
+    							<svg class="icon-svg" data-micromodal-close>
+    								<use xlink:href="img/sprites/svg/symbols.svg#icon-close"></use>
+    							</svg>
+    						</div>
+    					</div>
+    					<div class="modal__content" id="modal-1-content">
+    						<form action="" class="modal__form modal__form--flex">
+    							<label class="label data__label data__label--25">
+    								<p class="label__title">
+    									№ Заявки
+    								</p>
+    								<input class="input" type="text">
+    							</label>
+    							<label class="data__label data__label--25">
+    								<p class="filter__label-title">
+    									Дата выезда
+    								</p>
+    								<input class="filter__date data__date datapicker" type="text" placeholder="04.06.2019" aria-label="Use the arrow keys to pick a date">
+    							</label>
+    							<label class="label data__label data__label--50">
+    								<p class="label__title">
+    									Название тура
+    								</p>
+    								<input class="input" type="text">
+    							</label>
+    							<label class="label data__label data__label--100">
+    								<p class="label__title">
+    									Участники
+    								</p>
+    								<input class="input" type="text">
+    							</label>
+    							<label class="label data__label data__label--75">
+    								<p class="label__title">
+    									Менеджер
+    								</p>
+    								<input class="input" type="text">
+    							</label>
+    							<label class="data__label data__label--25">
+    								<p class="filter__label-title">
+    									Дата заявки
+    								</p>
+    								<input class="filter__date data__date datapicker" type="text" placeholder="04.06.2019" aria-label="Use the arrow keys to pick a date">
+    							</label>
+    							<br>
+    							<div class="modal__control">
+    								<button class="modal__btn btn btn--dark modal__btn--search">Войти</button>
+    								<div class="modal__btn modal__btn--clear" id="clearModal">
+    									Очистить поля
+    								</div>
+    							</div>
+    						</form>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    
+    	<!-- Информация об отеле -->
+    
+    	<!-- <div class="modal micromodal-slide" id="modal-hotel" aria-hidden="true">
+    		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+    			<div class="modal__container modal__container--filter custom-scroll custom-scroll--accent" role="dialog" aria-modal="true" aria-labelledby="modal-login-title">
+    				<div class="modal__tab modal__tab--auth">
+    					<div class="modal__header">
+    						<h2 class="modal__title" id="modal-1-title">
+    							Фильтр по полям
+    						</h2>
+    						<div class="modal__close close" aria-label="Закрыть окно" data-micromodal-close>
+    							<svg class="icon-svg" data-micromodal-close>
+    								<use xlink:href="img/sprites/svg/symbols.svg#icon-close"></use>
+    							</svg>
+    						</div>
+    					</div>
+    					<div class="modal__content" id="modal-1-content">
+    						<form action="" class="modal__form modal__form--flex">
+    							<label class="label data__label data__label--25">
+    								<p class="label__title">
+    									№ Заявки
+    								</p>
+    								<input class="input" type="text">
+    							</label>
+    							<label class="data__label data__label--25">
+    								<p class="filter__label-title">
+    									Дата выезда
+    								</p>
+    								<input class="filter__date data__date datapicker" type="text" placeholder="04.06.2019" aria-label="Use the arrow keys to pick a date">
+    							</label>
+    							<label class="label data__label data__label--50">
+    								<p class="label__title">
+    									Название тура
+    								</p>
+    								<input class="input" type="text">
+    							</label>
+    							<label class="label data__label data__label--100">
+    								<p class="label__title">
+    									Участники
+    								</p>
+    								<input class="input" type="text">
+    							</label>
+    							<label class="label data__label data__label--75">
+    								<p class="label__title">
+    									Менеджер
+    								</p>
+    								<input class="input" type="text">
+    							</label>
+    							<label class="data__label data__label--25">
+    								<p class="filter__label-title">
+    									Дата заявки
+    								</p>
+    								<input class="filter__date data__date datapicker" type="text" placeholder="04.06.2019" aria-label="Use the arrow keys to pick a date">
+    							</label>
+    							<br>
+    							<div class="modal__control">
+    								<button class="modal__btn btn btn--dark modal__btn--search">Войти</button>
+    								<div class="modal__btn modal__btn--clear" id="clearModal">
+    									Очистить поля
+    								</div>
+    							</div>
+    						</form>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</div> -->
     	
     </div>
     <!-- Это оставляй так, как есть, ничего не трогай -->

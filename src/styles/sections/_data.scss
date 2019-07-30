@@ -56,6 +56,12 @@
 				width: 100%;
 			}
 		}
+		&--75 {
+			width: calc(75% - 10px);
+			@include r(1200) {
+				width: 100%;
+			}
+		}
 		&--70 {
 			width: calc(70% - 10px);
 			@include r(1200) {

@@ -4,6 +4,22 @@
 	}
 	&__nav {
 		margin-bottom: 45px;
+		display: flex;
+	}
+	&__filter-wrap {
+		height: 40px;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		flex-grow: 1;
+	}
+	&__filter-link {
+		color: $accent;
+		text-decoration: underline;
+		cursor: pointer;
+		&:hover {
+			text-decoration: none;
+		}
 	}
 	&__tab {
 		display: inline-flex;
@@ -16,6 +32,7 @@
 		border-radius: 6px;
 		margin-right: 5px;
 		margin-bottom: 19px;
+		flex-shrink: 0;
 		&:hover {
 			opacity: 0.75;
 		}
