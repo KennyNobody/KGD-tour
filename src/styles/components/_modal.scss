@@ -142,6 +142,15 @@
         width: 100%;
         text-align: left;
     }
+    &__text {
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: left;
+    }
+    &__submit-checkbox {
+        text-align: left;
+        margin-bottom: 15px;
+    }
 }
 
 /**************************\
